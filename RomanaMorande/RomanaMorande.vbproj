@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{315070DE-70A2-4EAB-9107-C189F536BD4D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>RomanaMorande.My.MyApplication</StartupObject>
+    <RootNamespace>RomanaMorande</RootNamespace>
+    <AssemblyName>Romana Morande</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>d:\Perfiles\AdminCB\Escritorio\Romana\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Romana Morande.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Romana Morande.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FD0BDF84098E3116E749330DF717BBACF64317A1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RomanaMorande_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon-1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Descargas\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\conexion.vb" />
+    <Compile Include="Datos\farticulosuva.vb" />
+    <Compile Include="Datos\fenvases.vb" />
+    <Compile Include="Datos\fpatente.vb" />
+    <Compile Include="Datos\fpesajedestareM.vb" />
+    <Compile Include="Datos\fpesajesindestareM.vb" />
+    <Compile Include="Datos\ftransportistas.vb" />
+    <Compile Include="Datos\ftipovehiculos.vb" />
+    <Compile Include="Datos\fcalidades.vb" />
+    <Compile Include="frmPrincipal.Designer.vb">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logica\vcalidades.vb" />
+    <Compile Include="Logica\venvases.vb" />
+    <Compile Include="Logica\vpatente.vb" />
+    <Compile Include="Logica\vpesajedestareM.vb" />
+    <Compile Include="Logica\vpesajesindestareM.vb" />
+    <Compile Include="Logica\vtransportistas.vb" />
+    <Compile Include="pesajebckDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajebckDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajebckDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajebckDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajebckDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajebckDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajebckDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajebckDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajeDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajeDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajeDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajeDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajeDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajeDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajeDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajeDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajeDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajeDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajeDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajeDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajeDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajeDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajeDataSet9.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajeDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmArticulosUva.Designer.vb">
+      <DependentUpon>frmArticulosUva.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmArticulosUva.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmCalidad.Designer.vb">
+      <DependentUpon>frmCalidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmCalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmContratos.Designer.vb">
+      <DependentUpon>frmContratos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmContratos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmenvases.Designer.vb">
+      <DependentUpon>frmenvases.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmenvases.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmanulaobservaciones.Designer.vb">
+      <DependentUpon>frmanulaobservaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmanulaobservaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmanulaobservacionesautosindestare.Designer.vb">
+      <DependentUpon>frmanulaobservacionesautosindestare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmanulaobservacionesautosindestare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmanulaobservacionesnormal.Designer.vb">
+      <DependentUpon>frmanulaobservacionesnormal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmanulaobservacionesnormal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmanulaobservacionessindestare.Designer.vb">
+      <DependentUpon>frmanulaobservacionessindestare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmanulaobservacionessindestare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmanulaobservacionnormalsindestare.Designer.vb">
+      <DependentUpon>frmanulaobservacionnormalsindestare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmanulaobservacionnormalsindestare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmanulapesaje.Designer.vb">
+      <DependentUpon>frmanulapesaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmanulapesaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmanulapesajecondestare.Designer.vb">
+      <DependentUpon>frmanulapesajecondestare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmanulapesajecondestare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmclaveautomaticonormal.Designer.vb">
+      <DependentUpon>frmclaveautomaticonormal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmclaveautomaticonormal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmclaveautomaticoSinDestare.Designer.vb">
+      <DependentUpon>frmclaveautomaticoSinDestare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmclaveautomaticoSinDestare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmanulamanualDestare.Designer.vb">
+      <DependentUpon>frmanulamanualDestare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmanulamanualDestare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmclavemanualSinDestare.Designer.vb">
+      <DependentUpon>frmclavemanualSinDestare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmclavemanualSinDestare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmconsultapatente.Designer.vb">
+      <DependentUpon>frmconsultapatente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmconsultapatente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmcreapesaje.Designer.vb">
+      <DependentUpon>frmcreapesaje.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmcreapesaje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmcreapesajedestareM.Designer.vb">
+      <DependentUpon>frmcreapesajedestareM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmcreapesajedestareM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmMaestroPatentes.Designer.vb">
+      <DependentUpon>frmMaestroPatentes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmMaestroPatentes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmNuevoContrato.Designer.vb">
+      <DependentUpon>frmNuevoContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmNuevoContrato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmpesajedestareautomatico.Designer.vb">
+      <DependentUpon>frmpesajedestareautomatico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmpesajedestareautomatico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmpesajedestaremanual.Designer.vb">
+      <DependentUpon>frmpesajedestaremanual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmpesajedestaremanual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmpesajesindestareautomatico.Designer.vb">
+      <DependentUpon>frmpesajesindestareautomatico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmpesajesindestareautomatico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmProductores.Designer.vb">
+      <DependentUpon>frmProductores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmProductores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistroPatentes.Designer.vb">
+      <DependentUpon>frmRegistroPatentes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistroPatentes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmTipoVehiculo.Designer.vb">
+      <DependentUpon>frmTipoVehiculo.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Presentacion\frmTipoVehiculo.vb">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Presentacion\frmTransportistas.Designer.vb">
+      <DependentUpon>frmTransportistas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmTransportistas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidacion.Designer.vb">
+      <DependentUpon>frmValidacion.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logica\vtipovehiculo.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="pesajeDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajeDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajeDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmpesajesindestaremanual.Designer.vb">
+      <DependentUpon>frmpesajesindestaremanual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmpesajesindestaremanual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmreportecomprobante.Designer.vb">
+      <DependentUpon>frmreportecomprobante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmreportecomprobante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmreportecomprobantesindestare.Designer.vb">
+      <DependentUpon>frmreportecomprobantesindestare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmreportecomprobantesindestare.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmArticulosUva.resx">
+      <DependentUpon>frmArticulosUva.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmCalidad.resx">
+      <DependentUpon>frmCalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmContratos.resx">
+      <DependentUpon>frmContratos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmenvases.resx">
+      <DependentUpon>frmenvases.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmanulaobservaciones.resx">
+      <DependentUpon>frmanulaobservaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmanulaobservacionesautosindestare.resx">
+      <DependentUpon>frmanulaobservacionesautosindestare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmanulaobservacionesnormal.resx">
+      <DependentUpon>frmanulaobservacionesnormal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmanulaobservacionessindestare.resx">
+      <DependentUpon>frmanulaobservacionessindestare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmanulaobservacionnormalsindestare.resx">
+      <DependentUpon>frmanulaobservacionnormalsindestare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmanulapesaje.resx">
+      <DependentUpon>frmanulapesaje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmanulapesajecondestare.resx">
+      <DependentUpon>frmanulapesajecondestare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmclaveautomaticonormal.resx">
+      <DependentUpon>frmclaveautomaticonormal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmclaveautomaticoSinDestare.resx">
+      <DependentUpon>frmclaveautomaticoSinDestare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmanulamanualDestare.resx">
+      <DependentUpon>frmanulamanualDestare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmclavemanualSinDestare.resx">
+      <DependentUpon>frmclavemanualSinDestare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmconsultapatente.resx">
+      <DependentUpon>frmconsultapatente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmcreapesaje.resx">
+      <DependentUpon>frmcreapesaje.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmcreapesajedestareM.resx">
+      <DependentUpon>frmcreapesajedestareM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmMaestroPatentes.resx">
+      <DependentUpon>frmMaestroPatentes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmNuevoContrato.resx">
+      <DependentUpon>frmNuevoContrato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmpesajedestareautomatico.resx">
+      <DependentUpon>frmpesajedestareautomatico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmpesajedestaremanual.resx">
+      <DependentUpon>frmpesajedestaremanual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmpesajesindestareautomatico.resx">
+      <DependentUpon>frmpesajesindestareautomatico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmpesajesindestaremanual.resx">
+      <DependentUpon>frmpesajesindestaremanual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmProductores.resx">
+      <DependentUpon>frmProductores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmRegistroPatentes.resx">
+      <DependentUpon>frmRegistroPatentes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmTipoVehiculo.resx">
+      <DependentUpon>frmTipoVehiculo.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmTransportistas.resx">
+      <DependentUpon>frmTransportistas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidacion.resx">
+      <DependentUpon>frmValidacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmreportecomprobante.resx">
+      <DependentUpon>frmreportecomprobante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmreportecomprobantesindestare.resx">
+      <DependentUpon>frmreportecomprobantesindestare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VoucherPesajeNuevo.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="pesajebckDataSet.xsc">
+      <DependentUpon>pesajebckDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pesajebckDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajebckDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajebckDataSet.xss">
+      <DependentUpon>pesajebckDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pesajebckDataSet1.xsc">
+      <DependentUpon>pesajebckDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pesajebckDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajebckDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajebckDataSet1.xss">
+      <DependentUpon>pesajebckDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pesajebckDataSet2.xsc">
+      <DependentUpon>pesajebckDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="pesajebckDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajebckDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajebckDataSet2.xss">
+      <DependentUpon>pesajebckDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="pesajebckDataSet3.xsc">
+      <DependentUpon>pesajebckDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="pesajebckDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajebckDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajebckDataSet3.xss">
+      <DependentUpon>pesajebckDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet.xsc">
+      <DependentUpon>pesajeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajeDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajeDataSet.xss">
+      <DependentUpon>pesajeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet1.xsc">
+      <DependentUpon>pesajeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajeDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajeDataSet1.xss">
+      <DependentUpon>pesajeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet2.xsc">
+      <DependentUpon>pesajeDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajeDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajeDataSet2.xss">
+      <DependentUpon>pesajeDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet3.xsc">
+      <DependentUpon>pesajeDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajeDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajeDataSet3.xss">
+      <DependentUpon>pesajeDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet4.xsc">
+      <DependentUpon>pesajeDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajeDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajeDataSet4.xss">
+      <DependentUpon>pesajeDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet5.xsc">
+      <DependentUpon>pesajeDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajeDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajeDataSet5.xss">
+      <DependentUpon>pesajeDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet6.xsc">
+      <DependentUpon>pesajeDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajeDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajeDataSet6.xss">
+      <DependentUpon>pesajeDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet7.xsc">
+      <DependentUpon>pesajeDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajeDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajeDataSet7.xss">
+      <DependentUpon>pesajeDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet8.xsc">
+      <DependentUpon>pesajeDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajeDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajeDataSet8.xss">
+      <DependentUpon>pesajeDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet9.xsc">
+      <DependentUpon>pesajeDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajeDataSet9.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajeDataSet9.xss">
+      <DependentUpon>pesajeDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="RomanaMorande_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon-1.ico" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SAPbobsCOM">
+      <Guid>{FC8030BE-F5D2-4B8E-8F92-44228FE30090}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SAPbouiCOM">
+      <Guid>{6048236A-956D-498D-A6F1-9C81C13AB6E8}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
