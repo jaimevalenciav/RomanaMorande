@@ -423,6 +423,12 @@
     <Compile Include="Presentacion\frmpesajesindestaremanual.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmVendimiaPesajeAutomatico.Designer.vb">
+      <DependentUpon>frmVendimiaPesajeAutomatico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmVendimiaPesajeAutomatico.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\frmreportecomprobante.Designer.vb">
       <DependentUpon>frmreportecomprobante.vb</DependentUpon>
     </Compile>
@@ -536,6 +542,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmVendimiaPesajeAutomatico.resx">
+      <DependentUpon>frmVendimiaPesajeAutomatico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmreportecomprobante.resx">
       <DependentUpon>frmreportecomprobante.vb</DependentUpon>

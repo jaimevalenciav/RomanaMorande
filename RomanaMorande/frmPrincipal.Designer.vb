@@ -57,6 +57,7 @@ Partial Class frmPrincipal
         Me.PesajesVendimiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbluser = New System.Windows.Forms.Label()
+        Me.BodegasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -91,14 +92,14 @@ Partial Class frmPrincipal
         '
         Me.AcercaDeToolStripMenuItem.Image = CType(resources.GetObject("AcercaDeToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
-        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de..."
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'DefinicionesToolStripMenuItem
@@ -138,7 +139,7 @@ Partial Class frmPrincipal
         '
         'MaestrosToolStripMenuItem
         '
-        Me.MaestrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnvasesToolStripMenuItem, Me.TablaBaToolStripMenuItem, Me.CalidadesUvaToolStripMenuItem, Me.ContratosToolStripMenuItem, Me.VariedadesUvaEnSAPToolStripMenuItem})
+        Me.MaestrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnvasesToolStripMenuItem, Me.TablaBaToolStripMenuItem, Me.CalidadesUvaToolStripMenuItem, Me.ContratosToolStripMenuItem, Me.VariedadesUvaEnSAPToolStripMenuItem, Me.BodegasToolStripMenuItem})
         Me.MaestrosToolStripMenuItem.Image = CType(resources.GetObject("MaestrosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.MaestrosToolStripMenuItem.Name = "MaestrosToolStripMenuItem"
         Me.MaestrosToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
@@ -242,7 +243,7 @@ Partial Class frmPrincipal
         Me.PesajeAutomáticoToolStripMenuItem1.Image = CType(resources.GetObject("PesajeAutomáticoToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.PesajeAutomáticoToolStripMenuItem1.Name = "PesajeAutomáticoToolStripMenuItem1"
         Me.PesajeAutomáticoToolStripMenuItem1.Size = New System.Drawing.Size(174, 22)
-        Me.PesajeAutomáticoToolStripMenuItem1.Text = "Pesaje Automático"
+        Me.PesajeAutomáticoToolStripMenuItem1.Text = "Pesaje Uva Vinífera"
         '
         'PesajeManualToolStripMenuItem
         '
@@ -310,6 +311,13 @@ Partial Class frmPrincipal
         Me.lbluser.TabIndex = 3
         Me.lbluser.Text = "Label2"
         '
+        'BodegasToolStripMenuItem
+        '
+        Me.BodegasToolStripMenuItem.Image = CType(resources.GetObject("BodegasToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.BodegasToolStripMenuItem.Name = "BodegasToolStripMenuItem"
+        Me.BodegasToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.BodegasToolStripMenuItem.Text = "Bodegas"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -366,4 +374,5 @@ Partial Class frmPrincipal
     Friend WithEvents CalidadesUvaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ContratosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VariedadesUvaEnSAPToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BodegasToolStripMenuItem As ToolStripMenuItem
 End Class

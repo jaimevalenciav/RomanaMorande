@@ -121,7 +121,7 @@ Partial Class frmValidacion
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(43, 14)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Ver1.0.3"
+        Me.Label3.Text = "Ver1.0.4"
         '
         'Panel1
         '

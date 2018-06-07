@@ -63,5 +63,7 @@
         frmArticulosUva.ShowDialog()
     End Sub
 
-
+    Private Sub PesajeAutomáticoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PesajeAutomáticoToolStripMenuItem1.Click
+        frmVendimiaPesajeAutomatico.ShowDialog()
+    End Sub
 End Class
