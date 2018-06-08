@@ -25,13 +25,13 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVendimiaPesajeAutomatico))
         Me.DataListado = New System.Windows.Forms.DataGridView()
-        Me.txtuser = New System.Windows.Forms.TextBox()
+        Me.txtcantenv = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.btncapturapesobruto = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnnuevopesaje = New System.Windows.Forms.Button()
         Me.btncapturapesotara = New System.Windows.Forms.Button()
-        Me.txtguiadespacho = New System.Windows.Forms.TextBox()
+        Me.txtnumguia = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtestadopesaje = New System.Windows.Forms.TextBox()
@@ -44,8 +44,8 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtobservaciones = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txttipo = New System.Windows.Forms.TextBox()
-        Me.txtnomtipo = New System.Windows.Forms.TextBox()
+        Me.txttipoenv = New System.Windows.Forms.TextBox()
+        Me.txtnomtipoenv = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txttara = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -54,19 +54,58 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.sppuerto = New System.IO.Ports.SerialPort(Me.components)
         Me.txtidtransportista = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtnomprov = New System.Windows.Forms.TextBox()
+        Me.txtrutprov = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.rbMecanica = New System.Windows.Forms.RadioButton()
+        Me.rbManual = New System.Windows.Forms.RadioButton()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnBuscarTransportista = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.txtcastigo = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.txtapb = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.txttemp = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.txtdensidad = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.txtbrix = New System.Windows.Forms.TextBox()
+        Me.txtnomsubcuartel = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.txtidsubcuartel = New System.Windows.Forms.TextBox()
+        Me.txtnomcuartel = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.txtidcuartel = New System.Windows.Forms.TextBox()
+        Me.txtnomsector = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.txtidsector = New System.Windows.Forms.TextBox()
+        Me.txtcalidad = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.txtidcalidad = New System.Windows.Forms.TextBox()
+        Me.txtnomuva = New System.Windows.Forms.TextBox()
+        Me.txtiduva = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtnombretipovehiculo = New System.Windows.Forms.TextBox()
+        Me.txtbodega = New System.Windows.Forms.TextBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardarpesaje = New System.Windows.Forms.Button()
         Me.lbltitulo = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Button()
-        Me.txtidtipovehiculo = New System.Windows.Forms.TextBox()
+        Me.txtidbodega = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtmarca = New System.Windows.Forms.TextBox()
+        Me.txtnumcontrato = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtpatente = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.txtnumpesaje = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -75,28 +114,17 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label1 = New System.Windows.Forms.Label()
         Me.fecha = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnBuscarTransportista = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.txtdocsap = New System.Windows.Forms.TextBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.datalistado2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataListado
@@ -112,19 +140,19 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.DataListado.Size = New System.Drawing.Size(671, 186)
         Me.DataListado.TabIndex = 1
         '
-        'txtuser
+        'txtcantenv
         '
-        Me.txtuser.Enabled = False
-        Me.txtuser.Location = New System.Drawing.Point(379, 142)
-        Me.txtuser.Name = "txtuser"
-        Me.txtuser.Size = New System.Drawing.Size(96, 20)
-        Me.txtuser.TabIndex = 54
-        Me.txtuser.Visible = False
+        Me.txtcantenv.Enabled = False
+        Me.txtcantenv.Location = New System.Drawing.Point(379, 142)
+        Me.txtcantenv.Name = "txtcantenv"
+        Me.txtcantenv.Size = New System.Drawing.Size(95, 20)
+        Me.txtcantenv.TabIndex = 54
+        Me.txtcantenv.Visible = False
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(266, 147)
+        Me.Label15.Location = New System.Drawing.Point(278, 147)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(93, 13)
         Me.Label15.TabIndex = 53
@@ -179,19 +207,19 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.btncapturapesotara.UseVisualStyleBackColor = True
         Me.btncapturapesotara.Visible = False
         '
-        'txtguiadespacho
+        'txtnumguia
         '
-        Me.txtguiadespacho.Location = New System.Drawing.Point(351, 98)
-        Me.txtguiadespacho.Name = "txtguiadespacho"
-        Me.txtguiadespacho.Size = New System.Drawing.Size(123, 20)
-        Me.txtguiadespacho.TabIndex = 4
-        Me.txtguiadespacho.Text = "0"
-        Me.txtguiadespacho.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.txtnumguia.Location = New System.Drawing.Point(379, 98)
+        Me.txtnumguia.Name = "txtnumguia"
+        Me.txtnumguia.Size = New System.Drawing.Size(95, 20)
+        Me.txtnumguia.TabIndex = 4
+        Me.txtnumguia.Text = "0"
+        Me.txtnumguia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(238, 100)
+        Me.Label14.Location = New System.Drawing.Point(273, 101)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(98, 13)
         Me.Label14.TabIndex = 48
@@ -282,7 +310,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(88, 572)
+        Me.Label12.Location = New System.Drawing.Point(113, 572)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(64, 24)
         Me.Label12.TabIndex = 43
@@ -292,7 +320,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(88, 501)
+        Me.Label11.Location = New System.Drawing.Point(102, 501)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(75, 24)
         Me.Label11.TabIndex = 42
@@ -316,21 +344,21 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label2.TabIndex = 40
         Me.Label2.Text = "Observaciones"
         '
-        'txttipo
+        'txttipoenv
         '
-        Me.txttipo.Enabled = False
-        Me.txttipo.Location = New System.Drawing.Point(94, 142)
-        Me.txttipo.Name = "txttipo"
-        Me.txttipo.Size = New System.Drawing.Size(29, 20)
-        Me.txttipo.TabIndex = 39
+        Me.txttipoenv.Enabled = False
+        Me.txttipoenv.Location = New System.Drawing.Point(89, 142)
+        Me.txttipoenv.Name = "txttipoenv"
+        Me.txttipoenv.Size = New System.Drawing.Size(29, 20)
+        Me.txttipoenv.TabIndex = 39
         '
-        'txtnomtipo
+        'txtnomtipoenv
         '
-        Me.txtnomtipo.Enabled = False
-        Me.txtnomtipo.Location = New System.Drawing.Point(125, 142)
-        Me.txtnomtipo.Name = "txtnomtipo"
-        Me.txtnomtipo.Size = New System.Drawing.Size(105, 20)
-        Me.txtnomtipo.TabIndex = 38
+        Me.txtnomtipoenv.Enabled = False
+        Me.txtnomtipoenv.Location = New System.Drawing.Point(120, 142)
+        Me.txtnomtipoenv.Name = "txtnomtipoenv"
+        Me.txtnomtipoenv.Size = New System.Drawing.Size(126, 20)
+        Me.txtnomtipoenv.TabIndex = 38
         '
         'Label10
         '
@@ -346,7 +374,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txttara.Enabled = False
         Me.txttara.Location = New System.Drawing.Point(379, 120)
         Me.txttara.Name = "txttara"
-        Me.txttara.Size = New System.Drawing.Size(96, 20)
+        Me.txttara.Size = New System.Drawing.Size(95, 20)
         Me.txttara.TabIndex = 36
         '
         'Label9
@@ -361,7 +389,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'txtnomtrans
         '
         Me.txtnomtrans.Enabled = False
-        Me.txtnomtrans.Location = New System.Drawing.Point(125, 120)
+        Me.txtnomtrans.Location = New System.Drawing.Point(120, 120)
         Me.txtnomtrans.Name = "txtnomtrans"
         Me.txtnomtrans.Size = New System.Drawing.Size(159, 20)
         Me.txtnomtrans.TabIndex = 34
@@ -382,27 +410,28 @@ Partial Class frmVendimiaPesajeAutomatico
         'txtidtransportista
         '
         Me.txtidtransportista.Enabled = False
-        Me.txtidtransportista.Location = New System.Drawing.Point(94, 120)
+        Me.txtidtransportista.Location = New System.Drawing.Point(89, 120)
         Me.txtidtransportista.Name = "txtidtransportista"
         Me.txtidtransportista.Size = New System.Drawing.Size(29, 20)
         Me.txtidtransportista.TabIndex = 33
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.TextBox2)
-        Me.GroupBox3.Controls.Add(Me.TextBox1)
+        Me.GroupBox3.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox3.Controls.Add(Me.txtnomprov)
+        Me.GroupBox3.Controls.Add(Me.txtrutprov)
         Me.GroupBox3.Controls.Add(Me.Label21)
         Me.GroupBox3.Controls.Add(Me.Button2)
         Me.GroupBox3.Controls.Add(Me.GroupBox6)
         Me.GroupBox3.Controls.Add(Me.Button1)
         Me.GroupBox3.Controls.Add(Me.btnBuscarTransportista)
         Me.GroupBox3.Controls.Add(Me.GroupBox4)
-        Me.GroupBox3.Controls.Add(Me.txtuser)
+        Me.GroupBox3.Controls.Add(Me.txtcantenv)
         Me.GroupBox3.Controls.Add(Me.Label15)
         Me.GroupBox3.Controls.Add(Me.btncapturapesobruto)
         Me.GroupBox3.Controls.Add(Me.btncapturapesotara)
         Me.GroupBox3.Controls.Add(Me.btnanula)
-        Me.GroupBox3.Controls.Add(Me.txtguiadespacho)
+        Me.GroupBox3.Controls.Add(Me.txtnumguia)
         Me.GroupBox3.Controls.Add(Me.Label14)
         Me.GroupBox3.Controls.Add(Me.Label13)
         Me.GroupBox3.Controls.Add(Me.txtestadopesaje)
@@ -413,9 +442,9 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.Controls.Add(Me.txtpesajetara)
         Me.GroupBox3.Controls.Add(Me.txtobservaciones)
         Me.GroupBox3.Controls.Add(Me.Label2)
-        Me.GroupBox3.Controls.Add(Me.txttipo)
+        Me.GroupBox3.Controls.Add(Me.txttipoenv)
         Me.GroupBox3.Controls.Add(Me.Label19)
-        Me.GroupBox3.Controls.Add(Me.txtnomtipo)
+        Me.GroupBox3.Controls.Add(Me.txtnomtipoenv)
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Controls.Add(Me.Label18)
         Me.GroupBox3.Controls.Add(Me.txttara)
@@ -424,18 +453,17 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.Controls.Add(Me.Label17)
         Me.GroupBox3.Controls.Add(Me.txtidtransportista)
         Me.GroupBox3.Controls.Add(Me.Label8)
-        Me.GroupBox3.Controls.Add(Me.txtnombretipovehiculo)
+        Me.GroupBox3.Controls.Add(Me.txtbodega)
         Me.GroupBox3.Controls.Add(Me.btnCancelar)
         Me.GroupBox3.Controls.Add(Me.btnGuardarpesaje)
         Me.GroupBox3.Controls.Add(Me.lbltitulo)
         Me.GroupBox3.Controls.Add(Me.btnSalir)
-        Me.GroupBox3.Controls.Add(Me.txtidtipovehiculo)
+        Me.GroupBox3.Controls.Add(Me.txtidbodega)
         Me.GroupBox3.Controls.Add(Me.Label7)
-        Me.GroupBox3.Controls.Add(Me.txtmarca)
+        Me.GroupBox3.Controls.Add(Me.txtnumcontrato)
         Me.GroupBox3.Controls.Add(Me.Label6)
         Me.GroupBox3.Controls.Add(Me.txtpatente)
         Me.GroupBox3.Controls.Add(Me.Label5)
-        Me.GroupBox3.Controls.Add(Me.txtdocsap)
         Me.GroupBox3.Controls.Add(Me.Label16)
         Me.GroupBox3.Controls.Add(Me.txtnumpesaje)
         Me.GroupBox3.Controls.Add(Me.Label4)
@@ -451,14 +479,355 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Pesaje"
         '
+        'txtnomprov
+        '
+        Me.txtnomprov.Location = New System.Drawing.Point(339, 76)
+        Me.txtnomprov.Name = "txtnomprov"
+        Me.txtnomprov.Size = New System.Drawing.Size(256, 20)
+        Me.txtnomprov.TabIndex = 62
+        '
+        'txtrutprov
+        '
+        Me.txtrutprov.Location = New System.Drawing.Point(265, 76)
+        Me.txtrutprov.Name = "txtrutprov"
+        Me.txtrutprov.Size = New System.Drawing.Size(73, 20)
+        Me.txtrutprov.TabIndex = 61
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(206, 80)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(53, 13)
+        Me.Label21.TabIndex = 60
+        Me.Label21.Text = "Productor"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(246, 141)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(33, 22)
+        Me.Button2.TabIndex = 59
+        Me.Button2.Text = "..."
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.rbMecanica)
+        Me.GroupBox6.Controls.Add(Me.rbManual)
+        Me.GroupBox6.Location = New System.Drawing.Point(480, 99)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(114, 66)
+        Me.GroupBox6.TabIndex = 58
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "Tipo Cosecha"
+        '
+        'rbMecanica
+        '
+        Me.rbMecanica.AutoSize = True
+        Me.rbMecanica.Location = New System.Drawing.Point(10, 38)
+        Me.rbMecanica.Name = "rbMecanica"
+        Me.rbMecanica.Size = New System.Drawing.Size(72, 17)
+        Me.rbMecanica.TabIndex = 1
+        Me.rbMecanica.TabStop = True
+        Me.rbMecanica.Text = "Mecánica"
+        Me.rbMecanica.UseVisualStyleBackColor = True
+        '
+        'rbManual
+        '
+        Me.rbManual.AutoSize = True
+        Me.rbManual.Location = New System.Drawing.Point(10, 19)
+        Me.rbManual.Name = "rbManual"
+        Me.rbManual.Size = New System.Drawing.Size(60, 17)
+        Me.rbManual.TabIndex = 0
+        Me.rbManual.TabStop = True
+        Me.rbManual.Text = "Manual"
+        Me.rbManual.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(158, 75)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(33, 22)
+        Me.Button1.TabIndex = 57
+        Me.Button1.Text = "..."
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnBuscarTransportista
+        '
+        Me.btnBuscarTransportista.Location = New System.Drawing.Point(562, 45)
+        Me.btnBuscarTransportista.Name = "btnBuscarTransportista"
+        Me.btnBuscarTransportista.Size = New System.Drawing.Size(33, 28)
+        Me.btnBuscarTransportista.TabIndex = 56
+        Me.btnBuscarTransportista.Text = "..."
+        Me.btnBuscarTransportista.UseVisualStyleBackColor = True
+        '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Label31)
+        Me.GroupBox4.Controls.Add(Me.txtcastigo)
+        Me.GroupBox4.Controls.Add(Me.Label30)
+        Me.GroupBox4.Controls.Add(Me.txtapb)
+        Me.GroupBox4.Controls.Add(Me.Label29)
+        Me.GroupBox4.Controls.Add(Me.txttemp)
+        Me.GroupBox4.Controls.Add(Me.Label28)
+        Me.GroupBox4.Controls.Add(Me.txtdensidad)
+        Me.GroupBox4.Controls.Add(Me.Label27)
+        Me.GroupBox4.Controls.Add(Me.txtbrix)
+        Me.GroupBox4.Controls.Add(Me.txtnomsubcuartel)
+        Me.GroupBox4.Controls.Add(Me.Label26)
+        Me.GroupBox4.Controls.Add(Me.txtidsubcuartel)
+        Me.GroupBox4.Controls.Add(Me.txtnomcuartel)
+        Me.GroupBox4.Controls.Add(Me.Label25)
+        Me.GroupBox4.Controls.Add(Me.txtidcuartel)
+        Me.GroupBox4.Controls.Add(Me.txtnomsector)
+        Me.GroupBox4.Controls.Add(Me.Label24)
+        Me.GroupBox4.Controls.Add(Me.txtidsector)
+        Me.GroupBox4.Controls.Add(Me.txtcalidad)
+        Me.GroupBox4.Controls.Add(Me.Label23)
+        Me.GroupBox4.Controls.Add(Me.Button3)
+        Me.GroupBox4.Controls.Add(Me.txtidcalidad)
+        Me.GroupBox4.Controls.Add(Me.txtnomuva)
+        Me.GroupBox4.Controls.Add(Me.txtiduva)
+        Me.GroupBox4.Controls.Add(Me.Label22)
         Me.GroupBox4.Location = New System.Drawing.Point(8, 166)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(587, 173)
         Me.GroupBox4.TabIndex = 55
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos de la Uva"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(344, 109)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(53, 13)
+        Me.Label31.TabIndex = 83
+        Me.Label31.Text = "% Castigo"
+        '
+        'txtcastigo
+        '
+        Me.txtcastigo.Location = New System.Drawing.Point(400, 105)
+        Me.txtcastigo.Name = "txtcastigo"
+        Me.txtcastigo.Size = New System.Drawing.Size(39, 20)
+        Me.txtcastigo.TabIndex = 84
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(471, 83)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(28, 13)
+        Me.Label30.TabIndex = 81
+        Me.Label30.Text = "APB"
+        '
+        'txtapb
+        '
+        Me.txtapb.Location = New System.Drawing.Point(502, 79)
+        Me.txtapb.Name = "txtapb"
+        Me.txtapb.Size = New System.Drawing.Size(50, 20)
+        Me.txtapb.TabIndex = 82
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(379, 83)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(18, 13)
+        Me.Label29.TabIndex = 79
+        Me.Label29.Text = "T°"
+        '
+        'txttemp
+        '
+        Me.txttemp.Location = New System.Drawing.Point(400, 79)
+        Me.txttemp.Name = "txttemp"
+        Me.txttemp.Size = New System.Drawing.Size(39, 20)
+        Me.txttemp.TabIndex = 80
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(447, 57)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(52, 13)
+        Me.Label28.TabIndex = 77
+        Me.Label28.Text = "Densidad"
+        '
+        'txtdensidad
+        '
+        Me.txtdensidad.Location = New System.Drawing.Point(502, 54)
+        Me.txtdensidad.Name = "txtdensidad"
+        Me.txtdensidad.Size = New System.Drawing.Size(66, 20)
+        Me.txtdensidad.TabIndex = 78
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(373, 57)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(24, 13)
+        Me.Label27.TabIndex = 75
+        Me.Label27.Text = "Brix"
+        '
+        'txtbrix
+        '
+        Me.txtbrix.Location = New System.Drawing.Point(400, 54)
+        Me.txtbrix.Name = "txtbrix"
+        Me.txtbrix.Size = New System.Drawing.Size(39, 20)
+        Me.txtbrix.TabIndex = 76
+        '
+        'txtnomsubcuartel
+        '
+        Me.txtnomsubcuartel.Location = New System.Drawing.Point(115, 131)
+        Me.txtnomsubcuartel.Name = "txtnomsubcuartel"
+        Me.txtnomsubcuartel.Size = New System.Drawing.Size(202, 20)
+        Me.txtnomsubcuartel.TabIndex = 74
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(9, 134)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(62, 13)
+        Me.Label26.TabIndex = 72
+        Me.Label26.Text = "Sub-Cuartel"
+        '
+        'txtidsubcuartel
+        '
+        Me.txtidsubcuartel.Location = New System.Drawing.Point(75, 131)
+        Me.txtidsubcuartel.Name = "txtidsubcuartel"
+        Me.txtidsubcuartel.Size = New System.Drawing.Size(39, 20)
+        Me.txtidsubcuartel.TabIndex = 73
+        '
+        'txtnomcuartel
+        '
+        Me.txtnomcuartel.Location = New System.Drawing.Point(115, 106)
+        Me.txtnomcuartel.Name = "txtnomcuartel"
+        Me.txtnomcuartel.Size = New System.Drawing.Size(202, 20)
+        Me.txtnomcuartel.TabIndex = 71
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(9, 109)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(40, 13)
+        Me.Label25.TabIndex = 69
+        Me.Label25.Text = "Cuartel"
+        '
+        'txtidcuartel
+        '
+        Me.txtidcuartel.Location = New System.Drawing.Point(75, 106)
+        Me.txtidcuartel.Name = "txtidcuartel"
+        Me.txtidcuartel.Size = New System.Drawing.Size(39, 20)
+        Me.txtidcuartel.TabIndex = 70
+        '
+        'txtnomsector
+        '
+        Me.txtnomsector.Location = New System.Drawing.Point(115, 80)
+        Me.txtnomsector.Name = "txtnomsector"
+        Me.txtnomsector.Size = New System.Drawing.Size(202, 20)
+        Me.txtnomsector.TabIndex = 68
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(9, 83)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(38, 13)
+        Me.Label24.TabIndex = 66
+        Me.Label24.Text = "Sector"
+        '
+        'txtidsector
+        '
+        Me.txtidsector.Location = New System.Drawing.Point(75, 80)
+        Me.txtidsector.Name = "txtidsector"
+        Me.txtidsector.Size = New System.Drawing.Size(39, 20)
+        Me.txtidsector.TabIndex = 67
+        '
+        'txtcalidad
+        '
+        Me.txtcalidad.Location = New System.Drawing.Point(115, 54)
+        Me.txtcalidad.Name = "txtcalidad"
+        Me.txtcalidad.Size = New System.Drawing.Size(202, 20)
+        Me.txtcalidad.TabIndex = 65
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(9, 57)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(42, 13)
+        Me.Label23.TabIndex = 63
+        Me.Label23.Text = "Calidad"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(516, 24)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(52, 22)
+        Me.Button3.TabIndex = 63
+        Me.Button3.Text = "..."
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'txtidcalidad
+        '
+        Me.txtidcalidad.Location = New System.Drawing.Point(75, 54)
+        Me.txtidcalidad.Name = "txtidcalidad"
+        Me.txtidcalidad.Size = New System.Drawing.Size(39, 20)
+        Me.txtidcalidad.TabIndex = 64
+        '
+        'txtnomuva
+        '
+        Me.txtnomuva.Location = New System.Drawing.Point(153, 25)
+        Me.txtnomuva.Name = "txtnomuva"
+        Me.txtnomuva.Size = New System.Drawing.Size(362, 20)
+        Me.txtnomuva.TabIndex = 64
+        '
+        'txtiduva
+        '
+        Me.txtiduva.Location = New System.Drawing.Point(75, 25)
+        Me.txtiduva.Name = "txtiduva"
+        Me.txtiduva.Size = New System.Drawing.Size(77, 20)
+        Me.txtiduva.TabIndex = 63
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(9, 28)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(49, 13)
+        Me.Label22.TabIndex = 63
+        Me.Label22.Text = "Variedad"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(12, 146)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(67, 13)
+        Me.Label19.TabIndex = 37
+        Me.Label19.Text = "Tipo Envase"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(296, 123)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(75, 13)
+        Me.Label18.TabIndex = 35
+        Me.Label18.Text = "Tara Estimada"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(12, 123)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(68, 13)
+        Me.Label17.TabIndex = 32
+        Me.Label17.Text = "Transportista"
         '
         'Label8
         '
@@ -469,14 +838,14 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label8.TabIndex = 32
         Me.Label8.Text = "Transportista"
         '
-        'txtnombretipovehiculo
+        'txtbodega
         '
-        Me.txtnombretipovehiculo.Enabled = False
-        Me.txtnombretipovehiculo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtnombretipovehiculo.Location = New System.Drawing.Point(408, 46)
-        Me.txtnombretipovehiculo.Name = "txtnombretipovehiculo"
-        Me.txtnombretipovehiculo.Size = New System.Drawing.Size(152, 26)
-        Me.txtnombretipovehiculo.TabIndex = 31
+        Me.txtbodega.Enabled = False
+        Me.txtbodega.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtbodega.Location = New System.Drawing.Point(408, 46)
+        Me.txtbodega.Name = "txtbodega"
+        Me.txtbodega.Size = New System.Drawing.Size(152, 26)
+        Me.txtbodega.TabIndex = 31
         '
         'btnCancelar
         '
@@ -505,7 +874,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.lbltitulo.AutoSize = True
         Me.lbltitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbltitulo.Location = New System.Drawing.Point(88, 435)
+        Me.lbltitulo.Location = New System.Drawing.Point(116, 435)
         Me.lbltitulo.Name = "lbltitulo"
         Me.lbltitulo.Size = New System.Drawing.Size(61, 24)
         Me.lbltitulo.TabIndex = 30
@@ -522,14 +891,14 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
-        'txtidtipovehiculo
+        'txtidbodega
         '
-        Me.txtidtipovehiculo.Enabled = False
-        Me.txtidtipovehiculo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtidtipovehiculo.Location = New System.Drawing.Point(377, 46)
-        Me.txtidtipovehiculo.Name = "txtidtipovehiculo"
-        Me.txtidtipovehiculo.Size = New System.Drawing.Size(29, 26)
-        Me.txtidtipovehiculo.TabIndex = 25
+        Me.txtidbodega.Enabled = False
+        Me.txtidbodega.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtidbodega.Location = New System.Drawing.Point(377, 46)
+        Me.txtidbodega.Name = "txtidbodega"
+        Me.txtidbodega.Size = New System.Drawing.Size(29, 26)
+        Me.txtidbodega.TabIndex = 25
         '
         'Label7
         '
@@ -540,13 +909,12 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label7.TabIndex = 24
         Me.Label7.Text = "Bodega"
         '
-        'txtmarca
+        'txtnumcontrato
         '
-        Me.txtmarca.Enabled = False
-        Me.txtmarca.Location = New System.Drawing.Point(94, 76)
-        Me.txtmarca.Name = "txtmarca"
-        Me.txtmarca.Size = New System.Drawing.Size(69, 20)
-        Me.txtmarca.TabIndex = 23
+        Me.txtnumcontrato.Location = New System.Drawing.Point(89, 76)
+        Me.txtnumcontrato.Name = "txtnumcontrato"
+        Me.txtnumcontrato.Size = New System.Drawing.Size(69, 20)
+        Me.txtnumcontrato.TabIndex = 23
         '
         'Label6
         '
@@ -577,12 +945,23 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Patente"
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(12, 101)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(78, 13)
+        Me.Label16.TabIndex = 16
+        Me.Label16.Text = "Fecha Guía D."
+        '
         'txtnumpesaje
         '
+        Me.txtnumpesaje.BackColor = System.Drawing.SystemColors.Window
         Me.txtnumpesaje.Enabled = False
         Me.txtnumpesaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtnumpesaje.Location = New System.Drawing.Point(66, 46)
+        Me.txtnumpesaje.Location = New System.Drawing.Point(70, 46)
         Me.txtnumpesaje.Name = "txtnumpesaje"
+        Me.txtnumpesaje.ReadOnly = True
         Me.txtnumpesaje.Size = New System.Drawing.Size(97, 26)
         Me.txtnumpesaje.TabIndex = 17
         Me.txtnumpesaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -652,60 +1031,6 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.Timer1.Interval = 1000
         '
-        'btnBuscarTransportista
-        '
-        Me.btnBuscarTransportista.Location = New System.Drawing.Point(562, 45)
-        Me.btnBuscarTransportista.Name = "btnBuscarTransportista"
-        Me.btnBuscarTransportista.Size = New System.Drawing.Size(33, 28)
-        Me.btnBuscarTransportista.TabIndex = 56
-        Me.btnBuscarTransportista.Text = "..."
-        Me.btnBuscarTransportista.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(163, 76)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(33, 22)
-        Me.Button1.TabIndex = 57
-        Me.Button1.Text = "..."
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(12, 101)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(78, 13)
-        Me.Label16.TabIndex = 16
-        Me.Label16.Text = "Fecha Guía D."
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(12, 123)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(68, 13)
-        Me.Label17.TabIndex = 32
-        Me.Label17.Text = "Transportista"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(296, 123)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(75, 13)
-        Me.Label18.TabIndex = 35
-        Me.Label18.Text = "Tara Estimada"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(12, 146)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(67, 13)
-        Me.Label19.TabIndex = 37
-        Me.Label19.Text = "Tipo Envase"
-        '
         'Label20
         '
         Me.Label20.AutoSize = True
@@ -725,82 +1050,17 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.TextBox7.TabIndex = 54
         Me.TextBox7.Visible = False
         '
-        'GroupBox6
+        'Timer2
         '
-        Me.GroupBox6.Controls.Add(Me.RadioButton2)
-        Me.GroupBox6.Controls.Add(Me.RadioButton1)
-        Me.GroupBox6.Location = New System.Drawing.Point(481, 97)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(114, 63)
-        Me.GroupBox6.TabIndex = 58
-        Me.GroupBox6.TabStop = False
-        Me.GroupBox6.Text = "Tipo Cosecha"
+        Me.Timer2.Interval = 1000
         '
-        'RadioButton1
+        'DateTimePicker1
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(10, 19)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(60, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Manual"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(10, 38)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(66, 17)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Máquina"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(230, 141)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(33, 22)
-        Me.Button2.TabIndex = 59
-        Me.Button2.Text = "..."
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'txtdocsap
-        '
-        Me.txtdocsap.Location = New System.Drawing.Point(94, 98)
-        Me.txtdocsap.Name = "txtdocsap"
-        Me.txtdocsap.Size = New System.Drawing.Size(69, 20)
-        Me.txtdocsap.TabIndex = 3
-        Me.txtdocsap.Text = "0"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(202, 80)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(53, 13)
-        Me.Label21.TabIndex = 60
-        Me.Label21.Text = "Productor"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(252, 76)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(84, 20)
-        Me.TextBox1.TabIndex = 61
-        Me.TextBox1.Visible = False
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(339, 76)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(256, 20)
-        Me.TextBox2.TabIndex = 62
-        Me.TextBox2.Visible = False
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(89, 98)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(82, 20)
+        Me.DateTimePicker1.TabIndex = 63
         '
         'frmVendimiaPesajeAutomatico
         '
@@ -824,19 +1084,21 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents DataListado As DataGridView
-    Friend WithEvents txtuser As TextBox
+    Friend WithEvents txtcantenv As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents btncapturapesobruto As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnnuevopesaje As Button
     Friend WithEvents btncapturapesotara As Button
-    Friend WithEvents txtguiadespacho As TextBox
+    Friend WithEvents txtnumguia As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents txtestadopesaje As TextBox
@@ -849,8 +1111,8 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents Label11 As Label
     Friend WithEvents txtobservaciones As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txttipo As TextBox
-    Friend WithEvents txtnomtipo As TextBox
+    Friend WithEvents txttipoenv As TextBox
+    Friend WithEvents txtnomtipoenv As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents txttara As TextBox
     Friend WithEvents Label9 As Label
@@ -860,14 +1122,14 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents txtidtransportista As TextBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents txtnombretipovehiculo As TextBox
+    Friend WithEvents txtbodega As TextBox
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGuardarpesaje As Button
     Friend WithEvents lbltitulo As Label
     Friend WithEvents btnSalir As Button
-    Friend WithEvents txtidtipovehiculo As TextBox
+    Friend WithEvents txtidbodega As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtmarca As TextBox
+    Friend WithEvents txtnumcontrato As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents txtpatente As TextBox
     Friend WithEvents Label5 As Label
@@ -882,8 +1144,8 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents Label4 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents GroupBox6 As GroupBox
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents rbMecanica As RadioButton
+    Friend WithEvents rbManual As RadioButton
     Friend WithEvents Button1 As Button
     Friend WithEvents btnBuscarTransportista As Button
     Friend WithEvents TextBox7 As TextBox
@@ -892,8 +1154,35 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents Label18 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtnomprov As TextBox
+    Friend WithEvents txtrutprov As TextBox
     Friend WithEvents Label21 As Label
-    Friend WithEvents txtdocsap As TextBox
+    Friend WithEvents Label28 As Label
+    Friend WithEvents txtdensidad As TextBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents txtbrix As TextBox
+    Friend WithEvents txtnomsubcuartel As TextBox
+    Friend WithEvents Label26 As Label
+    Friend WithEvents txtidsubcuartel As TextBox
+    Friend WithEvents txtnomcuartel As TextBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents txtidcuartel As TextBox
+    Friend WithEvents txtnomsector As TextBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents txtidsector As TextBox
+    Friend WithEvents txtcalidad As TextBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents txtidcalidad As TextBox
+    Friend WithEvents txtnomuva As TextBox
+    Friend WithEvents txtiduva As TextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents txtcastigo As TextBox
+    Friend WithEvents Label30 As Label
+    Friend WithEvents txtapb As TextBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents txttemp As TextBox
+    Friend WithEvents Timer2 As Timer
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
