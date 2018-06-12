@@ -33,7 +33,7 @@ Partial Class frmRegistroPatentes
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtIdTipoVehiculo = New System.Windows.Forms.TextBox()
         Me.btnBuscarTransportista = New System.Windows.Forms.Button()
-        Me.txtNombreTrasportista = New System.Windows.Forms.TextBox()
+        Me.txtNombreTransportista = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtIdTransportista = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -77,7 +77,7 @@ Partial Class frmRegistroPatentes
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.txtIdTipoVehiculo)
         Me.GroupBox2.Controls.Add(Me.btnBuscarTransportista)
-        Me.GroupBox2.Controls.Add(Me.txtNombreTrasportista)
+        Me.GroupBox2.Controls.Add(Me.txtNombreTransportista)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.txtIdTransportista)
         Me.GroupBox2.Controls.Add(Me.Label3)
@@ -157,13 +157,12 @@ Partial Class frmRegistroPatentes
         Me.btnBuscarTransportista.Text = "..."
         Me.btnBuscarTransportista.UseVisualStyleBackColor = True
         '
-        'txtNombreTrasportista
+        'txtNombreTransportista
         '
-        Me.txtNombreTrasportista.Enabled = False
-        Me.txtNombreTrasportista.Location = New System.Drawing.Point(68, 149)
-        Me.txtNombreTrasportista.Name = "txtNombreTrasportista"
-        Me.txtNombreTrasportista.Size = New System.Drawing.Size(155, 20)
-        Me.txtNombreTrasportista.TabIndex = 16
+        Me.txtNombreTransportista.Location = New System.Drawing.Point(68, 149)
+        Me.txtNombreTransportista.Name = "txtNombreTransportista"
+        Me.txtNombreTransportista.Size = New System.Drawing.Size(155, 20)
+        Me.txtNombreTransportista.TabIndex = 16
         '
         'Label4
         '
@@ -176,7 +175,6 @@ Partial Class frmRegistroPatentes
         '
         'txtIdTransportista
         '
-        Me.txtIdTransportista.Enabled = False
         Me.txtIdTransportista.Location = New System.Drawing.Point(9, 149)
         Me.txtIdTransportista.Name = "txtIdTransportista"
         Me.txtIdTransportista.Size = New System.Drawing.Size(53, 20)
@@ -361,7 +359,7 @@ Partial Class frmRegistroPatentes
     Friend WithEvents Label5 As Label
     Friend WithEvents txtIdTipoVehiculo As TextBox
     Friend WithEvents btnBuscarTransportista As Button
-    Friend WithEvents txtNombreTrasportista As TextBox
+    Friend WithEvents txtNombreTransportista As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtIdTransportista As TextBox
     Friend WithEvents Label3 As Label

@@ -28,7 +28,7 @@ Public Class frmRegistroPatentes
         txtpatente.Text = ""
         txtmarca.Text = ""
         txtIdTransportista.Text = ""
-        txtNombreTrasportista.Text = ""
+        txtNombreTransportista.Text = ""
         txtIdTipoVehiculo.Text = ""
         txtNombreTipoVehiculo.Text = ""
         txtTara.Text = "0"
@@ -159,7 +159,7 @@ Public Class frmRegistroPatentes
         End If
     End Sub
 
-    Private Sub txtNombreTrasportista_Validating(sender As Object, e As CancelEventArgs) Handles txtNombreTrasportista.Validating
+    Private Sub txtNombreTrasportista_Validating(sender As Object, e As CancelEventArgs) Handles txtNombreTransportista.Validating
         If DirectCast(sender, TextBox).Text.Length > 0 Then
             Me.erroricono.SetError(sender, "")
         Else

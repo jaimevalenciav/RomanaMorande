@@ -221,11 +221,13 @@ Public Class frmTransportistas
 
     Private Sub DataListado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellDoubleClick
         If txtflag.Text = "1" Then
-            frmRegistroPatentes.txtIdTransportista.Text = DataListado.SelectedCells.Item(1).Value
-            frmRegistroPatentes.txtNombreTrasportista.Text = DataListado.SelectedCells.Item(2).Value
+            frmMaestroPatentes.txtIdTransportista.Text = DataListado.SelectedCells.Item(1).Value
+            frmMaestroPatentes.txtNombreTransportista.Text = DataListado.SelectedCells.Item(3).Value
             Me.Close()
-
-
+        ElseIf txtflag.Text = "2" Then
+            frmPatenteVendimia.txtIdTransportista.Text = DataListado.SelectedCells.Item(1).Value
+            frmPatenteVendimia.txtNombreTrasportista.Text = DataListado.SelectedCells.Item(3).Value
+            Me.Close()
         End If
     End Sub
 
@@ -276,5 +278,6 @@ Public Class frmTransportistas
             e.Handled = True
         End If
     End Sub
+
 
 End Class

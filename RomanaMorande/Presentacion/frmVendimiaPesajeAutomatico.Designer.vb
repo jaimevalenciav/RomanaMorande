@@ -118,6 +118,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -564,6 +565,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Button4)
         Me.GroupBox4.Controls.Add(Me.Label31)
         Me.GroupBox4.Controls.Add(Me.txtcastigo)
         Me.GroupBox4.Controls.Add(Me.Label30)
@@ -727,7 +729,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.txtnomsector.Location = New System.Drawing.Point(115, 80)
         Me.txtnomsector.Name = "txtnomsector"
-        Me.txtnomsector.Size = New System.Drawing.Size(202, 20)
+        Me.txtnomsector.Size = New System.Drawing.Size(168, 20)
         Me.txtnomsector.TabIndex = 68
         '
         'Label24
@@ -1062,6 +1064,15 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.DateTimePicker1.Size = New System.Drawing.Size(82, 20)
         Me.DateTimePicker1.TabIndex = 63
         '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(284, 79)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(33, 22)
+        Me.Button4.TabIndex = 64
+        Me.Button4.Text = "..."
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'frmVendimiaPesajeAutomatico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1185,4 +1196,5 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents txttemp As TextBox
     Friend WithEvents Timer2 As Timer
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Button4 As Button
 End Class

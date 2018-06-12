@@ -247,7 +247,7 @@ Partial Class frmTipoVehiculo
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmTipoVehiculo"
-        Me.Text = "Transportistas"
+        Me.Text = "Tipos de Vehículos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).EndInit()

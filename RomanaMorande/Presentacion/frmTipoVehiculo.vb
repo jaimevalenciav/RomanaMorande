@@ -38,7 +38,8 @@ Public Class frmTipoVehiculo
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
+        txtIdTipoVehiculo.Text = ""
+        txtNombreTipoVehiculo.Text = ""
         btnguardar.Visible = True
         btnEditar.Visible = False
 
@@ -200,9 +201,16 @@ Public Class frmTipoVehiculo
     End Sub
 
     Private Sub DataListado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellDoubleClick
-        frmRegistroPatentes.txtIdTipoVehiculo.Text = DataListado.SelectedCells.Item(1).Value
-        frmRegistroPatentes.txtNombreTipoVehiculo.Text = DataListado.SelectedCells.Item(2).Value
-        Me.Close()
+        If txtflag.Text = 1 Then
+            frmMaestroPatentes.txtIdTipoVehiculo.Text = DataListado.SelectedCells.Item(1).Value
+            frmMaestroPatentes.txtNombreTipoVehiculo.Text = DataListado.SelectedCells.Item(2).Value
+            Me.Close()
+
+        ElseIf txtflag.Text = 2 Then
+            frmPatenteVendimia.txtIdTipoVehiculo.Text = DataListado.SelectedCells.Item(1).Value
+            frmPatenteVendimia.txtNombreTipoVehiculo.Text = DataListado.SelectedCells.Item(2).Value
+            Me.Close()
+        End If
     End Sub
 
 

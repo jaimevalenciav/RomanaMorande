@@ -8,8 +8,9 @@ Public Class frmMaestroPatentes
 
     End Sub
     Private Sub btnBuscarTransportista_Click(sender As Object, e As EventArgs) Handles btnBuscarTransportista.Click
-        frmTransportistas.txtflag.Text = "1"
+        frmTransportistas.txtflag.Text = 1
         frmTransportistas.ShowDialog()
+
     End Sub
 
     Private Sub btnBuscarTipoVehiculo_Click(sender As Object, e As EventArgs) Handles btnBuscarTipoVehiculo.Click
@@ -27,7 +28,7 @@ Public Class frmMaestroPatentes
         txtpatente.Text = ""
         txtmarca.Text = ""
         txtIdTransportista.Text = ""
-        txtNombreTrasportista.Text = ""
+        txtNombreTransportista.Text = ""
         txtIdTipoVehiculo.Text = ""
         txtNombreTipoVehiculo.Text = ""
         txtTara.Text = "0"
@@ -158,7 +159,7 @@ Public Class frmMaestroPatentes
         End If
     End Sub
 
-    Private Sub txtNombreTrasportista_Validating(sender As Object, e As CancelEventArgs) Handles txtNombreTrasportista.Validating
+    Private Sub txtNombreTrasportista_Validating(sender As Object, e As CancelEventArgs) Handles txtNombreTransportista.Validating
         If DirectCast(sender, TextBox).Text.Length > 0 Then
             Me.erroricono.SetError(sender, "")
         Else
@@ -200,7 +201,7 @@ Public Class frmMaestroPatentes
         txtpatente.Text = DataListado.SelectedCells.Item(1).Value
         txtmarca.Text = DataListado.SelectedCells.Item(2).Value
         txtIdTransportista.Text = DataListado.SelectedCells.Item(3).Value
-        txtNombreTrasportista.Text = DataListado.SelectedCells.Item(4).Value
+        txtNombreTransportista.Text = DataListado.SelectedCells.Item(4).Value
         txtIdTipoVehiculo.Text = DataListado.SelectedCells.Item(5).Value
         txtNombreTipoVehiculo.Text = DataListado.SelectedCells.Item(6).Value
         txtTara.Text = DataListado.SelectedCells.Item(7).Value
@@ -241,5 +242,7 @@ Public Class frmMaestroPatentes
         End Try
     End Sub
 
+    Private Sub DataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellContentClick
 
+    End Sub
 End Class

@@ -127,5 +127,14 @@ Public Class frmenvases
         limpiar()
     End Sub
 
+    Private Sub DataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellContentClick
+        If txtflag.Text = 1 Then
 
+
+        ElseIf txtflag.Text = 2 Then
+            frmPatenteVendimia.txtidtipoenvase.Text = DataListado.SelectedCells.Item(1).Value
+            frmPatenteVendimia.txtnombretipoenvase.Text = DataListado.SelectedCells.Item(2).Value
+            Me.Close()
+        End If
+    End Sub
 End Class

@@ -284,11 +284,12 @@ Partial Class frmTransportistas
         '
         'txtflag
         '
+        Me.txtflag.Enabled = False
         Me.txtflag.Location = New System.Drawing.Point(729, 335)
         Me.txtflag.Name = "txtflag"
         Me.txtflag.Size = New System.Drawing.Size(35, 20)
         Me.txtflag.TabIndex = 10
-        Me.txtflag.Text = "0"
+        Me.txtflag.Text = "1"
         Me.txtflag.Visible = False
         '
         'frmTransportistas

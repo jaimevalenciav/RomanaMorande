@@ -39,6 +39,7 @@ Partial Class frmPrincipal
         Me.CalidadesUvaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContratosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VariedadesUvaEnSAPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BodegasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RomanaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesajeAutomáticoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesajeNormalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -57,7 +58,7 @@ Partial Class frmPrincipal
         Me.PesajesVendimiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbluser = New System.Windows.Forms.Label()
-        Me.BodegasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CamionesVendimiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -139,7 +140,7 @@ Partial Class frmPrincipal
         '
         'MaestrosToolStripMenuItem
         '
-        Me.MaestrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnvasesToolStripMenuItem, Me.TablaBaToolStripMenuItem, Me.CalidadesUvaToolStripMenuItem, Me.ContratosToolStripMenuItem, Me.VariedadesUvaEnSAPToolStripMenuItem, Me.BodegasToolStripMenuItem})
+        Me.MaestrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EnvasesToolStripMenuItem, Me.TablaBaToolStripMenuItem, Me.CalidadesUvaToolStripMenuItem, Me.ContratosToolStripMenuItem, Me.VariedadesUvaEnSAPToolStripMenuItem, Me.BodegasToolStripMenuItem, Me.CamionesVendimiaToolStripMenuItem})
         Me.MaestrosToolStripMenuItem.Image = CType(resources.GetObject("MaestrosToolStripMenuItem.Image"), System.Drawing.Image)
         Me.MaestrosToolStripMenuItem.Name = "MaestrosToolStripMenuItem"
         Me.MaestrosToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
@@ -179,6 +180,13 @@ Partial Class frmPrincipal
         Me.VariedadesUvaEnSAPToolStripMenuItem.Name = "VariedadesUvaEnSAPToolStripMenuItem"
         Me.VariedadesUvaEnSAPToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.VariedadesUvaEnSAPToolStripMenuItem.Text = "Variedades Uva en SAP"
+        '
+        'BodegasToolStripMenuItem
+        '
+        Me.BodegasToolStripMenuItem.Image = CType(resources.GetObject("BodegasToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.BodegasToolStripMenuItem.Name = "BodegasToolStripMenuItem"
+        Me.BodegasToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.BodegasToolStripMenuItem.Text = "Bodegas"
         '
         'RomanaToolStripMenuItem
         '
@@ -311,12 +319,12 @@ Partial Class frmPrincipal
         Me.lbluser.TabIndex = 3
         Me.lbluser.Text = "Label2"
         '
-        'BodegasToolStripMenuItem
+        'CamionesVendimiaToolStripMenuItem
         '
-        Me.BodegasToolStripMenuItem.Image = CType(resources.GetObject("BodegasToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.BodegasToolStripMenuItem.Name = "BodegasToolStripMenuItem"
-        Me.BodegasToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
-        Me.BodegasToolStripMenuItem.Text = "Bodegas"
+        Me.CamionesVendimiaToolStripMenuItem.Image = CType(resources.GetObject("CamionesVendimiaToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CamionesVendimiaToolStripMenuItem.Name = "CamionesVendimiaToolStripMenuItem"
+        Me.CamionesVendimiaToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.CamionesVendimiaToolStripMenuItem.Text = "Camiones Vendimia"
         '
         'frmPrincipal
         '
@@ -375,4 +383,5 @@ Partial Class frmPrincipal
     Friend WithEvents ContratosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VariedadesUvaEnSAPToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BodegasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CamionesVendimiaToolStripMenuItem As ToolStripMenuItem
 End Class
