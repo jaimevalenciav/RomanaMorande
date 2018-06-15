@@ -34,4 +34,12 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
     End Sub
+
+    Private Sub DataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellContentClick
+
+    End Sub
+
+    Private Sub btnnuevopesaje_Click(sender As Object, e As EventArgs) Handles btnnuevopesaje.Click
+        frmCreaPesajeVendimia.ShowDialog()
+    End Sub
 End Class

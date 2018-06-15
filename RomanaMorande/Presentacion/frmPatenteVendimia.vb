@@ -12,21 +12,23 @@ Public Class frmPatenteVendimia
 
         txtidvehiculo.Text = ""
         txtpatente.Text = ""
-        txtmarca.Text = ""
         txtIdTransportista.Text = ""
         txtNombreTrasportista.Text = ""
         txtIdTipoVehiculo.Text = ""
         txtNombreTipoVehiculo.Text = ""
         txtTara.Text = "0"
         txtbuscapatente.Text = ""
+        txtidtipoenvase.Text = ""
+        txtnombretipoenvase.Text = ""
+        txtcantenvase.Text = ""
 
     End Sub
 
 
     Private Sub mostrar()
         Try
-            Dim func As New fpatente
-            dt = func.mostrarcamiones
+            Dim func As New fpatentevendimia
+            dt = func.mostrar
 
 
             If dt.Rows.Count <> 0 Then
@@ -81,16 +83,18 @@ Public Class frmPatenteVendimia
     End Sub
 
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles btnguardar.Click
-        If Me.ValidateChildren = True And txtpatente.Text <> "" And txtmarca.Text <> "" And txtIdTransportista.Text <> "" And txtIdTipoVehiculo.Text <> "" And txtTara.Text <> "" Then
+        If Me.ValidateChildren = True And txtpatente.Text <> "" And txtIdTransportista.Text <> "" And txtIdTipoVehiculo.Text <> "" And txtTara.Text <> "" Then
             Try
-                Dim dts As New vpatente
-                Dim func As New fpatente
+                Dim dts As New vpatentevendimia
+                Dim func As New fpatentevendimia
 
                 dts.gpatente = txtpatente.Text
-                dts.gmarca = txtmarca.Text
                 dts.gidtransportista = CType(Val(txtIdTransportista.Text), Integer)
                 dts.gidtipovehiculo = CType(Val(txtIdTipoVehiculo.Text), Integer)
                 dts.gtara = Val(txtTara.Text)
+                dts.gtipoenvase = Val(txtidtipoenvase.Text)
+                dts.gcantenv = Val(txtcantenvase.Text)
+
 
                 If func.insertar(dts) Then
                     MessageBox.Show("Patente Registrada Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -123,5 +127,27 @@ Public Class frmPatenteVendimia
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         frmenvases.txtflag.Text = "2"
         frmenvases.ShowDialog()
+    End Sub
+
+
+
+    Private Sub DataListado_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellContentDoubleClick
+        frmCreaPesajeVendimia.txtidvehiculo.Text = DataListado.SelectedCells.Item(0).Value
+        frmCreaPesajeVendimia.txtpatente.Text = DataListado.SelectedCells.Item(1).Value
+        frmCreaPesajeVendimia.txttipoenvase.Text = DataListado.SelectedCells.Item(6).Value
+        frmCreaPesajeVendimia.txttransportista.Text = DataListado.SelectedCells.Item(3).Value
+        frmCreaPesajeVendimia.txttipovehiculo.Text = DataListado.SelectedCells.Item(5).Value
+        frmCreaPesajeVendimia.txttara.Text = DataListado.SelectedCells.Item(8).Value
+        frmCreaPesajeVendimia.txtcanenvases.Text = DataListado.SelectedCells.Item(7).Value
+
+        Me.Close()
+    End Sub
+
+    Private Sub DataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellContentClick
+
+    End Sub
+
+    Private Sub txtbuscapatente_TextChanged(sender As Object, e As EventArgs) Handles txtbuscapatente.TextChanged
+        buscarpatente()
     End Sub
 End Class

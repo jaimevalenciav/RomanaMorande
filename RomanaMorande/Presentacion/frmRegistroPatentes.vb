@@ -194,6 +194,9 @@ Public Class frmRegistroPatentes
 
 
     Private Sub DataListado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellDoubleClick
+
+
+
         frmcreapesajedestareM.txtidvehiculo.Text = DataListado.SelectedCells.Item(0).Value
         frmcreapesajedestareM.txtpatente.Text = DataListado.SelectedCells.Item(1).Value
         frmcreapesajedestareM.txtmarca.Text = DataListado.SelectedCells.Item(2).Value

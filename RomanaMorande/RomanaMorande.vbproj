@@ -137,6 +137,7 @@
     <Compile Include="Datos\farticulosuva.vb" />
     <Compile Include="Datos\fenvases.vb" />
     <Compile Include="Datos\fpatente.vb" />
+    <Compile Include="Datos\fpatentevendimia.vb" />
     <Compile Include="Datos\fpesajedestareM.vb" />
     <Compile Include="Datos\fpesajesindestareM.vb" />
     <Compile Include="Datos\ftransportistas.vb" />
@@ -151,6 +152,7 @@
     <Compile Include="Logica\vcalidades.vb" />
     <Compile Include="Logica\venvases.vb" />
     <Compile Include="Logica\vpatente.vb" />
+    <Compile Include="Logica\vpatentevendimia.vb" />
     <Compile Include="Logica\vpesajedestareM.vb" />
     <Compile Include="Logica\vpesajesindestareM.vb" />
     <Compile Include="Logica\vtransportistas.vb" />
@@ -236,6 +238,12 @@
       <DependentUpon>frmContratos.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmContratos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmCreaPesajeVendimia.Designer.vb">
+      <DependentUpon>frmCreaPesajeVendimia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmCreaPesajeVendimia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frmenvases.Designer.vb">
@@ -463,6 +471,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmContratos.resx">
       <DependentUpon>frmContratos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmCreaPesajeVendimia.resx">
+      <DependentUpon>frmCreaPesajeVendimia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmenvases.resx">
       <DependentUpon>frmenvases.vb</DependentUpon>

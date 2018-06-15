@@ -25,6 +25,12 @@ Partial Class frmPatenteVendimia
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPatenteVendimia))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtnombretipoenvase = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtidtipoenvase = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtcantenvase = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtTara = New System.Windows.Forms.TextBox()
         Me.btnBuscarTipoVehiculo = New System.Windows.Forms.Button()
@@ -35,8 +41,6 @@ Partial Class frmPatenteVendimia
         Me.txtNombreTrasportista = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtIdTransportista = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtmarca = New System.Windows.Forms.TextBox()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.btnguardar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
@@ -51,12 +55,6 @@ Partial Class frmPatenteVendimia
         Me.erroricono = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.txtbuscapatente = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtcantenvase = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.txtnombretipoenvase = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtidtipoenvase = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.erroricono, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,8 +79,6 @@ Partial Class frmPatenteVendimia
         Me.GroupBox2.Controls.Add(Me.txtNombreTrasportista)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.txtIdTransportista)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.txtmarca)
         Me.GroupBox2.Controls.Add(Me.btnNuevo)
         Me.GroupBox2.Controls.Add(Me.btnguardar)
         Me.GroupBox2.Controls.Add(Me.btnEditar)
@@ -97,10 +93,62 @@ Partial Class frmPatenteVendimia
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Agregar Patente"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(229, 191)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(33, 20)
+        Me.Button1.TabIndex = 26
+        Me.Button1.Text = "..."
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'txtnombretipoenvase
+        '
+        Me.txtnombretipoenvase.Enabled = False
+        Me.txtnombretipoenvase.Location = New System.Drawing.Point(68, 191)
+        Me.txtnombretipoenvase.Name = "txtnombretipoenvase"
+        Me.txtnombretipoenvase.Size = New System.Drawing.Size(160, 20)
+        Me.txtnombretipoenvase.TabIndex = 29
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 175)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(67, 13)
+        Me.Label9.TabIndex = 28
+        Me.Label9.Text = "Tipo Envase"
+        '
+        'txtidtipoenvase
+        '
+        Me.txtidtipoenvase.Enabled = False
+        Me.txtidtipoenvase.Location = New System.Drawing.Point(9, 191)
+        Me.txtidtipoenvase.Name = "txtidtipoenvase"
+        Me.txtidtipoenvase.Size = New System.Drawing.Size(53, 20)
+        Me.txtidtipoenvase.TabIndex = 27
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(6, 220)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(57, 13)
+        Me.Label8.TabIndex = 25
+        Me.Label8.Text = "Cant. Env."
+        '
+        'txtcantenvase
+        '
+        Me.txtcantenvase.Location = New System.Drawing.Point(68, 217)
+        Me.txtcantenvase.Name = "txtcantenvase"
+        Me.txtcantenvase.Size = New System.Drawing.Size(58, 20)
+        Me.txtcantenvase.TabIndex = 24
+        Me.txtcantenvase.Text = "0"
+        Me.txtcantenvase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(138, 256)
+        Me.Label6.Location = New System.Drawing.Point(138, 220)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(29, 13)
         Me.Label6.TabIndex = 23
@@ -108,7 +156,7 @@ Partial Class frmPatenteVendimia
         '
         'txtTara
         '
-        Me.txtTara.Location = New System.Drawing.Point(173, 253)
+        Me.txtTara.Location = New System.Drawing.Point(173, 217)
         Me.txtTara.Name = "txtTara"
         Me.txtTara.Size = New System.Drawing.Size(86, 20)
         Me.txtTara.TabIndex = 6
@@ -117,7 +165,7 @@ Partial Class frmPatenteVendimia
         '
         'btnBuscarTipoVehiculo
         '
-        Me.btnBuscarTipoVehiculo.Location = New System.Drawing.Point(229, 188)
+        Me.btnBuscarTipoVehiculo.Location = New System.Drawing.Point(229, 152)
         Me.btnBuscarTipoVehiculo.Name = "btnBuscarTipoVehiculo"
         Me.btnBuscarTipoVehiculo.Size = New System.Drawing.Size(33, 20)
         Me.btnBuscarTipoVehiculo.TabIndex = 5
@@ -127,7 +175,7 @@ Partial Class frmPatenteVendimia
         'txtNombreTipoVehiculo
         '
         Me.txtNombreTipoVehiculo.Enabled = False
-        Me.txtNombreTipoVehiculo.Location = New System.Drawing.Point(68, 188)
+        Me.txtNombreTipoVehiculo.Location = New System.Drawing.Point(68, 152)
         Me.txtNombreTipoVehiculo.Name = "txtNombreTipoVehiculo"
         Me.txtNombreTipoVehiculo.Size = New System.Drawing.Size(160, 20)
         Me.txtNombreTipoVehiculo.TabIndex = 20
@@ -135,7 +183,7 @@ Partial Class frmPatenteVendimia
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(6, 172)
+        Me.Label5.Location = New System.Drawing.Point(6, 136)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(74, 13)
         Me.Label5.TabIndex = 19
@@ -144,14 +192,14 @@ Partial Class frmPatenteVendimia
         'txtIdTipoVehiculo
         '
         Me.txtIdTipoVehiculo.Enabled = False
-        Me.txtIdTipoVehiculo.Location = New System.Drawing.Point(9, 188)
+        Me.txtIdTipoVehiculo.Location = New System.Drawing.Point(9, 152)
         Me.txtIdTipoVehiculo.Name = "txtIdTipoVehiculo"
         Me.txtIdTipoVehiculo.Size = New System.Drawing.Size(53, 20)
         Me.txtIdTipoVehiculo.TabIndex = 18
         '
         'btnBuscarTransportista
         '
-        Me.btnBuscarTransportista.Location = New System.Drawing.Point(229, 149)
+        Me.btnBuscarTransportista.Location = New System.Drawing.Point(229, 113)
         Me.btnBuscarTransportista.Name = "btnBuscarTransportista"
         Me.btnBuscarTransportista.Size = New System.Drawing.Size(33, 20)
         Me.btnBuscarTransportista.TabIndex = 4
@@ -161,7 +209,7 @@ Partial Class frmPatenteVendimia
         'txtNombreTrasportista
         '
         Me.txtNombreTrasportista.Enabled = False
-        Me.txtNombreTrasportista.Location = New System.Drawing.Point(68, 149)
+        Me.txtNombreTrasportista.Location = New System.Drawing.Point(68, 113)
         Me.txtNombreTrasportista.Name = "txtNombreTrasportista"
         Me.txtNombreTrasportista.Size = New System.Drawing.Size(160, 20)
         Me.txtNombreTrasportista.TabIndex = 16
@@ -169,7 +217,7 @@ Partial Class frmPatenteVendimia
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(6, 133)
+        Me.Label4.Location = New System.Drawing.Point(6, 97)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(68, 13)
         Me.Label4.TabIndex = 15
@@ -178,26 +226,10 @@ Partial Class frmPatenteVendimia
         'txtIdTransportista
         '
         Me.txtIdTransportista.Enabled = False
-        Me.txtIdTransportista.Location = New System.Drawing.Point(9, 149)
+        Me.txtIdTransportista.Location = New System.Drawing.Point(9, 113)
         Me.txtIdTransportista.Name = "txtIdTransportista"
         Me.txtIdTransportista.Size = New System.Drawing.Size(53, 20)
         Me.txtIdTransportista.TabIndex = 14
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 94)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 13)
-        Me.Label3.TabIndex = 13
-        Me.Label3.Text = "Marca Vehículo"
-        '
-        'txtmarca
-        '
-        Me.txtmarca.Location = New System.Drawing.Point(9, 110)
-        Me.txtmarca.Name = "txtmarca"
-        Me.txtmarca.Size = New System.Drawing.Size(254, 20)
-        Me.txtmarca.TabIndex = 3
         '
         'btnNuevo
         '
@@ -333,58 +365,6 @@ Partial Class frmPatenteVendimia
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Listado de Patentes"
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(6, 256)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(57, 13)
-        Me.Label8.TabIndex = 25
-        Me.Label8.Text = "Cant. Env."
-        '
-        'txtcantenvase
-        '
-        Me.txtcantenvase.Location = New System.Drawing.Point(68, 253)
-        Me.txtcantenvase.Name = "txtcantenvase"
-        Me.txtcantenvase.Size = New System.Drawing.Size(58, 20)
-        Me.txtcantenvase.TabIndex = 24
-        Me.txtcantenvase.Text = "0"
-        Me.txtcantenvase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(229, 227)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(33, 20)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "..."
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'txtnombretipoenvase
-        '
-        Me.txtnombretipoenvase.Enabled = False
-        Me.txtnombretipoenvase.Location = New System.Drawing.Point(68, 227)
-        Me.txtnombretipoenvase.Name = "txtnombretipoenvase"
-        Me.txtnombretipoenvase.Size = New System.Drawing.Size(160, 20)
-        Me.txtnombretipoenvase.TabIndex = 29
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 211)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(67, 13)
-        Me.Label9.TabIndex = 28
-        Me.Label9.Text = "Tipo Envase"
-        '
-        'txtidtipoenvase
-        '
-        Me.txtidtipoenvase.Enabled = False
-        Me.txtidtipoenvase.Location = New System.Drawing.Point(9, 227)
-        Me.txtidtipoenvase.Name = "txtidtipoenvase"
-        Me.txtidtipoenvase.Size = New System.Drawing.Size(53, 20)
-        Me.txtidtipoenvase.TabIndex = 27
-        '
         'frmPatenteVendimia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -395,6 +375,7 @@ Partial Class frmPatenteVendimia
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmPatenteVendimia"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Patente Camión Vendimia"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -423,8 +404,6 @@ Partial Class frmPatenteVendimia
     Friend WithEvents txtNombreTrasportista As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtIdTransportista As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txtmarca As TextBox
     Friend WithEvents btnNuevo As Button
     Friend WithEvents btnguardar As Button
     Friend WithEvents btnEditar As Button

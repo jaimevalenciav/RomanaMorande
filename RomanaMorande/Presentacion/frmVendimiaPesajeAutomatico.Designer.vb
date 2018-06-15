@@ -54,6 +54,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.sppuerto = New System.IO.Ports.SerialPort(Me.components)
         Me.txtidtransportista = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.txtnomprov = New System.Windows.Forms.TextBox()
         Me.txtrutprov = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -64,6 +65,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnBuscarTransportista = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.txtcastigo = New System.Windows.Forms.TextBox()
         Me.Label30 = New System.Windows.Forms.Label()
@@ -117,8 +119,8 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -144,27 +146,25 @@ Partial Class frmVendimiaPesajeAutomatico
         'txtcantenv
         '
         Me.txtcantenv.Enabled = False
-        Me.txtcantenv.Location = New System.Drawing.Point(379, 142)
+        Me.txtcantenv.Location = New System.Drawing.Point(318, 143)
         Me.txtcantenv.Name = "txtcantenv"
-        Me.txtcantenv.Size = New System.Drawing.Size(95, 20)
+        Me.txtcantenv.Size = New System.Drawing.Size(53, 20)
         Me.txtcantenv.TabIndex = 54
-        Me.txtcantenv.Visible = False
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(278, 147)
+        Me.Label15.Location = New System.Drawing.Point(281, 146)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(93, 13)
+        Me.Label15.Size = New System.Drawing.Size(37, 13)
         Me.Label15.TabIndex = 53
-        Me.Label15.Text = "Cantidad Envases"
-        Me.Label15.Visible = False
+        Me.Label15.Text = "EnvIN"
         '
         'btncapturapesobruto
         '
         Me.btncapturapesobruto.Image = CType(resources.GetObject("btncapturapesobruto.Image"), System.Drawing.Image)
         Me.btncapturapesobruto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btncapturapesobruto.Location = New System.Drawing.Point(376, 480)
+        Me.btncapturapesobruto.Location = New System.Drawing.Point(375, 408)
         Me.btncapturapesobruto.Name = "btncapturapesobruto"
         Me.btncapturapesobruto.Size = New System.Drawing.Size(171, 72)
         Me.btncapturapesobruto.TabIndex = 52
@@ -199,7 +199,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.btncapturapesotara.Image = CType(resources.GetObject("btncapturapesotara.Image"), System.Drawing.Image)
         Me.btncapturapesotara.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btncapturapesotara.Location = New System.Drawing.Point(376, 407)
+        Me.btncapturapesotara.Location = New System.Drawing.Point(375, 480)
         Me.btncapturapesotara.Name = "btncapturapesotara"
         Me.btncapturapesotara.Size = New System.Drawing.Size(171, 72)
         Me.btncapturapesotara.TabIndex = 51
@@ -300,7 +300,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtpesajebruto.Enabled = False
         Me.txtpesajebruto.Font = New System.Drawing.Font("Microsoft Sans Serif", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtpesajebruto.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtpesajebruto.Location = New System.Drawing.Point(185, 481)
+        Me.txtpesajebruto.Location = New System.Drawing.Point(185, 409)
         Me.txtpesajebruto.Name = "txtpesajebruto"
         Me.txtpesajebruto.Size = New System.Drawing.Size(189, 71)
         Me.txtpesajebruto.TabIndex = 7
@@ -311,7 +311,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(113, 572)
+        Me.Label12.Location = New System.Drawing.Point(114, 572)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(64, 24)
         Me.Label12.TabIndex = 43
@@ -321,7 +321,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(102, 501)
+        Me.Label11.Location = New System.Drawing.Point(103, 429)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(75, 24)
         Me.Label11.TabIndex = 42
@@ -401,7 +401,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtpesajetara.Enabled = False
         Me.txtpesajetara.Font = New System.Drawing.Font("Microsoft Sans Serif", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtpesajetara.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtpesajetara.Location = New System.Drawing.Point(185, 408)
+        Me.txtpesajetara.Location = New System.Drawing.Point(185, 481)
         Me.txtpesajetara.Name = "txtpesajetara"
         Me.txtpesajetara.Size = New System.Drawing.Size(189, 71)
         Me.txtpesajetara.TabIndex = 6
@@ -418,6 +418,8 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.TextBox1)
+        Me.GroupBox3.Controls.Add(Me.Label32)
         Me.GroupBox3.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox3.Controls.Add(Me.txtnomprov)
         Me.GroupBox3.Controls.Add(Me.txtrutprov)
@@ -479,6 +481,14 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.TabIndex = 40
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Pesaje"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(89, 98)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(82, 20)
+        Me.DateTimePicker1.TabIndex = 63
         '
         'txtnomprov
         '
@@ -598,6 +608,15 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox4.TabIndex = 55
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos de la Uva"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(284, 79)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(33, 22)
+        Me.Button4.TabIndex = 64
+        Me.Button4.Text = "..."
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'Label31
         '
@@ -876,7 +895,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.lbltitulo.AutoSize = True
         Me.lbltitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbltitulo.Location = New System.Drawing.Point(116, 435)
+        Me.lbltitulo.Location = New System.Drawing.Point(117, 508)
         Me.lbltitulo.Name = "lbltitulo"
         Me.lbltitulo.Size = New System.Drawing.Size(61, 24)
         Me.lbltitulo.TabIndex = 30
@@ -1056,22 +1075,22 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.Timer2.Interval = 1000
         '
-        'DateTimePicker1
+        'TextBox1
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(89, 98)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(82, 20)
-        Me.DateTimePicker1.TabIndex = 63
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(421, 143)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(53, 20)
+        Me.TextBox1.TabIndex = 65
         '
-        'Button4
+        'Label32
         '
-        Me.Button4.Location = New System.Drawing.Point(284, 79)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(33, 22)
-        Me.Button4.TabIndex = 64
-        Me.Button4.Text = "..."
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(374, 146)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(49, 13)
+        Me.Label32.TabIndex = 64
+        Me.Label32.Text = "EnvOUT"
         '
         'frmVendimiaPesajeAutomatico
         '
@@ -1197,4 +1216,6 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents Timer2 As Timer
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button4 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label32 As Label
 End Class
