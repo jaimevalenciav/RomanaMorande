@@ -54,7 +54,9 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.sppuerto = New System.IO.Ports.SerialPort(Me.components)
         Me.txtidtransportista = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.dpfechaguia = New System.Windows.Forms.DateTimePicker()
         Me.txtnomprov = New System.Windows.Forms.TextBox()
         Me.txtrutprov = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -119,8 +121,6 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label32 = New System.Windows.Forms.Label()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -420,7 +420,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.GroupBox3.Controls.Add(Me.TextBox1)
         Me.GroupBox3.Controls.Add(Me.Label32)
-        Me.GroupBox3.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox3.Controls.Add(Me.dpfechaguia)
         Me.GroupBox3.Controls.Add(Me.txtnomprov)
         Me.GroupBox3.Controls.Add(Me.txtrutprov)
         Me.GroupBox3.Controls.Add(Me.Label21)
@@ -482,13 +482,30 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Pesaje"
         '
-        'DateTimePicker1
+        'TextBox1
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(89, 98)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(82, 20)
-        Me.DateTimePicker1.TabIndex = 63
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(421, 143)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(53, 20)
+        Me.TextBox1.TabIndex = 65
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(374, 146)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(49, 13)
+        Me.Label32.TabIndex = 64
+        Me.Label32.Text = "EnvOUT"
+        '
+        'dpfechaguia
+        '
+        Me.dpfechaguia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dpfechaguia.Location = New System.Drawing.Point(89, 98)
+        Me.dpfechaguia.Name = "dpfechaguia"
+        Me.dpfechaguia.Size = New System.Drawing.Size(82, 20)
+        Me.dpfechaguia.TabIndex = 63
         '
         'txtnomprov
         '
@@ -1075,23 +1092,6 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.Timer2.Interval = 1000
         '
-        'TextBox1
-        '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(421, 143)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(53, 20)
-        Me.TextBox1.TabIndex = 65
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(374, 146)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(49, 13)
-        Me.Label32.TabIndex = 64
-        Me.Label32.Text = "EnvOUT"
-        '
         'frmVendimiaPesajeAutomatico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1214,7 +1214,7 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents Label29 As Label
     Friend WithEvents txttemp As TextBox
     Friend WithEvents Timer2 As Timer
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dpfechaguia As DateTimePicker
     Friend WithEvents Button4 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label32 As Label

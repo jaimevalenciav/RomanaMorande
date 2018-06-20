@@ -140,6 +140,7 @@
     <Compile Include="Datos\fpatentevendimia.vb" />
     <Compile Include="Datos\fpesajedestareM.vb" />
     <Compile Include="Datos\fpesajesindestareM.vb" />
+    <Compile Include="Datos\fpesajevendimia.vb" />
     <Compile Include="Datos\ftransportistas.vb" />
     <Compile Include="Datos\ftipovehiculos.vb" />
     <Compile Include="Datos\fcalidades.vb" />
@@ -155,6 +156,7 @@
     <Compile Include="Logica\vpatentevendimia.vb" />
     <Compile Include="Logica\vpesajedestareM.vb" />
     <Compile Include="Logica\vpesajesindestareM.vb" />
+    <Compile Include="Logica\vpesajevendimia.vb" />
     <Compile Include="Logica\vtransportistas.vb" />
     <Compile Include="pesajebckDataSet.Designer.vb">
       <AutoGen>True</AutoGen>

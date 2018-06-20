@@ -1,5 +1,5 @@
 ﻿Public Class frmVendimiaPesajeAutomatico
-
+    Private dt As New DataTable
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
@@ -24,6 +24,9 @@
         txtpatente.BackColor = Color.White
         txtidbodega.BackColor = Color.White
         txtbodega.BackColor = Color.White
+
+        mostrar()
+
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
@@ -41,5 +44,28 @@
 
     Private Sub btnnuevopesaje_Click(sender As Object, e As EventArgs) Handles btnnuevopesaje.Click
         frmCreaPesajeVendimia.ShowDialog()
+    End Sub
+
+    Private Sub mostrar()
+
+        Try
+            Dim func As New fpesajevendimia
+            dt = func.mostrar
+            dpfechaguia.Value = Date.Today
+
+            If dt.Rows.Count <> 0 Then
+                DataListado.DataSource = dt
+
+
+            Else
+                DataListado.DataSource = Nothing
+
+
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
     End Sub
 End Class
