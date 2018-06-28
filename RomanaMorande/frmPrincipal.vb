@@ -70,4 +70,8 @@
     Private Sub CamionesVendimiaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CamionesVendimiaToolStripMenuItem.Click
         frmPatenteVendimia.ShowDialog()
     End Sub
+
+    Private Sub BodegasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BodegasToolStripMenuItem.Click
+        frmBodega.ShowDialog()
+    End Sub
 End Class

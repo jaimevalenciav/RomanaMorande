@@ -324,9 +324,7 @@
         End If
     End Sub
 
-    Private Sub DataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellContentClick
 
-    End Sub
 
 
 

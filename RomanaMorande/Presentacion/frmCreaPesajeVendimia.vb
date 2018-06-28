@@ -42,7 +42,7 @@
             dts.gnumguia = 0
             dts.gidbodega = 0
             dts.gidenvase = 0
-            dts.gcantenvin = 0
+            dts.gcantenvin = txtcanenvases.Text
             dts.gcantenvout = 0
             dts.gdiftaraenvases = 0
             dts.gtipocosecha = ""

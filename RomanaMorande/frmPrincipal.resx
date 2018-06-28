@@ -1012,17 +1012,17 @@
   </data>
   <data name="CamionesVendimiaToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALkAAAC5AeKnQegAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAB6ElEQVRYR+2XPS8FQRiFR6MUErVSSwTJLRSi8JEIpVKhUKpp6PwEiT+gUag0ehJCr0ChEA0RXxHJ
-        dZ5kRmZ233XX3ZWQmOTJ7sz7njMnu/fezHXNZtNEoyHOxKhVLwNa79Gw6mAugsa54GbKqpcBrfc4t+pg
-        LoLGlRfXEeDKqoO5CIi8GJMesSZOxE0LTsWG6BW1BJgW+/7+OxyIGX9fKcCuv7bDnr9WCvDur+0QtJUC
-        1EHlAPdtEvSVAtxb9TKg9R7/Af52gCex0CZoKweog/8AtQV4EOPCet9AjZ6s7tLaA8xF0LACHIkJsVMA
-        NXqyuvJPQINj1LZ4FrEJHIo+sVgANSsAXnjmjnfpxLku8ShicQzmY2KrAGpWgADeXcmeycS5Wd9YBOb9
-        YqUAal8FgNlkz2Ti3HzUCK/iLZpjPiDWC6AWB0CLR5jDfLJnMkkDTPq1ThFONpgPi80CqIUAaDq9x6Rf
-        g9IBVsWg4P8Bh1HWbsWIsB4/UKOHXjRoeSp4Bd+5ZM9kkn8FFi/COg0DNUsTYz8BjSVx7Zt+EvZYsgLw
-        NYobf5KtXxmA33I+wcciboYLQe07oMn64E1tIRfgc8G5bhGLYDnb1wo0kT7QnevLLTjXIUgZRHdiKNvX
-        CjReG3zw7Ej7mu4DxkPn4noNJzcAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        uQAAALkB4qdB6AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHoSURBVFhH7Zc9
+        LwVBGIVHoxQStVJLBMktFKLwkQilUqFQqmno/ASJP6BRqDR6EkKvQKEQDRFfEcl1nmRGZnbfddfdlZCY
+        5MnuzPueMye7997Mdc1m00SjIc7EqFUvA1rv0bDqYC6CxrngZsqqlwGt9zi36mAugsaVF9cR4Mqqg7kI
+        iLwYkx6xJk7ETQtOxYboFbUEmBb7/v47HIgZf18pwK6/tsOev1YK8O6v7RC0lQLUQeUA920S9JUC3Fv1
+        MqD1Hv8B/naAJ7HQJmgrB6iD/wC1BXgQ48J630CNnqzu0toDzEXQsAIciQmxUwA1erK68k9Ag2PUtngW
+        sQkcij6xWAA1KwBeeOaOd+nEuS7xKGJxDOZjYqsAalaAAN5dyZ7JxLlZ31gE5v1ipQBqXwWA2WTPZOLc
+        fNQIr+ItmmM+INYLoBYHQItHmMN8smcySQNM+rVOEU42mA+LzQKohQBoOr3HpF+D0gFWxaDg/wGHUdZu
+        xYiwHj9Qo4deNGh5KngF37lkz2SSfwUWL8I6DQM1SxNjPwGNJXHtm34S9liyAvA1iht/kq1fGYDfcj7B
+        xyJuhgtB7TugyfrgTW0hF+BzwbluEYtgOdvXCjSRPtCd68stONchSBlEd2Io29cKNF4bfPDsSPua7gPG
+        Q+fieg0nNwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="MaestrosToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -40,6 +40,7 @@ Partial Class frmPrincipal
         Me.ContratosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VariedadesUvaEnSAPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BodegasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CamionesVendimiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RomanaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesajeAutomáticoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesajeNormalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -58,7 +59,6 @@ Partial Class frmPrincipal
         Me.PesajesVendimiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbluser = New System.Windows.Forms.Label()
-        Me.CamionesVendimiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -187,6 +187,13 @@ Partial Class frmPrincipal
         Me.BodegasToolStripMenuItem.Name = "BodegasToolStripMenuItem"
         Me.BodegasToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.BodegasToolStripMenuItem.Text = "Bodegas"
+        '
+        'CamionesVendimiaToolStripMenuItem
+        '
+        Me.CamionesVendimiaToolStripMenuItem.Image = CType(resources.GetObject("CamionesVendimiaToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CamionesVendimiaToolStripMenuItem.Name = "CamionesVendimiaToolStripMenuItem"
+        Me.CamionesVendimiaToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.CamionesVendimiaToolStripMenuItem.Text = "Camiones Vendimia"
         '
         'RomanaToolStripMenuItem
         '
@@ -318,13 +325,6 @@ Partial Class frmPrincipal
         Me.lbluser.Size = New System.Drawing.Size(39, 13)
         Me.lbluser.TabIndex = 3
         Me.lbluser.Text = "Label2"
-        '
-        'CamionesVendimiaToolStripMenuItem
-        '
-        Me.CamionesVendimiaToolStripMenuItem.Image = CType(resources.GetObject("CamionesVendimiaToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.CamionesVendimiaToolStripMenuItem.Name = "CamionesVendimiaToolStripMenuItem"
-        Me.CamionesVendimiaToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
-        Me.CamionesVendimiaToolStripMenuItem.Text = "Camiones Vendimia"
         '
         'frmPrincipal
         '

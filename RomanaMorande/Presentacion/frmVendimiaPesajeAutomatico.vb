@@ -16,13 +16,13 @@
         'bloquear campos que no deben ser modificables
         txtnumpesaje.ReadOnly = True
         txtpatente.ReadOnly = True
-        txtidbodega.ReadOnly = True
+        txtcodbodega.ReadOnly = True
         txtbodega.ReadOnly = True
 
         'cambio de color de campos bloqueados
         txtnumpesaje.BackColor = Color.White
         txtpatente.BackColor = Color.White
-        txtidbodega.BackColor = Color.White
+        txtcodbodega.BackColor = Color.White
         txtbodega.BackColor = Color.White
 
         mostrar()
@@ -38,9 +38,7 @@
 
     End Sub
 
-    Private Sub DataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellContentClick
 
-    End Sub
 
     Private Sub btnnuevopesaje_Click(sender As Object, e As EventArgs) Handles btnnuevopesaje.Click
         frmCreaPesajeVendimia.ShowDialog()
@@ -55,17 +53,46 @@
 
             If dt.Rows.Count <> 0 Then
                 DataListado.DataSource = dt
-
-
             Else
                 DataListado.DataSource = Nothing
-
-
             End If
-
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub DataListado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellDoubleClick
+        txtnumpesaje.Text = DataListado.SelectedCells.Item(1).Value
+        txtpatente.Text = DataListado.SelectedCells.Item(4).Value
+        txtcodbodega.Text = DataListado.SelectedCells.Item(18).Value
+        txtbodega.Text = DataListado.SelectedCells.Item(19).Value
+        txtnumcontrato.Text = DataListado.SelectedCells.Item(26).Value
+        txtrutprov.Text = DataListado.SelectedCells.Item(28).Value
+        txtnomprov.Text = DataListado.SelectedCells.Item(29).Value
+        txtnumguia.Text = DataListado.SelectedCells.Item(2).Value
+        txtidtransportista.Text = DataListado.SelectedCells.Item(5).Value
+        txtnomtrans.Text = DataListado.SelectedCells.Item(6).Value
+        txttara.Text = DataListado.SelectedCells.Item(46).Value
+        txtidbodega.Text = DataListado.SelectedCells.Item(17).Value
+        If DataListado.SelectedCells.Item(24).Value.ToString = "M" Then
+            rbManual.Checked = True
+        Else
+            rbMecanica.Checked = True
+        End If
+        txttipoenv.Text = DataListado.SelectedCells.Item(19).Value
+        txtnomtipoenv.Text = DataListado.SelectedCells.Item(20).Value
+        txtcantenvin.Text = DataListado.SelectedCells.Item(21).Value
+        txtcantenvout.Text = DataListado.SelectedCells.Item(22).Value
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        frmContratos.txtflag.Text = "1"
+        frmContratos.ShowDialog()
+    End Sub
+
+    Private Sub btnBuscarTransportista_Click(sender As Object, e As EventArgs) Handles btnBuscarTransportista.Click
+        frmBodega.txtflag.Text = 2
+        frmBodega.ShowDialog()
     End Sub
 End Class

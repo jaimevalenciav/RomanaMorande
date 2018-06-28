@@ -25,7 +25,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVendimiaPesajeAutomatico))
         Me.DataListado = New System.Windows.Forms.DataGridView()
-        Me.txtcantenv = New System.Windows.Forms.TextBox()
+        Me.txtcantenvin = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.btncapturapesobruto = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -54,7 +54,9 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.sppuerto = New System.IO.Ports.SerialPort(Me.components)
         Me.txtidtransportista = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.txtidbodega = New System.Windows.Forms.TextBox()
+        Me.txtcantenvout = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.dpfechaguia = New System.Windows.Forms.DateTimePicker()
         Me.txtnomprov = New System.Windows.Forms.TextBox()
@@ -103,7 +105,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.btnGuardarpesaje = New System.Windows.Forms.Button()
         Me.lbltitulo = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Button()
-        Me.txtidbodega = New System.Windows.Forms.TextBox()
+        Me.txtcodbodega = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtnumcontrato = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -143,13 +145,13 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.DataListado.Size = New System.Drawing.Size(671, 186)
         Me.DataListado.TabIndex = 1
         '
-        'txtcantenv
+        'txtcantenvin
         '
-        Me.txtcantenv.Enabled = False
-        Me.txtcantenv.Location = New System.Drawing.Point(318, 143)
-        Me.txtcantenv.Name = "txtcantenv"
-        Me.txtcantenv.Size = New System.Drawing.Size(53, 20)
-        Me.txtcantenv.TabIndex = 54
+        Me.txtcantenvin.Enabled = False
+        Me.txtcantenvin.Location = New System.Drawing.Point(318, 143)
+        Me.txtcantenvin.Name = "txtcantenvin"
+        Me.txtcantenvin.Size = New System.Drawing.Size(53, 20)
+        Me.txtcantenvin.TabIndex = 54
         '
         'Label15
         '
@@ -229,7 +231,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(457, 17)
+        Me.Label13.Location = New System.Drawing.Point(378, 7)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(75, 13)
         Me.Label13.TabIndex = 47
@@ -239,7 +241,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'txtestadopesaje
         '
         Me.txtestadopesaje.Enabled = False
-        Me.txtestadopesaje.Location = New System.Drawing.Point(537, 10)
+        Me.txtestadopesaje.Location = New System.Drawing.Point(458, 0)
         Me.txtestadopesaje.Name = "txtestadopesaje"
         Me.txtestadopesaje.Size = New System.Drawing.Size(29, 20)
         Me.txtestadopesaje.TabIndex = 46
@@ -418,7 +420,9 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.TextBox1)
+        Me.GroupBox3.Controls.Add(Me.Label33)
+        Me.GroupBox3.Controls.Add(Me.txtidbodega)
+        Me.GroupBox3.Controls.Add(Me.txtcantenvout)
         Me.GroupBox3.Controls.Add(Me.Label32)
         Me.GroupBox3.Controls.Add(Me.dpfechaguia)
         Me.GroupBox3.Controls.Add(Me.txtnomprov)
@@ -429,7 +433,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.Controls.Add(Me.Button1)
         Me.GroupBox3.Controls.Add(Me.btnBuscarTransportista)
         Me.GroupBox3.Controls.Add(Me.GroupBox4)
-        Me.GroupBox3.Controls.Add(Me.txtcantenv)
+        Me.GroupBox3.Controls.Add(Me.txtcantenvin)
         Me.GroupBox3.Controls.Add(Me.Label15)
         Me.GroupBox3.Controls.Add(Me.btncapturapesobruto)
         Me.GroupBox3.Controls.Add(Me.btncapturapesotara)
@@ -461,7 +465,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.Controls.Add(Me.btnGuardarpesaje)
         Me.GroupBox3.Controls.Add(Me.lbltitulo)
         Me.GroupBox3.Controls.Add(Me.btnSalir)
-        Me.GroupBox3.Controls.Add(Me.txtidbodega)
+        Me.GroupBox3.Controls.Add(Me.txtcodbodega)
         Me.GroupBox3.Controls.Add(Me.Label7)
         Me.GroupBox3.Controls.Add(Me.txtnumcontrato)
         Me.GroupBox3.Controls.Add(Me.Label6)
@@ -482,13 +486,32 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Pesaje"
         '
-        'TextBox1
+        'Label33
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(421, 143)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(53, 20)
-        Me.TextBox1.TabIndex = 65
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(501, 3)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(63, 13)
+        Me.Label33.TabIndex = 67
+        Me.Label33.Text = "CodBodega"
+        Me.Label33.Visible = False
+        '
+        'txtidbodega
+        '
+        Me.txtidbodega.Enabled = False
+        Me.txtidbodega.Location = New System.Drawing.Point(567, 0)
+        Me.txtidbodega.Name = "txtidbodega"
+        Me.txtidbodega.Size = New System.Drawing.Size(29, 20)
+        Me.txtidbodega.TabIndex = 66
+        Me.txtidbodega.Visible = False
+        '
+        'txtcantenvout
+        '
+        Me.txtcantenvout.Enabled = False
+        Me.txtcantenvout.Location = New System.Drawing.Point(421, 143)
+        Me.txtcantenvout.Name = "txtcantenvout"
+        Me.txtcantenvout.Size = New System.Drawing.Size(53, 20)
+        Me.txtcantenvout.TabIndex = 65
         '
         'Label32
         '
@@ -929,14 +952,14 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
-        'txtidbodega
+        'txtcodbodega
         '
-        Me.txtidbodega.Enabled = False
-        Me.txtidbodega.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtidbodega.Location = New System.Drawing.Point(377, 46)
-        Me.txtidbodega.Name = "txtidbodega"
-        Me.txtidbodega.Size = New System.Drawing.Size(29, 26)
-        Me.txtidbodega.TabIndex = 25
+        Me.txtcodbodega.Enabled = False
+        Me.txtcodbodega.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtcodbodega.Location = New System.Drawing.Point(377, 46)
+        Me.txtcodbodega.Name = "txtcodbodega"
+        Me.txtcodbodega.Size = New System.Drawing.Size(29, 26)
+        Me.txtcodbodega.TabIndex = 25
         '
         'Label7
         '
@@ -1122,7 +1145,7 @@ Partial Class frmVendimiaPesajeAutomatico
     End Sub
 
     Friend WithEvents DataListado As DataGridView
-    Friend WithEvents txtcantenv As TextBox
+    Friend WithEvents txtcantenvin As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents btncapturapesobruto As Button
     Friend WithEvents GroupBox1 As GroupBox
@@ -1157,7 +1180,7 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents btnGuardarpesaje As Button
     Friend WithEvents lbltitulo As Label
     Friend WithEvents btnSalir As Button
-    Friend WithEvents txtidbodega As TextBox
+    Friend WithEvents txtcodbodega As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtnumcontrato As TextBox
     Friend WithEvents Label6 As Label
@@ -1216,6 +1239,8 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents Timer2 As Timer
     Friend WithEvents dpfechaguia As DateTimePicker
     Friend WithEvents Button4 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtcantenvout As TextBox
     Friend WithEvents Label32 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents txtidbodega As TextBox
 End Class

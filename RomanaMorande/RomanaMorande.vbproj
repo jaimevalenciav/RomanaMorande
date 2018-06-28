@@ -135,6 +135,8 @@
   <ItemGroup>
     <Compile Include="Datos\conexion.vb" />
     <Compile Include="Datos\farticulosuva.vb" />
+    <Compile Include="Datos\fbodega.vb" />
+    <Compile Include="Datos\fcontratos.vb" />
     <Compile Include="Datos\fenvases.vb" />
     <Compile Include="Datos\fpatente.vb" />
     <Compile Include="Datos\fpatentevendimia.vb" />
@@ -150,7 +152,9 @@
     <Compile Include="frmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Logica\vbodega.vb" />
     <Compile Include="Logica\vcalidades.vb" />
+    <Compile Include="Logica\vcontratos.vb" />
     <Compile Include="Logica\venvases.vb" />
     <Compile Include="Logica\vpatente.vb" />
     <Compile Include="Logica\vpatentevendimia.vb" />
@@ -230,6 +234,12 @@
     <Compile Include="Presentacion\frmArticulosUva.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmBodega.Designer.vb">
+      <DependentUpon>frmBodega.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmBodega.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmCalidad.Designer.vb">
       <DependentUpon>frmCalidad.vb</DependentUpon>
     </Compile>
@@ -240,6 +250,12 @@
       <DependentUpon>frmContratos.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmContratos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmContratosVendimia.Designer.vb">
+      <DependentUpon>frmContratosVendimia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmContratosVendimia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frmCreaPesajeVendimia.Designer.vb">
@@ -468,11 +484,17 @@
     <EmbeddedResource Include="Presentacion\frmArticulosUva.resx">
       <DependentUpon>frmArticulosUva.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmBodega.resx">
+      <DependentUpon>frmBodega.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmCalidad.resx">
       <DependentUpon>frmCalidad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmContratos.resx">
       <DependentUpon>frmContratos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmContratosVendimia.resx">
+      <DependentUpon>frmContratosVendimia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmCreaPesajeVendimia.resx">
       <DependentUpon>frmCreaPesajeVendimia.vb</DependentUpon>
