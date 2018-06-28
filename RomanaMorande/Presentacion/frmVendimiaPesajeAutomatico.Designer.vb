@@ -66,10 +66,10 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.rbMecanica = New System.Windows.Forms.RadioButton()
         Me.rbManual = New System.Windows.Forms.RadioButton()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnBuscarTransportista = New System.Windows.Forms.Button()
+        Me.btnBuscarContrato = New System.Windows.Forms.Button()
+        Me.btnBuscarBodega = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnBuscarSector = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.txtcastigo = New System.Windows.Forms.TextBox()
         Me.Label30 = New System.Windows.Forms.Label()
@@ -91,10 +91,10 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtidsector = New System.Windows.Forms.TextBox()
         Me.txtcalidad = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.txtidcalidad = New System.Windows.Forms.TextBox()
+        Me.btnBuscarVariedad = New System.Windows.Forms.Button()
+        Me.txtcodcalidad = New System.Windows.Forms.TextBox()
         Me.txtnomuva = New System.Windows.Forms.TextBox()
-        Me.txtiduva = New System.Windows.Forms.TextBox()
+        Me.txtcoduva = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -123,6 +123,8 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.txtidcalidad = New System.Windows.Forms.TextBox()
+        Me.txtidvariedad = New System.Windows.Forms.TextBox()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -430,8 +432,8 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.Controls.Add(Me.Label21)
         Me.GroupBox3.Controls.Add(Me.Button2)
         Me.GroupBox3.Controls.Add(Me.GroupBox6)
-        Me.GroupBox3.Controls.Add(Me.Button1)
-        Me.GroupBox3.Controls.Add(Me.btnBuscarTransportista)
+        Me.GroupBox3.Controls.Add(Me.btnBuscarContrato)
+        Me.GroupBox3.Controls.Add(Me.btnBuscarBodega)
         Me.GroupBox3.Controls.Add(Me.GroupBox4)
         Me.GroupBox3.Controls.Add(Me.txtcantenvin)
         Me.GroupBox3.Controls.Add(Me.Label15)
@@ -595,27 +597,31 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.rbManual.Text = "Manual"
         Me.rbManual.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnBuscarContrato
         '
-        Me.Button1.Location = New System.Drawing.Point(158, 75)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(33, 22)
-        Me.Button1.TabIndex = 57
-        Me.Button1.Text = "..."
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnBuscarContrato.Enabled = False
+        Me.btnBuscarContrato.Location = New System.Drawing.Point(158, 75)
+        Me.btnBuscarContrato.Name = "btnBuscarContrato"
+        Me.btnBuscarContrato.Size = New System.Drawing.Size(33, 22)
+        Me.btnBuscarContrato.TabIndex = 57
+        Me.btnBuscarContrato.Text = "..."
+        Me.btnBuscarContrato.UseVisualStyleBackColor = True
         '
-        'btnBuscarTransportista
+        'btnBuscarBodega
         '
-        Me.btnBuscarTransportista.Location = New System.Drawing.Point(562, 45)
-        Me.btnBuscarTransportista.Name = "btnBuscarTransportista"
-        Me.btnBuscarTransportista.Size = New System.Drawing.Size(33, 28)
-        Me.btnBuscarTransportista.TabIndex = 56
-        Me.btnBuscarTransportista.Text = "..."
-        Me.btnBuscarTransportista.UseVisualStyleBackColor = True
+        Me.btnBuscarBodega.Enabled = False
+        Me.btnBuscarBodega.Location = New System.Drawing.Point(562, 45)
+        Me.btnBuscarBodega.Name = "btnBuscarBodega"
+        Me.btnBuscarBodega.Size = New System.Drawing.Size(33, 28)
+        Me.btnBuscarBodega.TabIndex = 56
+        Me.btnBuscarBodega.Text = "..."
+        Me.btnBuscarBodega.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.Button4)
+        Me.GroupBox4.Controls.Add(Me.txtidvariedad)
+        Me.GroupBox4.Controls.Add(Me.txtidcalidad)
+        Me.GroupBox4.Controls.Add(Me.btnBuscarSector)
         Me.GroupBox4.Controls.Add(Me.Label31)
         Me.GroupBox4.Controls.Add(Me.txtcastigo)
         Me.GroupBox4.Controls.Add(Me.Label30)
@@ -637,10 +643,10 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox4.Controls.Add(Me.txtidsector)
         Me.GroupBox4.Controls.Add(Me.txtcalidad)
         Me.GroupBox4.Controls.Add(Me.Label23)
-        Me.GroupBox4.Controls.Add(Me.Button3)
-        Me.GroupBox4.Controls.Add(Me.txtidcalidad)
+        Me.GroupBox4.Controls.Add(Me.btnBuscarVariedad)
+        Me.GroupBox4.Controls.Add(Me.txtcodcalidad)
         Me.GroupBox4.Controls.Add(Me.txtnomuva)
-        Me.GroupBox4.Controls.Add(Me.txtiduva)
+        Me.GroupBox4.Controls.Add(Me.txtcoduva)
         Me.GroupBox4.Controls.Add(Me.Label22)
         Me.GroupBox4.Location = New System.Drawing.Point(8, 166)
         Me.GroupBox4.Name = "GroupBox4"
@@ -649,14 +655,15 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos de la Uva"
         '
-        'Button4
+        'btnBuscarSector
         '
-        Me.Button4.Location = New System.Drawing.Point(284, 79)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(33, 22)
-        Me.Button4.TabIndex = 64
-        Me.Button4.Text = "..."
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnBuscarSector.Enabled = False
+        Me.btnBuscarSector.Location = New System.Drawing.Point(284, 79)
+        Me.btnBuscarSector.Name = "btnBuscarSector"
+        Me.btnBuscarSector.Size = New System.Drawing.Size(33, 22)
+        Me.btnBuscarSector.TabIndex = 64
+        Me.btnBuscarSector.Text = "..."
+        Me.btnBuscarSector.UseVisualStyleBackColor = True
         '
         'Label31
         '
@@ -823,21 +830,22 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label23.TabIndex = 63
         Me.Label23.Text = "Calidad"
         '
-        'Button3
+        'btnBuscarVariedad
         '
-        Me.Button3.Location = New System.Drawing.Point(516, 24)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(52, 22)
-        Me.Button3.TabIndex = 63
-        Me.Button3.Text = "..."
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnBuscarVariedad.Enabled = False
+        Me.btnBuscarVariedad.Location = New System.Drawing.Point(516, 24)
+        Me.btnBuscarVariedad.Name = "btnBuscarVariedad"
+        Me.btnBuscarVariedad.Size = New System.Drawing.Size(52, 22)
+        Me.btnBuscarVariedad.TabIndex = 63
+        Me.btnBuscarVariedad.Text = "..."
+        Me.btnBuscarVariedad.UseVisualStyleBackColor = True
         '
-        'txtidcalidad
+        'txtcodcalidad
         '
-        Me.txtidcalidad.Location = New System.Drawing.Point(75, 54)
-        Me.txtidcalidad.Name = "txtidcalidad"
-        Me.txtidcalidad.Size = New System.Drawing.Size(39, 20)
-        Me.txtidcalidad.TabIndex = 64
+        Me.txtcodcalidad.Location = New System.Drawing.Point(75, 54)
+        Me.txtcodcalidad.Name = "txtcodcalidad"
+        Me.txtcodcalidad.Size = New System.Drawing.Size(39, 20)
+        Me.txtcodcalidad.TabIndex = 64
         '
         'txtnomuva
         '
@@ -846,12 +854,12 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtnomuva.Size = New System.Drawing.Size(362, 20)
         Me.txtnomuva.TabIndex = 64
         '
-        'txtiduva
+        'txtcoduva
         '
-        Me.txtiduva.Location = New System.Drawing.Point(75, 25)
-        Me.txtiduva.Name = "txtiduva"
-        Me.txtiduva.Size = New System.Drawing.Size(77, 20)
-        Me.txtiduva.TabIndex = 63
+        Me.txtcoduva.Location = New System.Drawing.Point(75, 25)
+        Me.txtcoduva.Name = "txtcoduva"
+        Me.txtcoduva.Size = New System.Drawing.Size(77, 20)
+        Me.txtcoduva.TabIndex = 63
         '
         'Label22
         '
@@ -1115,6 +1123,20 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.Timer2.Interval = 1000
         '
+        'txtidcalidad
+        '
+        Me.txtidcalidad.Location = New System.Drawing.Point(321, 54)
+        Me.txtidcalidad.Name = "txtidcalidad"
+        Me.txtidcalidad.Size = New System.Drawing.Size(39, 20)
+        Me.txtidcalidad.TabIndex = 85
+        '
+        'txtidvariedad
+        '
+        Me.txtidvariedad.Location = New System.Drawing.Point(120, 4)
+        Me.txtidvariedad.Name = "txtidvariedad"
+        Me.txtidvariedad.Size = New System.Drawing.Size(39, 20)
+        Me.txtidvariedad.TabIndex = 89
+        '
         'frmVendimiaPesajeAutomatico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1199,8 +1221,8 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents rbMecanica As RadioButton
     Friend WithEvents rbManual As RadioButton
-    Friend WithEvents Button1 As Button
-    Friend WithEvents btnBuscarTransportista As Button
+    Friend WithEvents btnBuscarContrato As Button
+    Friend WithEvents btnBuscarBodega As Button
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label20 As Label
     Friend WithEvents Label19 As Label
@@ -1225,10 +1247,10 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents txtidsector As TextBox
     Friend WithEvents txtcalidad As TextBox
     Friend WithEvents Label23 As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents txtidcalidad As TextBox
+    Friend WithEvents btnBuscarVariedad As Button
+    Friend WithEvents txtcodcalidad As TextBox
     Friend WithEvents txtnomuva As TextBox
-    Friend WithEvents txtiduva As TextBox
+    Friend WithEvents txtcoduva As TextBox
     Friend WithEvents Label22 As Label
     Friend WithEvents Label31 As Label
     Friend WithEvents txtcastigo As TextBox
@@ -1238,9 +1260,11 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents txttemp As TextBox
     Friend WithEvents Timer2 As Timer
     Friend WithEvents dpfechaguia As DateTimePicker
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnBuscarSector As Button
     Friend WithEvents txtcantenvout As TextBox
     Friend WithEvents Label32 As Label
     Friend WithEvents Label33 As Label
     Friend WithEvents txtidbodega As TextBox
+    Friend WithEvents txtidvariedad As TextBox
+    Friend WithEvents txtidcalidad As TextBox
 End Class

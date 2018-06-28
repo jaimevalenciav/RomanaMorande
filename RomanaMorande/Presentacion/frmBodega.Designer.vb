@@ -37,12 +37,12 @@ Partial Class frmBodega
         Me.btnguardar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtidcalidad = New System.Windows.Forms.TextBox()
+        Me.txtidbodega = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtnomcalidad = New System.Windows.Forms.TextBox()
+        Me.txtnombodega = New System.Windows.Forms.TextBox()
         Me.txtflag = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtcodbodega = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -128,16 +128,16 @@ Partial Class frmBodega
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.txtcodbodega)
         Me.GroupBox2.Controls.Add(Me.swactivo)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.btnNuevo)
         Me.GroupBox2.Controls.Add(Me.btnguardar)
         Me.GroupBox2.Controls.Add(Me.btnEditar)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.txtidcalidad)
+        Me.GroupBox2.Controls.Add(Me.txtidbodega)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.txtnomcalidad)
+        Me.GroupBox2.Controls.Add(Me.txtnombodega)
         Me.GroupBox2.Location = New System.Drawing.Point(452, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(302, 341)
@@ -213,13 +213,13 @@ Partial Class frmBodega
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "ID Bodega"
         '
-        'txtidcalidad
+        'txtidbodega
         '
-        Me.txtidcalidad.Enabled = False
-        Me.txtidcalidad.Location = New System.Drawing.Point(18, 46)
-        Me.txtidcalidad.Name = "txtidcalidad"
-        Me.txtidcalidad.Size = New System.Drawing.Size(86, 20)
-        Me.txtidcalidad.TabIndex = 6
+        Me.txtidbodega.Enabled = False
+        Me.txtidbodega.Location = New System.Drawing.Point(18, 46)
+        Me.txtidbodega.Name = "txtidbodega"
+        Me.txtidbodega.Size = New System.Drawing.Size(86, 20)
+        Me.txtidbodega.TabIndex = 6
         '
         'Label1
         '
@@ -230,12 +230,12 @@ Partial Class frmBodega
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Nombre Bodega"
         '
-        'txtnomcalidad
+        'txtnombodega
         '
-        Me.txtnomcalidad.Location = New System.Drawing.Point(18, 141)
-        Me.txtnomcalidad.Name = "txtnomcalidad"
-        Me.txtnomcalidad.Size = New System.Drawing.Size(254, 20)
-        Me.txtnomcalidad.TabIndex = 2
+        Me.txtnombodega.Location = New System.Drawing.Point(18, 141)
+        Me.txtnombodega.Name = "txtnombodega"
+        Me.txtnombodega.Size = New System.Drawing.Size(254, 20)
+        Me.txtnombodega.TabIndex = 2
         '
         'txtflag
         '
@@ -255,13 +255,12 @@ Partial Class frmBodega
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Código Bodega"
         '
-        'TextBox1
+        'txtcodbodega
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(18, 98)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(86, 20)
-        Me.TextBox1.TabIndex = 16
+        Me.txtcodbodega.Location = New System.Drawing.Point(18, 98)
+        Me.txtcodbodega.Name = "txtcodbodega"
+        Me.txtcodbodega.Size = New System.Drawing.Size(86, 20)
+        Me.txtcodbodega.TabIndex = 16
         '
         'frmBodega
         '
@@ -302,10 +301,10 @@ Partial Class frmBodega
     Friend WithEvents btnguardar As Button
     Friend WithEvents btnEditar As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtidcalidad As TextBox
+    Friend WithEvents txtidbodega As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtnomcalidad As TextBox
+    Friend WithEvents txtnombodega As TextBox
     Friend WithEvents txtflag As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtcodbodega As TextBox
 End Class

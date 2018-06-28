@@ -25,6 +25,11 @@
         txtcodbodega.BackColor = Color.White
         txtbodega.BackColor = Color.White
 
+        txtnumcontrato.ReadOnly = True
+        txtrutprov.ReadOnly = True
+        txtnomprov.ReadOnly = True
+
+
         mostrar()
 
     End Sub
@@ -34,7 +39,7 @@
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnBuscarVariedad.Click
 
     End Sub
 
@@ -80,19 +85,28 @@
         Else
             rbMecanica.Checked = True
         End If
-        txttipoenv.Text = DataListado.SelectedCells.Item(19).Value
-        txtnomtipoenv.Text = DataListado.SelectedCells.Item(20).Value
-        txtcantenvin.Text = DataListado.SelectedCells.Item(21).Value
-        txtcantenvout.Text = DataListado.SelectedCells.Item(22).Value
+        txttipoenv.Text = DataListado.SelectedCells.Item(20).Value
+        txtnomtipoenv.Text = DataListado.SelectedCells.Item(21).Value
+        txtcantenvin.Text = DataListado.SelectedCells.Item(22).Value
+        txtcantenvout.Text = DataListado.SelectedCells.Item(23).Value
+
+        btnBuscarBodega.Enabled = True
+        btnBuscarContrato.Enabled = True
+        btnBuscarVariedad.Enabled = True
+        btnBuscarSector.Enabled = True
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBuscarContrato.Click
         frmContratos.txtflag.Text = "1"
         frmContratos.ShowDialog()
     End Sub
 
-    Private Sub btnBuscarTransportista_Click(sender As Object, e As EventArgs) Handles btnBuscarTransportista.Click
+    Private Sub btnBuscarTransportista_Click(sender As Object, e As EventArgs) Handles btnBuscarBodega.Click
         frmBodega.txtflag.Text = 2
         frmBodega.ShowDialog()
+    End Sub
+
+    Private Sub DataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellContentClick
+
     End Sub
 End Class
