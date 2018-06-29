@@ -144,6 +144,7 @@
     <Compile Include="Datos\fpesajesindestareM.vb" />
     <Compile Include="Datos\fpesajevendimia.vb" />
     <Compile Include="Datos\fseleccionavariedad.vb" />
+    <Compile Include="Datos\fseleccionsectorcuartel.vb" />
     <Compile Include="Datos\ftransportistas.vb" />
     <Compile Include="Datos\ftipovehiculos.vb" />
     <Compile Include="Datos\fcalidades.vb" />
@@ -163,6 +164,7 @@
     <Compile Include="Logica\vpesajesindestareM.vb" />
     <Compile Include="Logica\vpesajevendimia.vb" />
     <Compile Include="Logica\vseleccionavariedad.vb" />
+    <Compile Include="Logica\vSeleccionSectorCuartel.vb" />
     <Compile Include="Logica\vtransportistas.vb" />
     <Compile Include="pesajebckDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -416,6 +418,12 @@
     <Compile Include="Presentacion\frmSeleccionaFecha.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmSeleccionarSectorCuartel.Designer.vb">
+      <DependentUpon>frmSeleccionarSectorCuartel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSeleccionarSectorCuartel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmSeleccionaTipoCosecha.Designer.vb">
       <DependentUpon>frmSeleccionaTipoCosecha.vb</DependentUpon>
     </Compile>
@@ -602,6 +610,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmSeleccionaFecha.resx">
       <DependentUpon>frmSeleccionaFecha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmSeleccionarSectorCuartel.resx">
+      <DependentUpon>frmSeleccionarSectorCuartel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmSeleccionaTipoCosecha.resx">
       <DependentUpon>frmSeleccionaTipoCosecha.vb</DependentUpon>

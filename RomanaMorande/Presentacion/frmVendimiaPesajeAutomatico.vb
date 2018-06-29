@@ -109,7 +109,14 @@
             frmSeleccionaFecha.ShowDialog()
             frmIngresaNumGuia.ShowDialog()
             frmSeleccionaVariedad.ShowDialog()
+            frmSeleccionarSectorCuartel.ShowDialog()
             btncapturapesobruto.Visible = True
+            txtbrix.Text = 0
+            txtdensidad.Text = 0
+            txttemp.Text = 0
+            txtapb.Text = 0
+            txtcastigo.Text = 0
+
         End If
     End Sub
 
@@ -121,6 +128,10 @@
     Private Sub btnBuscarTransportista_Click(sender As Object, e As EventArgs) Handles btnBuscarBodega.Click
         frmBodega.txtflag.Text = 2
         frmBodega.ShowDialog()
+    End Sub
+
+    Private Sub btnBuscarSector_Click(sender As Object, e As EventArgs) Handles btnBuscarSector.Click
+        frmSeleccionarSectorCuartel.ShowDialog()
     End Sub
 
 
