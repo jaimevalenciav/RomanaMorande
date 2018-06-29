@@ -29,6 +29,8 @@
         txtrutprov.ReadOnly = True
         txtnomprov.ReadOnly = True
 
+        rbManual.Checked = False
+        rbMecanica.Checked = False
 
         mostrar()
 
@@ -41,6 +43,7 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnBuscarVariedad.Click
 
+        frmSeleccionaVariedad.ShowDialog()
     End Sub
 
 
@@ -82,18 +85,32 @@
         txtidbodega.Text = DataListado.SelectedCells.Item(17).Value
         If DataListado.SelectedCells.Item(24).Value.ToString = "M" Then
             rbManual.Checked = True
-        Else
+        ElseIf DataListado.SelectedCells.Item(24).Value.ToString = "Q" Then
             rbMecanica.Checked = True
         End If
         txttipoenv.Text = DataListado.SelectedCells.Item(20).Value
         txtnomtipoenv.Text = DataListado.SelectedCells.Item(21).Value
         txtcantenvin.Text = DataListado.SelectedCells.Item(22).Value
         txtcantenvout.Text = DataListado.SelectedCells.Item(23).Value
+        txtestadopesaje.Text = DataListado.SelectedCells.Item(15).Value
 
         btnBuscarBodega.Enabled = True
         btnBuscarContrato.Enabled = True
         btnBuscarVariedad.Enabled = True
         btnBuscarSector.Enabled = True
+
+        If txtestadopesaje.Text = 0 Then
+            'MsgBox("Debe elejir un contrato para el pesaje seleccionado")
+            frmContratos.txtflag.Text = 1
+            frmContratos.ShowDialog()
+            frmBodega.txtflag.Text = 2
+            frmBodega.ShowDialog()
+            frmSeleccionaTipoCosecha.ShowDialog()
+            frmSeleccionaFecha.ShowDialog()
+            frmIngresaNumGuia.ShowDialog()
+            frmSeleccionaVariedad.ShowDialog()
+            btncapturapesobruto.Visible = True
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBuscarContrato.Click
@@ -106,7 +123,5 @@
         frmBodega.ShowDialog()
     End Sub
 
-    Private Sub DataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellContentClick
 
-    End Sub
 End Class

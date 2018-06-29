@@ -143,6 +143,7 @@
     <Compile Include="Datos\fpesajedestareM.vb" />
     <Compile Include="Datos\fpesajesindestareM.vb" />
     <Compile Include="Datos\fpesajevendimia.vb" />
+    <Compile Include="Datos\fseleccionavariedad.vb" />
     <Compile Include="Datos\ftransportistas.vb" />
     <Compile Include="Datos\ftipovehiculos.vb" />
     <Compile Include="Datos\fcalidades.vb" />
@@ -161,6 +162,7 @@
     <Compile Include="Logica\vpesajedestareM.vb" />
     <Compile Include="Logica\vpesajesindestareM.vb" />
     <Compile Include="Logica\vpesajevendimia.vb" />
+    <Compile Include="Logica\vseleccionavariedad.vb" />
     <Compile Include="Logica\vtransportistas.vb" />
     <Compile Include="pesajebckDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -354,6 +356,12 @@
     <Compile Include="Presentacion\frmcreapesajedestareM.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmIngresaNumGuia.Designer.vb">
+      <DependentUpon>frmIngresaNumGuia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmIngresaNumGuia.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmMaestroPatentes.Designer.vb">
       <DependentUpon>frmMaestroPatentes.vb</DependentUpon>
     </Compile>
@@ -400,6 +408,18 @@
       <DependentUpon>frmRegistroPatentes.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\frmRegistroPatentes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSeleccionaFecha.Designer.vb">
+      <DependentUpon>frmSeleccionaFecha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSeleccionaFecha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSeleccionaTipoCosecha.Designer.vb">
+      <DependentUpon>frmSeleccionaTipoCosecha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSeleccionaTipoCosecha.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\frmSeleccionaVariedad.Designer.vb">
@@ -550,6 +570,9 @@
     <EmbeddedResource Include="Presentacion\frmcreapesajedestareM.resx">
       <DependentUpon>frmcreapesajedestareM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmIngresaNumGuia.resx">
+      <DependentUpon>frmIngresaNumGuia.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmMaestroPatentes.resx">
       <DependentUpon>frmMaestroPatentes.vb</DependentUpon>
     </EmbeddedResource>
@@ -576,6 +599,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmRegistroPatentes.resx">
       <DependentUpon>frmRegistroPatentes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmSeleccionaFecha.resx">
+      <DependentUpon>frmSeleccionaFecha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmSeleccionaTipoCosecha.resx">
+      <DependentUpon>frmSeleccionaTipoCosecha.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmSeleccionaVariedad.resx">
       <DependentUpon>frmSeleccionaVariedad.vb</DependentUpon>

@@ -69,6 +69,9 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.btnBuscarContrato = New System.Windows.Forms.Button()
         Me.btnBuscarBodega = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtidcontrato = New System.Windows.Forms.TextBox()
+        Me.txtidvariedad = New System.Windows.Forms.TextBox()
+        Me.txtidcalidad = New System.Windows.Forms.TextBox()
         Me.btnBuscarSector = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.txtcastigo = New System.Windows.Forms.TextBox()
@@ -123,8 +126,6 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.txtidcalidad = New System.Windows.Forms.TextBox()
-        Me.txtidvariedad = New System.Windows.Forms.TextBox()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -154,6 +155,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtcantenvin.Name = "txtcantenvin"
         Me.txtcantenvin.Size = New System.Drawing.Size(53, 20)
         Me.txtcantenvin.TabIndex = 54
+        Me.txtcantenvin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label15
         '
@@ -356,6 +358,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txttipoenv.Name = "txttipoenv"
         Me.txttipoenv.Size = New System.Drawing.Size(29, 20)
         Me.txttipoenv.TabIndex = 39
+        Me.txttipoenv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtnomtipoenv
         '
@@ -419,6 +422,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtidtransportista.Name = "txtidtransportista"
         Me.txtidtransportista.Size = New System.Drawing.Size(29, 20)
         Me.txtidtransportista.TabIndex = 33
+        Me.txtidtransportista.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'GroupBox3
         '
@@ -514,6 +518,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtcantenvout.Name = "txtcantenvout"
         Me.txtcantenvout.Size = New System.Drawing.Size(53, 20)
         Me.txtcantenvout.TabIndex = 65
+        Me.txtcantenvout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label32
         '
@@ -619,6 +624,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.txtidcontrato)
         Me.GroupBox4.Controls.Add(Me.txtidvariedad)
         Me.GroupBox4.Controls.Add(Me.txtidcalidad)
         Me.GroupBox4.Controls.Add(Me.btnBuscarSector)
@@ -655,6 +661,30 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos de la Uva"
         '
+        'txtidcontrato
+        '
+        Me.txtidcontrato.Location = New System.Drawing.Point(98, 2)
+        Me.txtidcontrato.Name = "txtidcontrato"
+        Me.txtidcontrato.Size = New System.Drawing.Size(39, 20)
+        Me.txtidcontrato.TabIndex = 90
+        Me.txtidcontrato.Visible = False
+        '
+        'txtidvariedad
+        '
+        Me.txtidvariedad.Location = New System.Drawing.Point(476, 24)
+        Me.txtidvariedad.Name = "txtidvariedad"
+        Me.txtidvariedad.Size = New System.Drawing.Size(39, 20)
+        Me.txtidvariedad.TabIndex = 89
+        Me.txtidvariedad.Visible = False
+        '
+        'txtidcalidad
+        '
+        Me.txtidcalidad.Location = New System.Drawing.Point(321, 54)
+        Me.txtidcalidad.Name = "txtidcalidad"
+        Me.txtidcalidad.Size = New System.Drawing.Size(39, 20)
+        Me.txtidcalidad.TabIndex = 85
+        Me.txtidcalidad.Visible = False
+        '
         'btnBuscarSector
         '
         Me.btnBuscarSector.Enabled = False
@@ -680,6 +710,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtcastigo.Name = "txtcastigo"
         Me.txtcastigo.Size = New System.Drawing.Size(39, 20)
         Me.txtcastigo.TabIndex = 84
+        Me.txtcastigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label30
         '
@@ -696,6 +727,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtapb.Name = "txtapb"
         Me.txtapb.Size = New System.Drawing.Size(50, 20)
         Me.txtapb.TabIndex = 82
+        Me.txtapb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label29
         '
@@ -712,6 +744,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txttemp.Name = "txttemp"
         Me.txttemp.Size = New System.Drawing.Size(39, 20)
         Me.txttemp.TabIndex = 80
+        Me.txttemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label28
         '
@@ -728,6 +761,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtdensidad.Name = "txtdensidad"
         Me.txtdensidad.Size = New System.Drawing.Size(66, 20)
         Me.txtdensidad.TabIndex = 78
+        Me.txtdensidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label27
         '
@@ -744,6 +778,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtbrix.Name = "txtbrix"
         Me.txtbrix.Size = New System.Drawing.Size(39, 20)
         Me.txtbrix.TabIndex = 76
+        Me.txtbrix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtnomsubcuartel
         '
@@ -767,6 +802,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtidsubcuartel.Name = "txtidsubcuartel"
         Me.txtidsubcuartel.Size = New System.Drawing.Size(39, 20)
         Me.txtidsubcuartel.TabIndex = 73
+        Me.txtidsubcuartel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtnomcuartel
         '
@@ -790,6 +826,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtidcuartel.Name = "txtidcuartel"
         Me.txtidcuartel.Size = New System.Drawing.Size(39, 20)
         Me.txtidcuartel.TabIndex = 70
+        Me.txtidcuartel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtnomsector
         '
@@ -813,6 +850,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtidsector.Name = "txtidsector"
         Me.txtidsector.Size = New System.Drawing.Size(39, 20)
         Me.txtidsector.TabIndex = 67
+        Me.txtidsector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtcalidad
         '
@@ -846,6 +884,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtcodcalidad.Name = "txtcodcalidad"
         Me.txtcodcalidad.Size = New System.Drawing.Size(39, 20)
         Me.txtcodcalidad.TabIndex = 64
+        Me.txtcodcalidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtnomuva
         '
@@ -860,6 +899,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtcoduva.Name = "txtcoduva"
         Me.txtcoduva.Size = New System.Drawing.Size(77, 20)
         Me.txtcoduva.TabIndex = 63
+        Me.txtcoduva.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label22
         '
@@ -984,6 +1024,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtnumcontrato.Name = "txtnumcontrato"
         Me.txtnumcontrato.Size = New System.Drawing.Size(69, 20)
         Me.txtnumcontrato.TabIndex = 23
+        Me.txtnumcontrato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
         '
@@ -1123,20 +1164,6 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.Timer2.Interval = 1000
         '
-        'txtidcalidad
-        '
-        Me.txtidcalidad.Location = New System.Drawing.Point(321, 54)
-        Me.txtidcalidad.Name = "txtidcalidad"
-        Me.txtidcalidad.Size = New System.Drawing.Size(39, 20)
-        Me.txtidcalidad.TabIndex = 85
-        '
-        'txtidvariedad
-        '
-        Me.txtidvariedad.Location = New System.Drawing.Point(120, 4)
-        Me.txtidvariedad.Name = "txtidvariedad"
-        Me.txtidvariedad.Size = New System.Drawing.Size(39, 20)
-        Me.txtidvariedad.TabIndex = 89
-        '
         'frmVendimiaPesajeAutomatico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1267,4 +1294,5 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents txtidbodega As TextBox
     Friend WithEvents txtidvariedad As TextBox
     Friend WithEvents txtidcalidad As TextBox
+    Friend WithEvents txtidcontrato As TextBox
 End Class
