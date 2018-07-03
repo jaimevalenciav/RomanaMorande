@@ -10,4 +10,6 @@
         frmVendimiaPesajeAutomatico.rbMecanica.Checked = True
         Me.Close()
     End Sub
+
+
 End Class

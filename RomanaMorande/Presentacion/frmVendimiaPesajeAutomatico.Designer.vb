@@ -126,6 +126,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.txtidsectorcuartel = New System.Windows.Forms.TextBox()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -624,6 +625,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.txtidsectorcuartel)
         Me.GroupBox4.Controls.Add(Me.txtidcontrato)
         Me.GroupBox4.Controls.Add(Me.txtidvariedad)
         Me.GroupBox4.Controls.Add(Me.txtidcalidad)
@@ -1164,6 +1166,14 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.Timer2.Interval = 1000
         '
+        'txtidsectorcuartel
+        '
+        Me.txtidsectorcuartel.Location = New System.Drawing.Point(321, 80)
+        Me.txtidsectorcuartel.Name = "txtidsectorcuartel"
+        Me.txtidsectorcuartel.Size = New System.Drawing.Size(39, 20)
+        Me.txtidsectorcuartel.TabIndex = 91
+        Me.txtidsectorcuartel.Visible = False
+        '
         'frmVendimiaPesajeAutomatico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1295,4 +1305,5 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents txtidvariedad As TextBox
     Friend WithEvents txtidcalidad As TextBox
     Friend WithEvents txtidcontrato As TextBox
+    Friend WithEvents txtidsectorcuartel As TextBox
 End Class

@@ -54,6 +54,9 @@ Partial Class frmPrincipal
         Me.ControlDeEnvasesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EntregaDeEnvasesAProductorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaSaldoDeEnvasesXProductorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RecepciónDeUvaViníferaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GuíasAnuladasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesajesPorPatenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PesajesVendimiaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -248,7 +251,7 @@ Partial Class frmPrincipal
         '
         'VendimiaToolStripMenuItem
         '
-        Me.VendimiaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PesajeAutomáticoToolStripMenuItem1, Me.PesajeManualToolStripMenuItem, Me.ControlDeEnvasesToolStripMenuItem})
+        Me.VendimiaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PesajeAutomáticoToolStripMenuItem1, Me.PesajeManualToolStripMenuItem, Me.ControlDeEnvasesToolStripMenuItem, Me.ReportesToolStripMenuItem})
         Me.VendimiaToolStripMenuItem.Name = "VendimiaToolStripMenuItem"
         Me.VendimiaToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
         Me.VendimiaToolStripMenuItem.Text = "Vendimia"
@@ -286,6 +289,28 @@ Partial Class frmPrincipal
         Me.ConsultaSaldoDeEnvasesXProductorToolStripMenuItem.Name = "ConsultaSaldoDeEnvasesXProductorToolStripMenuItem"
         Me.ConsultaSaldoDeEnvasesXProductorToolStripMenuItem.Size = New System.Drawing.Size(277, 22)
         Me.ConsultaSaldoDeEnvasesXProductorToolStripMenuItem.Text = "Consulta Saldo de Envases x Productor"
+        '
+        'ReportesToolStripMenuItem
+        '
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RecepciónDeUvaViníferaToolStripMenuItem, Me.GuíasAnuladasToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.Image = CType(resources.GetObject("ReportesToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
+        '
+        'RecepciónDeUvaViníferaToolStripMenuItem
+        '
+        Me.RecepciónDeUvaViníferaToolStripMenuItem.Image = CType(resources.GetObject("RecepciónDeUvaViníferaToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.RecepciónDeUvaViníferaToolStripMenuItem.Name = "RecepciónDeUvaViníferaToolStripMenuItem"
+        Me.RecepciónDeUvaViníferaToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.RecepciónDeUvaViníferaToolStripMenuItem.Text = "Recepción de Uva Vinífera"
+        '
+        'GuíasAnuladasToolStripMenuItem
+        '
+        Me.GuíasAnuladasToolStripMenuItem.Image = CType(resources.GetObject("GuíasAnuladasToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.GuíasAnuladasToolStripMenuItem.Name = "GuíasAnuladasToolStripMenuItem"
+        Me.GuíasAnuladasToolStripMenuItem.Size = New System.Drawing.Size(211, 22)
+        Me.GuíasAnuladasToolStripMenuItem.Text = "Guías Anuladas"
         '
         'ConsultasToolStripMenuItem
         '
@@ -384,4 +409,7 @@ Partial Class frmPrincipal
     Friend WithEvents VariedadesUvaEnSAPToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BodegasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CamionesVendimiaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RecepciónDeUvaViníferaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GuíasAnuladasToolStripMenuItem As ToolStripMenuItem
 End Class
