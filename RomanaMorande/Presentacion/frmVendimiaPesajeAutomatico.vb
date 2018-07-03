@@ -83,6 +83,7 @@
         txtnomtrans.Text = DataListado.SelectedCells.Item(6).Value
         txttara.Text = DataListado.SelectedCells.Item(46).Value
         txtidbodega.Text = DataListado.SelectedCells.Item(17).Value
+        txtobservaciones.Text = DataListado.SelectedCells.Item(14).Value
         If DataListado.SelectedCells.Item(24).Value.ToString = "M" Then
             rbManual.Checked = True
         ElseIf DataListado.SelectedCells.Item(24).Value.ToString = "Q" Then
@@ -93,6 +94,11 @@
         txtcantenvin.Text = DataListado.SelectedCells.Item(22).Value
         txtcantenvout.Text = DataListado.SelectedCells.Item(23).Value
         txtestadopesaje.Text = DataListado.SelectedCells.Item(15).Value
+        txtbrix.Text = DataListado.SelectedCells.Item(38).Value
+        txtdensidad.Text = DataListado.SelectedCells.Item(39).Value
+        txttemp.Text = DataListado.SelectedCells.Item(40).Value
+        txtapb.Text = DataListado.SelectedCells.Item(41).Value
+        txtcastigo.Text = DataListado.SelectedCells.Item(42).Value
 
         btnBuscarBodega.Enabled = True
         btnBuscarContrato.Enabled = True
@@ -111,11 +117,7 @@
             frmSeleccionaVariedad.ShowDialog()
             frmSeleccionarSectorCuartel.ShowDialog()
             btncapturapesobruto.Visible = True
-            txtbrix.Text = 0
-            txtdensidad.Text = 0
-            txttemp.Text = 0
-            txtapb.Text = 0
-            txtcastigo.Text = 0
+            btnanula.Visible = True
 
         End If
     End Sub
@@ -134,5 +136,170 @@
         frmSeleccionarSectorCuartel.ShowDialog()
     End Sub
 
+    Private Sub btncapturapesobruto_Click(sender As Object, e As EventArgs) Handles btncapturapesobruto.Click
+        txtpesajebruto.Text = "0"
+        While txtpesajebruto.Text = 0
+            Dim buffer As String
+            sppuerto.Close()
+            buffer = ""
+            Try
+                With sppuerto
+                    .BaudRate = 4800
+                    .DataBits = 7
+                    .Parity = IO.Ports.Parity.Even
+                    .StopBits = 1
+                    .PortName = "COM1"
+                    .Open()
+                    If .IsOpen Then
+                        buffer = sppuerto.ReadExisting
+                        txtpesajebruto.Text = ""
+                        buffer = Mid(buffer, 6, 5)
+                        'MsgBox(buffer)
+                        If Val(buffer) <= 60000 Then
+                            txtpesajebruto.Text = Val(buffer)
+                            txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
+                            sppuerto.Close()
+                        End If
+                    Else
+                        MsgBox("No es posible hacer lectura de la Báscula", MsgBoxStyle.Exclamation)
+                    End If
+                    .Close()
+                End With
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical)
+            Finally
+            End Try
+        End While
+    End Sub
 
+    Private Sub btncapturapesotara_Click(sender As Object, e As EventArgs) Handles btncapturapesotara.Click
+        txtpesajetara.Text = "0"
+        While txtpesajetara.Text = 0
+            Dim buffer As String
+            sppuerto.Close()
+            buffer = ""
+            Try
+                With sppuerto
+                    .BaudRate = 4800
+                    .DataBits = 7
+                    .Parity = IO.Ports.Parity.Even
+                    .StopBits = 1
+                    .PortName = "COM1"
+                    .Open()
+                    If .IsOpen Then
+                        buffer = sppuerto.ReadExisting
+                        txtpesajetara.Text = ""
+                        buffer = Mid(buffer, 6, 5)
+                        'MsgBox(buffer)
+                        If Val(buffer) <= 60000 Then
+                            txtpesajetara.Text = Val(buffer)
+                            txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
+                            sppuerto.Close()
+                        End If
+                    Else
+                        MsgBox("No es posible hacer lectura de la Báscula", MsgBoxStyle.Exclamation)
+                    End If
+                    .Close()
+                End With
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical)
+            Finally
+            End Try
+        End While
+    End Sub
+
+    Private Sub btnGuardarpesaje_Click(sender As Object, e As EventArgs) Handles btnGuardarpesaje.Click
+        Dim validar As Integer = 0
+
+        If validar = 1 Or txtestadopesaje.Text = 0 Then
+            Try
+                If txtnumpesaje.Text <> "" Or txtpesajetara.Text <> "" Or txtpesajebruto.Text <> "" Or Val(txtpesajeneto.Text > 0) Then
+                    Try
+                        Dim dts As New vpesajevendimia
+                        Dim func As New fpesajevendimia
+                        dts.gidpesajev = txtnumpesaje.Text
+                        'dts.ganiovendimia = txt.Text
+                        'dts.gidsap = txtdocsap.Text
+                        dts.gpesajeneto = txtpesajeneto.Text
+                        dts.gpesajebruto = txtpesajebruto.Text
+                        dts.gpesajetara = txtpesajetara.Text
+
+
+                        If Val(txtestadopesaje.Text) = 0 Then
+                            dts.gestadopesaje = 1 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
+                            dts.gobservaciones = txtobservaciones.Text
+                            If func.editarIn(dts) Then
+                                MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                mostrar()
+                                mostrar2()
+                                limpiar()
+                            Else
+                                MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                mostrar()
+                                mostrar2()
+                                limpiar()
+                            End If
+                        ElseIf Val(txtestadopesaje.Text) = 1 Then
+                            'Validar contenido DocSAP, GuiaDespacho y Observaciones
+                            If txtdocsap.Text.Length <= 1 Or txtguiadespacho.Text.Length <= 1 Or txtobservaciones.Text.Length <= 1 Or txtTaraContenedor.Text.Length < 1 Then
+                                Dim mensaje As String = "El campo DocSAP, Guía Despacho, Tara Contenedor u Observaciones se encuentra sin información. Desea continuar con la operación?"
+                                Dim caption As String = "Campos sin información."
+                                Dim botones As MessageBoxButtons = MessageBoxButtons.YesNo
+                                Dim Result As DialogResult
+                                Result = MessageBox.Show(mensaje, caption, botones, MessageBoxIcon.Exclamation)
+                                If Result = System.Windows.Forms.DialogResult.No Then
+                                    txtdocsap.Select()
+                                Else
+                                    dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
+                                    dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
+                                    If func.editarOut(dts) Then
+                                        MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                        If txtestadopesaje.Text = 1 Then
+                                            frmreportecomprobante.txtidpesaje.Text = Me.txtnumpesaje.Text
+                                            frmreportecomprobante.ShowDialog()
+                                        End If
+                                        mostrar()
+                                        mostrar2()
+                                        limpiar()
+                                    Else
+                                        MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                        mostrar()
+                                        mostrar2()
+                                        limpiar()
+                                    End If
+                                End If
+                            Else
+                                dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
+                                dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
+                                If func.editarOut(dts) Then
+                                    MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                    If txtestadopesaje.Text = 1 Then
+                                        frmreportecomprobante.txtidpesaje.Text = Me.txtnumpesaje.Text
+                                        frmreportecomprobante.ShowDialog()
+                                    End If
+                                    mostrar()
+                                    mostrar2()
+                                    limpiar()
+                                Else
+                                    MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                    mostrar()
+                                    mostrar2()
+                                    limpiar()
+                                End If
+                            End If
+                        End If
+                        dts.gvisible = 1 '0:NoVisible 1:Visible
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+                Else
+                    MessageBox.Show("Debe Seleccionar un registro de pesaje, o ingresar un valor para el pesaje, o pesaje debe ser mayor que 0", "Romana Morandé", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Catch ex As Exception
+
+            End Try
+        Else
+            MessageBox.Show("El pesaje neto NO puede ser menor a 0, verifique los pesajes", "Romana Morandé", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
 End Class

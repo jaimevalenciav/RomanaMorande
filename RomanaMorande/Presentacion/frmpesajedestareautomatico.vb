@@ -333,4 +333,12 @@
             txtTaraContenedor.Text = "0"
         End If
     End Sub
+
+    Private Sub lbltitulo_Click(sender As Object, e As EventArgs) Handles lbltitulo.Click
+
+    End Sub
+
+    Private Sub txtpesajetara_TextChanged(sender As Object, e As EventArgs) Handles txtpesajetara.TextChanged
+
+    End Sub
 End Class

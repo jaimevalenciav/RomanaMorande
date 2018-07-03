@@ -198,7 +198,7 @@ Partial Class frmpesajedestareautomatico
         '
         Me.btncapturapesobruto.Image = CType(resources.GetObject("btncapturapesobruto.Image"), System.Drawing.Image)
         Me.btncapturapesobruto.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btncapturapesobruto.Location = New System.Drawing.Point(387, 384)
+        Me.btncapturapesobruto.Location = New System.Drawing.Point(387, 385)
         Me.btncapturapesobruto.Name = "btncapturapesobruto"
         Me.btncapturapesobruto.Size = New System.Drawing.Size(171, 71)
         Me.btncapturapesobruto.TabIndex = 52
@@ -211,7 +211,7 @@ Partial Class frmpesajedestareautomatico
         '
         Me.btncapturapesotara.Image = CType(resources.GetObject("btncapturapesotara.Image"), System.Drawing.Image)
         Me.btncapturapesotara.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btncapturapesotara.Location = New System.Drawing.Point(387, 307)
+        Me.btncapturapesotara.Location = New System.Drawing.Point(387, 308)
         Me.btncapturapesotara.Name = "btncapturapesotara"
         Me.btncapturapesotara.Size = New System.Drawing.Size(171, 71)
         Me.btncapturapesotara.TabIndex = 51
@@ -289,7 +289,7 @@ Partial Class frmpesajedestareautomatico
         Me.txtpesajebruto.Enabled = False
         Me.txtpesajebruto.Font = New System.Drawing.Font("Microsoft Sans Serif", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtpesajebruto.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtpesajebruto.Location = New System.Drawing.Point(195, 384)
+        Me.txtpesajebruto.Location = New System.Drawing.Point(195, 385)
         Me.txtpesajebruto.Name = "txtpesajebruto"
         Me.txtpesajebruto.Size = New System.Drawing.Size(189, 71)
         Me.txtpesajebruto.TabIndex = 7
@@ -310,7 +310,7 @@ Partial Class frmpesajedestareautomatico
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(98, 404)
+        Me.Label11.Location = New System.Drawing.Point(98, 405)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(75, 24)
         Me.Label11.TabIndex = 42
@@ -322,7 +322,7 @@ Partial Class frmpesajedestareautomatico
         Me.txtpesajetara.Enabled = False
         Me.txtpesajetara.Font = New System.Drawing.Font("Microsoft Sans Serif", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtpesajetara.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtpesajetara.Location = New System.Drawing.Point(195, 307)
+        Me.txtpesajetara.Location = New System.Drawing.Point(195, 308)
         Me.txtpesajetara.Name = "txtpesajetara"
         Me.txtpesajetara.Size = New System.Drawing.Size(189, 71)
         Me.txtpesajetara.TabIndex = 6
@@ -449,7 +449,7 @@ Partial Class frmpesajedestareautomatico
         '
         Me.lbltitulo.AutoSize = True
         Me.lbltitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbltitulo.Location = New System.Drawing.Point(98, 334)
+        Me.lbltitulo.Location = New System.Drawing.Point(98, 335)
         Me.lbltitulo.Name = "lbltitulo"
         Me.lbltitulo.Size = New System.Drawing.Size(61, 24)
         Me.lbltitulo.TabIndex = 30

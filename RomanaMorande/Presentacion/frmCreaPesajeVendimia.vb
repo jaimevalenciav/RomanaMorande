@@ -28,7 +28,7 @@
 
             'dts.gidpesajev =
             'dts.ganiovendimia =
-            dts.gidsapv = ""
+            dts.gidsapv = "0"
             dts.gidvehiculo = txtidvehiculo.Text
             'dts.gfechacreacion =
             'dts.gfechapesajein =
@@ -36,7 +36,7 @@
             dts.gpesajetara = 0
             dts.gpesajebruto = 0
             dts.gpesajeneto = 0
-            dts.gobservaciones = ""
+            dts.gobservaciones = "Pesado por: " & frmPrincipal.lbluser.Text & ". "
             dts.gestadopesaje = 0 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
             dts.gvisible = 1
             dts.gnumguia = 0

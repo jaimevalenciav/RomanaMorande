@@ -69,6 +69,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.btnBuscarContrato = New System.Windows.Forms.Button()
         Me.btnBuscarBodega = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtidsectorcuartel = New System.Windows.Forms.TextBox()
         Me.txtidcontrato = New System.Windows.Forms.TextBox()
         Me.txtidvariedad = New System.Windows.Forms.TextBox()
         Me.txtidcalidad = New System.Windows.Forms.TextBox()
@@ -126,7 +127,6 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.txtidsectorcuartel = New System.Windows.Forms.TextBox()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -663,13 +663,20 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos de la Uva"
         '
+        'txtidsectorcuartel
+        '
+        Me.txtidsectorcuartel.Location = New System.Drawing.Point(321, 80)
+        Me.txtidsectorcuartel.Name = "txtidsectorcuartel"
+        Me.txtidsectorcuartel.Size = New System.Drawing.Size(39, 20)
+        Me.txtidsectorcuartel.TabIndex = 91
+        Me.txtidsectorcuartel.Visible = False
+        '
         'txtidcontrato
         '
         Me.txtidcontrato.Location = New System.Drawing.Point(98, 2)
         Me.txtidcontrato.Name = "txtidcontrato"
         Me.txtidcontrato.Size = New System.Drawing.Size(39, 20)
         Me.txtidcontrato.TabIndex = 90
-        Me.txtidcontrato.Visible = False
         '
         'txtidvariedad
         '
@@ -1165,14 +1172,6 @@ Partial Class frmVendimiaPesajeAutomatico
         'Timer2
         '
         Me.Timer2.Interval = 1000
-        '
-        'txtidsectorcuartel
-        '
-        Me.txtidsectorcuartel.Location = New System.Drawing.Point(321, 80)
-        Me.txtidsectorcuartel.Name = "txtidsectorcuartel"
-        Me.txtidsectorcuartel.Size = New System.Drawing.Size(39, 20)
-        Me.txtidsectorcuartel.TabIndex = 91
-        Me.txtidsectorcuartel.Visible = False
         '
         'frmVendimiaPesajeAutomatico
         '

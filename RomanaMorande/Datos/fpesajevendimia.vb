@@ -90,4 +90,27 @@ Public Class fpesajevendimia
         End Try
 
     End Function
+
+    Public Function editarIN(ByVal dts As vpesajevendimia) As Boolean
+        Try
+            conectado()
+            cmd = New SqlCommand("editar_pesajevendimiaIN")
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Connection = cnn
+            cmd.Parameters.AddWithValue("@idpesaje", dts.gidpesajev)
+
+
+
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            desconectado()
+        End Try
+    End Function
 End Class
