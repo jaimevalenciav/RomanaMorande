@@ -41,7 +41,7 @@ Public Class frmSeleccionaVariedad
         frmVendimiaPesajeAutomatico.txtcalidad.Text = datalistado.SelectedCells(5).Value
         frmVendimiaPesajeAutomatico.txtidvariedad.Text = datalistado.SelectedCells(6).Value
         frmVendimiaPesajeAutomatico.txtidcalidad.Text = datalistado.SelectedCells(7).Value
-        frmVendimiaPesajeAutomatico.txtidcontrato.Text = datalistado.SelectedCells(8).Value
+        frmVendimiaPesajeAutomatico.txtiddetcontrato.Text = datalistado.SelectedCells(8).Value
         Me.Close()
     End Sub
 

@@ -33,7 +33,7 @@
         rbMecanica.Checked = False
 
         mostrar()
-
+        mostrar2()
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
@@ -63,6 +63,24 @@
                 DataListado.DataSource = dt
             Else
                 DataListado.DataSource = Nothing
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub mostrar2()
+
+        Try
+            Dim func As New fpesajevendimia
+            dt = func.mostrar2
+            dpfechaguia.Value = Date.Today
+
+            If dt.Rows.Count <> 0 Then
+                datalistado2.DataSource = dt
+            Else
+                datalistado2.DataSource = Nothing
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -218,11 +236,19 @@
                         Dim dts As New vpesajevendimia
                         Dim func As New fpesajevendimia
                         dts.gidpesajev = txtnumpesaje.Text
+                        dts.gidcontrato = txtidcontratos.Text
                         'dts.ganiovendimia = txt.Text
                         'dts.gidsap = txtdocsap.Text
                         dts.gpesajeneto = txtpesajeneto.Text
                         dts.gpesajebruto = txtpesajebruto.Text
                         dts.gpesajetara = txtpesajetara.Text
+                        dts.gidcontratovariedad = txtiddetcontrato.Text
+                        dts.gidcontratosectorcuartel = txtidsectorcuartel.Text
+                        If rbManual.Checked = True Then
+                            dts.gtipocosecha = "M"
+                        ElseIf rbMecanica.Checked = True Then
+                            dts.gtipocosecha = "Q"
+                        End If
 
 
                         If Val(txtestadopesaje.Text) = 0 Then
@@ -232,61 +258,61 @@
                                 MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                 mostrar()
                                 mostrar2()
-                                limpiar()
+                                ' limpiar()
                             Else
                                 MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                                 mostrar()
                                 mostrar2()
-                                limpiar()
+                                'limpiar()
                             End If
-                        ElseIf Val(txtestadopesaje.Text) = 1 Then
+                            'ElseIf Val(txtestadopesaje.Text) = 1 Then
                             'Validar contenido DocSAP, GuiaDespacho y Observaciones
-                            If txtdocsap.Text.Length <= 1 Or txtguiadespacho.Text.Length <= 1 Or txtobservaciones.Text.Length <= 1 Or txtTaraContenedor.Text.Length < 1 Then
-                                Dim mensaje As String = "El campo DocSAP, Guía Despacho, Tara Contenedor u Observaciones se encuentra sin información. Desea continuar con la operación?"
-                                Dim caption As String = "Campos sin información."
-                                Dim botones As MessageBoxButtons = MessageBoxButtons.YesNo
-                                Dim Result As DialogResult
-                                Result = MessageBox.Show(mensaje, caption, botones, MessageBoxIcon.Exclamation)
-                                If Result = System.Windows.Forms.DialogResult.No Then
-                                    txtdocsap.Select()
-                                Else
-                                    dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
-                                    dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
-                                    If func.editarOut(dts) Then
-                                        MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                                        If txtestadopesaje.Text = 1 Then
-                                            frmreportecomprobante.txtidpesaje.Text = Me.txtnumpesaje.Text
-                                            frmreportecomprobante.ShowDialog()
-                                        End If
-                                        mostrar()
-                                        mostrar2()
-                                        limpiar()
-                                    Else
-                                        MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                        mostrar()
-                                        mostrar2()
-                                        limpiar()
-                                    End If
-                                End If
-                            Else
-                                dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
-                                dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
-                                If func.editarOut(dts) Then
-                                    MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                                    If txtestadopesaje.Text = 1 Then
-                                        frmreportecomprobante.txtidpesaje.Text = Me.txtnumpesaje.Text
-                                        frmreportecomprobante.ShowDialog()
-                                    End If
-                                    mostrar()
-                                    mostrar2()
-                                    limpiar()
-                                Else
-                                    MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                    mostrar()
-                                    mostrar2()
-                                    limpiar()
-                                End If
-                            End If
+                            '    If txtdocsap.Text.Length <= 1 Or txtguiadespacho.Text.Length <= 1 Or txtobservaciones.Text.Length <= 1 Or txtTaraContenedor.Text.Length < 1 Then
+                            '        Dim mensaje As String = "El campo DocSAP, Guía Despacho, Tara Contenedor u Observaciones se encuentra sin información. Desea continuar con la operación?"
+                            '        Dim caption As String = "Campos sin información."
+                            '        Dim botones As MessageBoxButtons = MessageBoxButtons.YesNo
+                            '        Dim Result As DialogResult
+                            '        Result = MessageBox.Show(mensaje, caption, botones, MessageBoxIcon.Exclamation)
+                            '        If Result = System.Windows.Forms.DialogResult.No Then
+                            '            txtdocsap.Select()
+                            '        Else
+                            '            dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
+                            '            dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
+                            '            If func.editarOut(dts) Then
+                            '                MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            '                If txtestadopesaje.Text = 1 Then
+                            '                    frmreportecomprobante.txtidpesaje.Text = Me.txtnumpesaje.Text
+                            '                    frmreportecomprobante.ShowDialog()
+                            '                End If
+                            '                mostrar()
+                            '                mostrar2()
+                            '                limpiar()
+                            '            Else
+                            '                MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            '                mostrar()
+                            '                mostrar2()
+                            '                limpiar()
+                            '            End If
+                            '        End If
+                            '    Else
+                            '        dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
+                            '        dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
+                            '        If func.editarOut(dts) Then
+                            '            MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                            '            If txtestadopesaje.Text = 1 Then
+                            '                frmreportecomprobante.txtidpesaje.Text = Me.txtnumpesaje.Text
+                            '                frmreportecomprobante.ShowDialog()
+                            '            End If
+                            '            mostrar()
+                            '            mostrar2()
+                            '            limpiar()
+                            '        Else
+                            '            MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            '            mostrar()
+                            '            mostrar2()
+                            '            limpiar()
+                            '        End If
+                            '    End If
                         End If
                         dts.gvisible = 1 '0:NoVisible 1:Visible
                     Catch ex As Exception
@@ -302,4 +328,6 @@
             MessageBox.Show("El pesaje neto NO puede ser menor a 0, verifique los pesajes", "Romana Morandé", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
+
+
 End Class

@@ -22,6 +22,7 @@
     Dim tipocosecha As String
     Dim idcontrato As Integer
     Dim idcontratovariedad As Integer
+    Dim idcontratosectorcuartel As Integer
     Dim sector As Integer
     Dim nomsector As String
     Dim cuartel As Integer
@@ -73,6 +74,15 @@
         End Get
         Set(value)
             idvehiculo = value
+        End Set
+    End Property
+
+    Public Property gidcontratosectorcuartel
+        Get
+            Return idcontratosectorcuartel
+        End Get
+        Set(value)
+            idcontratosectorcuartel = value
         End Set
     End Property
 
@@ -405,6 +415,7 @@
                     ByVal tipocosecha As String,
                     ByVal idcontrato As Integer,
                     ByVal idcontratovariedad As Integer,
+                    ByVal idcontratosectorcuartel As Integer,
                     ByVal sector As Integer,
                     ByVal nomsector As String,
                     ByVal cuartel As Integer,
@@ -443,6 +454,7 @@
         gtipocosecha = tipocosecha
         gidcontrato = idcontrato
         gidcontratovariedad = idcontratovariedad
+        gidcontratosectorcuartel = idcontratosectorcuartel
         gsector = sector
         gnomsector = nomsector
         gcuartel = cuartel

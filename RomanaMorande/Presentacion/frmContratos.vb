@@ -46,6 +46,7 @@ Public Class frmContratos
             frmVendimiaPesajeAutomatico.txtnumcontrato.Text = datalistado.SelectedCells.Item(1).Value
             frmVendimiaPesajeAutomatico.txtrutprov.Text = datalistado.SelectedCells.Item(2).Value
             frmVendimiaPesajeAutomatico.txtnomprov.Text = datalistado.SelectedCells.Item(3).Value
+            frmVendimiaPesajeAutomatico.txtidcontratos.Text = datalistado.SelectedCells.Item(5).Value
             Me.Close()
         End If
     End Sub
