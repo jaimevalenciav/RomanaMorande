@@ -28,12 +28,19 @@
         txtnumcontrato.ReadOnly = True
         txtrutprov.ReadOnly = True
         txtnomprov.ReadOnly = True
+        txtpesajebruto.ReadOnly = True
+        txtpesajetara.ReadOnly = True
+        txtpesajeneto.ReadOnly = True
 
         rbManual.Checked = False
         rbMecanica.Checked = False
 
-        mostrar()
-        mostrar2()
+        limpiar()
+
+        If frmPrincipal.lbluser.Text = "jvalencia" Then
+            chkemular.Visible = True
+            chkemular.Checked = True
+        End If
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
@@ -45,8 +52,6 @@
 
         frmSeleccionaVariedad.ShowDialog()
     End Sub
-
-
 
     Private Sub btnnuevopesaje_Click(sender As Object, e As EventArgs) Handles btnnuevopesaje.Click
         frmCreaPesajeVendimia.ShowDialog()
@@ -68,6 +73,44 @@
             MsgBox(ex.Message)
         End Try
 
+        DataListado.Columns(3).Visible = False
+        DataListado.Columns(5).Visible = False
+        DataListado.Columns(7).Visible = False
+        DataListado.Columns(9).Visible = False
+        DataListado.Columns(10).Visible = False
+        DataListado.Columns(14).Visible = False
+        DataListado.Columns(15).Visible = False
+        DataListado.Columns(16).Visible = False
+        DataListado.Columns(17).Visible = False
+        DataListado.Columns(20).Visible = False
+        DataListado.Columns(21).Visible = False
+        DataListado.Columns(22).Visible = False
+        DataListado.Columns(23).Visible = False
+        DataListado.Columns(24).Visible = False
+        DataListado.Columns(26).Visible = False
+        DataListado.Columns(27).Visible = False
+        DataListado.Columns(30).Visible = False
+        DataListado.Columns(31).Visible = False
+        DataListado.Columns(32).Visible = False
+        DataListado.Columns(34).Visible = False
+        DataListado.Columns(36).Visible = False
+        DataListado.Columns(38).Visible = False
+        DataListado.Columns(39).Visible = False
+        DataListado.Columns(40).Visible = False
+        DataListado.Columns(41).Visible = False
+        DataListado.Columns(42).Visible = False
+        DataListado.Columns(43).Visible = False
+        DataListado.Columns(53).Visible = False
+        DataListado.Columns(44).Visible = False
+        DataListado.Columns(45).Visible = False
+        DataListado.Columns(46).Visible = False
+        DataListado.Columns(47).Visible = False
+        DataListado.Columns(48).Visible = False
+        DataListado.Columns(49).Visible = False
+        DataListado.Columns(51).Visible = False
+        DataListado.Columns(53).Visible = False
+
+
     End Sub
 
     Private Sub mostrar2()
@@ -88,23 +131,75 @@
 
     End Sub
 
+    Private Sub limpiar()
+        txtidcontratos.Text = ""
+        txtestadopesaje.Text = ""
+        txtidbodega.Text = ""
+        txtnumpesaje.Text = ""
+        txtpatente.Text = ""
+        txtcodbodega.Text = ""
+        txtbodega.Text = ""
+        txtnumcontrato.Text = ""
+        txtrutprov.Text = ""
+        txtnomprov.Text = ""
+        dpfechaguia.Value = Now()
+        txtnumguia.Text = 0
+        txtidtransportista.Text = ""
+        txtnomtrans.Text = ""
+        txttara.Text = ""
+        txttipoenv.Text = ""
+        txtnomtipoenv.Text = ""
+        txtcantenvin.Text = ""
+        txtcantenvout.Text = ""
+        rbManual.Checked = False
+        rbMecanica.Checked = False
+        txtiddetcontrato.Text = ""
+        txtcoduva.Text = ""
+        txtnomuva.Text = ""
+        txtcodcalidad.Text = ""
+        txtcalidad.Text = ""
+        txtidcalidad.Text = ""
+        txtbrix.Text = ""
+        txtdensidad.Text = ""
+        txtidsector.Text = ""
+        txtnomsector.Text = ""
+        txtidsectorcuartel.Text = ""
+        txttemp.Text = ""
+        txtapb.Text = ""
+        txtidcuartel.Text = ""
+        txtnomcuartel.Text = ""
+        txtcastigo.Text = ""
+        txtidsubcuartel.Text = ""
+        txtnomsubcuartel.Text = ""
+        txtobservaciones.Text = ""
+        txtpesajebruto.Text = "0"
+        txtpesajetara.Text = "0"
+        txtpesajeneto.Text = "0"
+        btncapturapesobruto.Visible = False
+        btncapturapesotara.Visible = False
+        btnanula.Visible = False
+        mostrar()
+        mostrar2()
+    End Sub
+
     Private Sub DataListado_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellDoubleClick
         txtnumpesaje.Text = DataListado.SelectedCells.Item(1).Value
         txtpatente.Text = DataListado.SelectedCells.Item(4).Value
         txtcodbodega.Text = DataListado.SelectedCells.Item(18).Value
         txtbodega.Text = DataListado.SelectedCells.Item(19).Value
-        txtnumcontrato.Text = DataListado.SelectedCells.Item(26).Value
+        txtidcontratos.Text = DataListado.SelectedCells.Item(26).Value
+        txtnumcontrato.Text = DataListado.SelectedCells.Item(53).Value
         txtrutprov.Text = DataListado.SelectedCells.Item(28).Value
         txtnomprov.Text = DataListado.SelectedCells.Item(29).Value
         txtnumguia.Text = DataListado.SelectedCells.Item(2).Value
         txtidtransportista.Text = DataListado.SelectedCells.Item(5).Value
         txtnomtrans.Text = DataListado.SelectedCells.Item(6).Value
-        txttara.Text = DataListado.SelectedCells.Item(46).Value
+        txttara.Text = DataListado.SelectedCells.Item(47).Value
         txtidbodega.Text = DataListado.SelectedCells.Item(17).Value
         txtobservaciones.Text = DataListado.SelectedCells.Item(14).Value
-        If DataListado.SelectedCells.Item(24).Value.ToString = "M" Then
+        If DataListado.SelectedCells.Item(25).Value.ToString = "M" Then
             rbManual.Checked = True
-        ElseIf DataListado.SelectedCells.Item(24).Value.ToString = "Q" Then
+        ElseIf DataListado.SelectedCells.Item(25).Value.ToString = "Q" Then
             rbMecanica.Checked = True
         End If
         txttipoenv.Text = DataListado.SelectedCells.Item(20).Value
@@ -112,11 +207,31 @@
         txtcantenvin.Text = DataListado.SelectedCells.Item(22).Value
         txtcantenvout.Text = DataListado.SelectedCells.Item(23).Value
         txtestadopesaje.Text = DataListado.SelectedCells.Item(15).Value
-        txtbrix.Text = DataListado.SelectedCells.Item(38).Value
-        txtdensidad.Text = DataListado.SelectedCells.Item(39).Value
-        txttemp.Text = DataListado.SelectedCells.Item(40).Value
-        txtapb.Text = DataListado.SelectedCells.Item(41).Value
-        txtcastigo.Text = DataListado.SelectedCells.Item(42).Value
+        txtiddetcontrato.Text = DataListado.SelectedCells.Item(30).Value
+        txtidvariedad.Text = DataListado.SelectedCells.Item(48).Value
+        txtcoduva.Text = DataListado.SelectedCells.Item(49).Value
+        txtnomuva.Text = DataListado.SelectedCells.Item(50).Value
+        txtcodcalidad.Text = DataListado.SelectedCells.Item(51).Value
+        txtcalidad.Text = DataListado.SelectedCells.Item(52).Value
+        txtidcalidad.Text = DataListado.SelectedCells.Item(38).Value
+        txtidsector.Text = DataListado.SelectedCells.Item(32).Value
+        txtnomsector.Text = DataListado.SelectedCells.Item(33).Value
+        txtidsectorcuartel.Text = DataListado.SelectedCells.Item(31).Value
+        txtidcuartel.Text = DataListado.SelectedCells.Item(34).Value
+        txtnomcuartel.Text = DataListado.SelectedCells.Item(35).Value
+        txtidsubcuartel.Text = DataListado.SelectedCells.Item(36).Value
+        txtnomsubcuartel.Text = DataListado.SelectedCells.Item(37).Value
+        txtbrix.Text = DataListado.SelectedCells.Item(39).Value
+        txtdensidad.Text = DataListado.SelectedCells.Item(40).Value
+        txttemp.Text = DataListado.SelectedCells.Item(41).Value
+        txtapb.Text = DataListado.SelectedCells.Item(42).Value
+        txtcastigo.Text = DataListado.SelectedCells.Item(43).Value
+        txtobservaciones.Text = DataListado.SelectedCells.Item(14).Value
+        txtpesajebruto.Text = DataListado.SelectedCells.Item(12).Value
+        txtpesajetara.Text = DataListado.SelectedCells.Item(11).Value
+        txtpesajeneto.Text = DataListado.SelectedCells.Item(13).Value
+
+
 
         btnBuscarBodega.Enabled = True
         btnBuscarContrato.Enabled = True
@@ -135,9 +250,15 @@
             frmSeleccionaVariedad.ShowDialog()
             frmSeleccionarSectorCuartel.ShowDialog()
             btncapturapesobruto.Visible = True
+            btncapturapesotara.Visible = False
             btnanula.Visible = True
-
+        ElseIf txtestadopesaje.Text = 1 Then
+            frmContratos.txtflag.Text = 1
+            frmBodega.txtflag.Text = 2
+            btncapturapesotara.Visible = True
+            btncapturapesobruto.Visible = False
         End If
+        btnanula.Visible = True
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnBuscarContrato.Click
@@ -153,77 +274,102 @@
     Private Sub btnBuscarSector_Click(sender As Object, e As EventArgs) Handles btnBuscarSector.Click
         frmSeleccionarSectorCuartel.ShowDialog()
     End Sub
+    Public Sub emularbruto()
 
+        Dim rnd1 As New Random()
+        Dim N1 As Integer = rnd1.Next(25000, 45000)
+        txtpesajebruto.Text = N1
+    End Sub
+
+    Public Sub emulartara()
+
+        Dim rnd2 As New Random()
+        Dim N2 As Integer = rnd2.Next(1000, 15000)
+        txtpesajetara.Text = N2
+    End Sub
     Private Sub btncapturapesobruto_Click(sender As Object, e As EventArgs) Handles btncapturapesobruto.Click
-        txtpesajebruto.Text = "0"
-        While txtpesajebruto.Text = 0
-            Dim buffer As String
-            sppuerto.Close()
-            buffer = ""
-            Try
-                With sppuerto
-                    .BaudRate = 4800
-                    .DataBits = 7
-                    .Parity = IO.Ports.Parity.Even
-                    .StopBits = 1
-                    .PortName = "COM1"
-                    .Open()
-                    If .IsOpen Then
-                        buffer = sppuerto.ReadExisting
-                        txtpesajebruto.Text = ""
-                        buffer = Mid(buffer, 6, 5)
-                        'MsgBox(buffer)
-                        If Val(buffer) <= 60000 Then
-                            txtpesajebruto.Text = Val(buffer)
-                            txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
-                            sppuerto.Close()
+        If chkemular.Checked = True Then
+            'Si checkbox emular se encuentra activado, emula un pesaje
+            emularbruto()
+            txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
+        Else
+            txtpesajebruto.Text = "0"
+            While txtpesajebruto.Text = 0
+                Dim buffer As String
+                sppuerto.Close()
+                buffer = ""
+                Try
+                    With sppuerto
+                        .BaudRate = 4800
+                        .DataBits = 7
+                        .Parity = IO.Ports.Parity.Even
+                        .StopBits = 1
+                        .PortName = "COM1"
+                        .Open()
+                        If .IsOpen Then
+                            buffer = sppuerto.ReadExisting
+                            txtpesajebruto.Text = ""
+                            buffer = Mid(buffer, 6, 5)
+                            'MsgBox(buffer)
+                            If Val(buffer) <= 60000 Then
+                                txtpesajebruto.Text = Val(buffer)
+                                txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
+                                sppuerto.Close()
+                            End If
+                        Else
+                            MsgBox("No es posible hacer lectura de la Báscula", MsgBoxStyle.Exclamation)
                         End If
-                    Else
-                        MsgBox("No es posible hacer lectura de la Báscula", MsgBoxStyle.Exclamation)
-                    End If
-                    .Close()
-                End With
-            Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical)
-            Finally
-            End Try
-        End While
+                        .Close()
+                    End With
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Critical)
+                Finally
+                End Try
+            End While
+        End If
     End Sub
 
     Private Sub btncapturapesotara_Click(sender As Object, e As EventArgs) Handles btncapturapesotara.Click
-        txtpesajetara.Text = "0"
-        While txtpesajetara.Text = 0
-            Dim buffer As String
-            sppuerto.Close()
-            buffer = ""
-            Try
-                With sppuerto
-                    .BaudRate = 4800
-                    .DataBits = 7
-                    .Parity = IO.Ports.Parity.Even
-                    .StopBits = 1
-                    .PortName = "COM1"
-                    .Open()
-                    If .IsOpen Then
-                        buffer = sppuerto.ReadExisting
-                        txtpesajetara.Text = ""
-                        buffer = Mid(buffer, 6, 5)
-                        'MsgBox(buffer)
-                        If Val(buffer) <= 60000 Then
-                            txtpesajetara.Text = Val(buffer)
-                            txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
-                            sppuerto.Close()
+        If chkemular.Checked = True Then
+            'Si checkbox emular se encuentra activado, emula un pesaje
+            emulartara()
+            txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
+        Else
+
+            txtpesajetara.Text = "0"
+            While txtpesajetara.Text = 0
+                Dim buffer As String
+                sppuerto.Close()
+                buffer = ""
+                Try
+                    With sppuerto
+                        .BaudRate = 4800
+                        .DataBits = 7
+                        .Parity = IO.Ports.Parity.Even
+                        .StopBits = 1
+                        .PortName = "COM1"
+                        .Open()
+                        If .IsOpen Then
+                            buffer = sppuerto.ReadExisting
+                            txtpesajetara.Text = ""
+                            buffer = Mid(buffer, 6, 5)
+                            'MsgBox(buffer)
+                            If Val(buffer) <= 60000 Then
+                                txtpesajetara.Text = Val(buffer)
+                                txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
+                                sppuerto.Close()
+                            End If
+                        Else
+                            MsgBox("No es posible hacer lectura de la Báscula", MsgBoxStyle.Exclamation)
                         End If
-                    Else
-                        MsgBox("No es posible hacer lectura de la Báscula", MsgBoxStyle.Exclamation)
-                    End If
-                    .Close()
-                End With
-            Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical)
-            Finally
-            End Try
-        End While
+                        .Close()
+                    End With
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Critical)
+                Finally
+                End Try
+            End While
+        End If
     End Sub
 
     Private Sub btnGuardarpesaje_Click(sender As Object, e As EventArgs) Handles btnGuardarpesaje.Click
@@ -244,6 +390,8 @@
                         dts.gpesajetara = txtpesajetara.Text
                         dts.gidcontratovariedad = txtiddetcontrato.Text
                         dts.gidcontratosectorcuartel = txtidsectorcuartel.Text
+                        dts.gnumguia = txtnumguia.Text
+                        dts.gidbodega = txtidbodega.Text
                         If rbManual.Checked = True Then
                             dts.gtipocosecha = "M"
                         ElseIf rbMecanica.Checked = True Then
@@ -327,7 +475,37 @@
         Else
             MessageBox.Show("El pesaje neto NO puede ser menor a 0, verifique los pesajes", "Romana Morandé", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+        limpiar()
     End Sub
 
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        limpiar()
+    End Sub
 
+    Private Sub btnanula_Click(sender As Object, e As EventArgs) Handles btnanula.Click
+
+
+        Try
+            Dim dts As New vpesajevendimia
+            Dim func As New fpesajevendimia
+            dts.gidpesajev = txtnumpesaje.Text
+            'dts.gobservaciones = txtobservaciones.Text
+
+            If func.anular(dts) Then
+                MessageBox.Show("Pesaje Anulado Correctamente", "Anular Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                'Me.Close()
+                limpiar()
+                'frmpesajedestareautomatico.Close()
+                'frmpesajedestareautomatico.ShowDialog()
+            Else
+                MessageBox.Show("Pesaje no fue Anulado", "Anular Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                'Me.Close()
+                limpiar()
+                'frmpesajedestareautomatico.Close()
+                'frmpesajedestareautomatico.ShowDialog()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

@@ -176,4 +176,36 @@ Public Class fpesajevendimia
         End Try
 
     End Function
+
+    Public Function anular(ByVal dts As vpesajevendimia) As Boolean
+        Dim result As DialogResult
+        result = MessageBox.Show("Desea eliminar el registro seleccionados?", "Eliminar...", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+
+        If result = DialogResult.OK Then
+            Try
+                conectado()
+                cmd = New SqlCommand("anula_pesajevendimia")
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Connection = cnn
+                cmd.Parameters.AddWithValue("@idpesajev", dts.gidpesajev)
+
+                'cmd.Parameters.AddWithValue("@observaciones", dts.gobservaciones)
+
+                If cmd.ExecuteNonQuery Then
+                    Return True
+                Else
+                    Return False
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+                Return False
+            Finally
+                desconectado()
+            End Try
+        Else
+            MessageBox.Show("Se cancela eliminacion del registro.", "Eliminando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call mostrar()
+        End If
+
+    End Function
 End Class
