@@ -1,7 +1,6 @@
 ﻿
 Public Class frmconsultapatente
     Private dt As New DataTable
-
     Private Sub frmconsultapatente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         fechainicio.Value = Date.Now.AddDays(-Now.Day + 1)
         fechatermino.Value = Date.Now.AddDays(-Now.Day + 1).AddMonths(1).AddDays(-1)
@@ -9,11 +8,8 @@ Public Class frmconsultapatente
         txtpatente.Text = ""
         rbfechain.Checked = True
         buscarfechaIn()
-
-
     End Sub
     Private Sub mostrar2()
-
         Try
             Dim func As New fpesajedestareM
             dt = func.mostrar3
@@ -22,11 +18,9 @@ Public Class frmconsultapatente
             Else
                 datalistado2.DataSource = Nothing
             End If
-
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
     End Sub
     Private Sub pintanulos()
         datalistado2.EnableHeadersVisualStyles = False
@@ -35,15 +29,11 @@ Public Class frmconsultapatente
         datalistado2.DefaultCellStyle.SelectionBackColor = Color.DarkRed
         datalistado2.DefaultCellStyle.SelectionForeColor = Color.White
         For Each Row As DataGridViewRow In datalistado2.Rows
-
             If Row.Cells("Estado").Value = "NULO" Then
                 Row.DefaultCellStyle.BackColor = Color.Bisque
             End If
-
         Next
     End Sub
-
-
 
     Private Sub datalistado2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado2.CellContentClick
         Try
@@ -51,16 +41,13 @@ Public Class frmconsultapatente
         Catch ex As Exception
             'MsgBox(ex.Message)
         End Try
-
     End Sub
 
     Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
         frmreportecomprobante.txtidpesaje.Text = Me.txtnumpesaje.Text
         frmreportecomprobante.ShowDialog()
     End Sub
-
     Private Sub btnreset_Click(sender As Object, e As EventArgs) Handles btnreset.Click
-
         txtpatente.Text = ""
         cmbtipopesaje.Text = "Todos"
         mostrar2()
@@ -102,7 +89,6 @@ Public Class frmconsultapatente
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
     End Sub
 
     Private Sub btnfiltrar_Click(sender As Object, e As EventArgs) Handles btnfiltrar.Click
@@ -149,8 +135,6 @@ Public Class frmconsultapatente
                 Else
                     dv.RowFilter = "FechaIN >= '" & fechadesde & "' AND  FechaIN <= '" & fechahasta & "' and TipoPesaje='Sin Destare'"
                 End If
-
-
                 datalistado2.DataSource = dv
                 datalistado2.Update()
                 pintanulos()
@@ -164,7 +148,6 @@ Public Class frmconsultapatente
         If fechatermino.Value < fechainicio.Value Then
             MessageBox.Show("Revise las fechas, la fecha HASTA no puede ser menor a la Fecha DESDE del filtro", "Sistema Romana", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
-
             Try
                 Dim ds As New DataSet
                 Dim fechadesde As DateTime = fechainicio.Value.ToShortDateString
@@ -180,14 +163,12 @@ Public Class frmconsultapatente
                 Else
                     dv.RowFilter = "FechaIN >= '" & fechadesde & "' AND  FechaIN <= '" & fechahasta & "' and TipoPesaje='Sin Destare'"
                 End If
-
                 datalistado2.DataSource = dv
                 datalistado2.Update()
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
         End If
-
     End Sub
 
     Private Sub txtpatente_TextChanged(sender As Object, e As EventArgs) Handles txtpatente.TextChanged
@@ -198,14 +179,12 @@ Public Class frmconsultapatente
     Private Sub fechainicio_ValueChanged(sender As Object, e As EventArgs) Handles fechainicio.ValueChanged
         If fechainicio.Value > fechatermino.Value Then
             MessageBox.Show("Revise las fechas, la fecha HASTA no puede ser menor a la Fecha DESDE del filtro", "Sistema Romana", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
         End If
     End Sub
 
     Private Sub fechatermino_ValueChanged(sender As Object, e As EventArgs) Handles fechatermino.ValueChanged
         If fechatermino.Value < fechainicio.Value Then
             MessageBox.Show("Revise las fechas, la fecha HASTA no puede ser menor a la Fecha DESDE del filtro", "Sistema Romana", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            
         End If
     End Sub
 
@@ -218,6 +197,4 @@ Public Class frmconsultapatente
             pintanulos()
         End If
     End Sub
-
-
 End Class

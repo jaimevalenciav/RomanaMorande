@@ -28,7 +28,7 @@
 
             'dts.gidpesajev =
             'dts.ganiovendimia =
-            dts.gidsapv = "0"
+            dts.gidsapv = 0
             dts.gidvehiculo = txtidvehiculo.Text
             'dts.gfechacreacion =
             'dts.gfechapesajein =
@@ -48,14 +48,14 @@
             dts.gtipocosecha = ""
             dts.gidcontrato = 0
             dts.gidcontratovariedad = 1
-            dts.gidcontrato = ""
-            'dts.gsector = 0
-            ' dts.gnomsector = "Sin Información"
-            ' dts.gcuartel = "0"
-            'dts.gnomcuartel = "Sin Información"
-            'dts.gsubcuartel = "0"
-            'dts.gnomsubcuartel = "Sin Información"
-            'dts.gidcalidad = 0
+            dts.gidcontrato = 0
+            dts.gsector = 0
+            dts.gnomsector = "Sin Información"
+            dts.gcuartel = "0"
+            dts.gnomcuartel = "Sin Información"
+            dts.gsubcuartel = "0"
+            dts.gnomsubcuartel = "Sin Información"
+            dts.gidcalidad = 0
             dts.gbrix = 0
             dts.gdensidad = 0
             dts.gtemp = 0

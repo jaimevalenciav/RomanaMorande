@@ -73,6 +73,8 @@
             MsgBox(ex.Message)
         End Try
 
+        DataListado.Columns(0).Width = 55
+
         DataListado.Columns(3).Visible = False
         DataListado.Columns(5).Visible = False
         DataListado.Columns(7).Visible = False
@@ -111,6 +113,8 @@
         DataListado.Columns(53).Visible = False
 
 
+
+
     End Sub
 
     Private Sub mostrar2()
@@ -128,6 +132,42 @@
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+        datalistado2.Columns(3).Visible = False
+        datalistado2.Columns(5).Visible = False
+        datalistado2.Columns(7).Visible = False
+        datalistado2.Columns(9).Visible = False
+        datalistado2.Columns(10).Visible = False
+        datalistado2.Columns(14).Visible = False
+        datalistado2.Columns(15).Visible = False
+        datalistado2.Columns(16).Visible = False
+        datalistado2.Columns(17).Visible = False
+        datalistado2.Columns(20).Visible = False
+        datalistado2.Columns(21).Visible = False
+        datalistado2.Columns(22).Visible = False
+        datalistado2.Columns(23).Visible = False
+        datalistado2.Columns(24).Visible = False
+        datalistado2.Columns(26).Visible = False
+        datalistado2.Columns(27).Visible = False
+        datalistado2.Columns(30).Visible = False
+        datalistado2.Columns(31).Visible = False
+        datalistado2.Columns(32).Visible = False
+        datalistado2.Columns(34).Visible = False
+        datalistado2.Columns(36).Visible = False
+        datalistado2.Columns(38).Visible = False
+        datalistado2.Columns(39).Visible = False
+        datalistado2.Columns(40).Visible = False
+        datalistado2.Columns(41).Visible = False
+        datalistado2.Columns(42).Visible = False
+        datalistado2.Columns(43).Visible = False
+        datalistado2.Columns(53).Visible = False
+        datalistado2.Columns(44).Visible = False
+        datalistado2.Columns(45).Visible = False
+        datalistado2.Columns(46).Visible = False
+        datalistado2.Columns(47).Visible = False
+        datalistado2.Columns(48).Visible = False
+        datalistado2.Columns(49).Visible = False
+        datalistado2.Columns(51).Visible = False
+        datalistado2.Columns(53).Visible = False
 
     End Sub
 
@@ -374,7 +414,9 @@
 
     Private Sub btnGuardarpesaje_Click(sender As Object, e As EventArgs) Handles btnGuardarpesaje.Click
         Dim validar As Integer = 0
-
+        If txtestadopesaje.Text = "1" And Val(txtpesajeneto.Text) > 0 Then
+            validar = 1
+        End If
         If validar = 1 Or txtestadopesaje.Text = 0 Then
             Try
                 If txtnumpesaje.Text <> "" Or txtpesajetara.Text <> "" Or txtpesajebruto.Text <> "" Or Val(txtpesajeneto.Text > 0) Then
@@ -402,66 +444,70 @@
                         If Val(txtestadopesaje.Text) = 0 Then
                             dts.gestadopesaje = 1 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
                             dts.gobservaciones = txtobservaciones.Text
-                            If func.editarIn(dts) Then
+                            If func.editarIN(dts) Then
                                 MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                 mostrar()
                                 mostrar2()
-                                ' limpiar()
+                                limpiar()
                             Else
                                 MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                                 mostrar()
                                 mostrar2()
-                                'limpiar()
+                                limpiar()
                             End If
-                            'ElseIf Val(txtestadopesaje.Text) = 1 Then
-                            'Validar contenido DocSAP, GuiaDespacho y Observaciones
-                            '    If txtdocsap.Text.Length <= 1 Or txtguiadespacho.Text.Length <= 1 Or txtobservaciones.Text.Length <= 1 Or txtTaraContenedor.Text.Length < 1 Then
-                            '        Dim mensaje As String = "El campo DocSAP, Guía Despacho, Tara Contenedor u Observaciones se encuentra sin información. Desea continuar con la operación?"
-                            '        Dim caption As String = "Campos sin información."
-                            '        Dim botones As MessageBoxButtons = MessageBoxButtons.YesNo
-                            '        Dim Result As DialogResult
-                            '        Result = MessageBox.Show(mensaje, caption, botones, MessageBoxIcon.Exclamation)
-                            '        If Result = System.Windows.Forms.DialogResult.No Then
-                            '            txtdocsap.Select()
-                            '        Else
-                            '            dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
-                            '            dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
-                            '            If func.editarOut(dts) Then
-                            '                MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                            '                If txtestadopesaje.Text = 1 Then
-                            '                    frmreportecomprobante.txtidpesaje.Text = Me.txtnumpesaje.Text
-                            '                    frmreportecomprobante.ShowDialog()
-                            '                End If
-                            '                mostrar()
-                            '                mostrar2()
-                            '                limpiar()
-                            '            Else
-                            '                MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            '                mostrar()
-                            '                mostrar2()
-                            '                limpiar()
-                            '            End If
-                            '        End If
-                            '    Else
-                            '        dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
-                            '        dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
-                            '        If func.editarOut(dts) Then
-                            '            MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                            '            If txtestadopesaje.Text = 1 Then
-                            '                frmreportecomprobante.txtidpesaje.Text = Me.txtnumpesaje.Text
-                            '                frmreportecomprobante.ShowDialog()
-                            '            End If
-                            '            mostrar()
-                            '            mostrar2()
-                            '            limpiar()
-                            '        Else
-                            '            MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            '            mostrar()
-                            '            mostrar2()
-                            '            limpiar()
-                            '        End If
-                            '    End If
+                        ElseIf Val(txtestadopesaje.Text) = 1 Then
+                            'validar contenido DocSAP, GuiaDespacho y Observaciones
+                            If txtcoduva.Text.Length < 1 Or txtidsector.Text.Length < 1 Or txtnumguia.Text.Length < 1 Or txtobservaciones.Text.Length < 1 Then
+                                Dim mensaje As String = "No ha ingresado el número de Guía Despacho, No ha seleccionado Variedad de Uva o no ha seleccionado un sector, o campo Observaciones se encuentra sin información. Desea continuar con la operación?"
+                                Dim caption As String = "Campos sin información."
+                                Dim botones As MessageBoxButtons = MessageBoxButtons.YesNo
+                                Dim Result As DialogResult
+                                Result = MessageBox.Show(mensaje, caption, botones, MessageBoxIcon.Exclamation)
+                                If Result = System.Windows.Forms.DialogResult.No Then
+                                    txtnumguia.Select()
+                                Else
+                                    dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
+                                    'dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
+                                    If func.editarOUT(dts) Then
+                                        MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                        'If txtestadopesaje.Text = 1 Then
+                                        'frmreportecomprobante.txtidpesaje.Text = Me.txtnumpesaje.Text
+                                        'frmreportecomprobante.ShowDialog()
+                                        'endif
+                                        mostrar()
+                                        mostrar2()
+                                        limpiar()
+                                    Else
+                                        MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                        mostrar()
+                                        mostrar2()
+                                        limpiar()
+                                    End If
+                                End If
+                            Else
+                                dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
+                                dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
+                                If func.editarOUT(dts) Then
+                                    MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                    frmReporteRecepUva.txtidpesajev.Text = Me.txtnumpesaje.Text
+                                    frmReporteRecepUva.ShowDialog()
+
+                                    'If txtestadopesaje.Text = 1 Then
+                                    'frmreportecomprobante.txtidpesaje.Text = Me.txtnumpesaje.Text
+                                    'frmreportecomprobante.ShowDialog()
+                                    'End If
+                                    mostrar()
+                                    mostrar2()
+                                    limpiar()
+                                Else
+                                    MessageBox.Show("Pesaje no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                    mostrar()
+                                    mostrar2()
+                                    limpiar()
+                                End If
+                            End If
                         End If
+
                         dts.gvisible = 1 '0:NoVisible 1:Visible
                     Catch ex As Exception
                         MsgBox(ex.Message)

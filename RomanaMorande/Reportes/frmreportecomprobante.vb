@@ -3,6 +3,7 @@
 Public Class frmreportecomprobante
     Private Sub frmreportecomprobante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
         Dim usuario As New ReportParameter("usuario", frmPrincipal.lbluser.Text)
         ReportViewer1.LocalReport.SetParameters(usuario)
 
@@ -12,7 +13,5 @@ Public Class frmreportecomprobante
         Me.ReportViewer1.RefreshReport()
     End Sub
 
-    Private Sub ReportViewer1_Load(sender As Object, e As EventArgs) Handles ReportViewer1.Load
 
-    End Sub
 End Class
