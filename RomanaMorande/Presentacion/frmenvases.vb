@@ -64,11 +64,11 @@ Public Class frmenvases
                 dts.gnombreenvase = txtnombretipoenvase.Text
 
                 If func.insertar(dts) Then
-                    MessageBox.Show("Tipo Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Tipo Envase Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     mostrar()
                     limpiar()
                 Else
-                    MessageBox.Show("Tipo no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Tipo Envase no fue Registrado, intente nuevamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     mostrar()
                     limpiar()
                 End If
@@ -93,7 +93,7 @@ Public Class frmenvases
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
 
         Dim result As DialogResult
-        result = MessageBox.Show("Realimente desea editar el registro?", "Modificar Registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+        result = MessageBox.Show("Realmente desea editar el registro?", "Modificar Registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
 
         If result = DialogResult.OK Then
 
@@ -129,11 +129,15 @@ Public Class frmenvases
 
     Private Sub DataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataListado.CellContentClick
         If txtflag.Text = 1 Then
-
-
+            frmSeleccionTipoEnvase.txtidenvase.Text = DataListado.SelectedCells.Item(1).Value
+            frmSeleccionTipoEnvase.txtnomenvase.Text = DataListado.SelectedCells.Item(2).Value
+            frmSeleccionTipoEnvase.txtkgenv.Text = DataListado.SelectedCells.Item(3).Value
+            frmSeleccionTipoEnvase.txtcantenv.Text = 0
+            Me.Close()
         ElseIf txtflag.Text = 2 Then
             frmPatenteVendimia.txtidtipoenvase.Text = DataListado.SelectedCells.Item(1).Value
             frmPatenteVendimia.txtnombretipoenvase.Text = DataListado.SelectedCells.Item(2).Value
+            frmSeleccionTipoEnvase.txtkgenv.Text = DataListado.SelectedCells.Item(3).Value
             Me.Close()
         End If
     End Sub

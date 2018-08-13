@@ -38,6 +38,7 @@
     Dim kiloscastigo As Integer
     Dim anulado As Boolean
     Dim activo As Boolean
+    Dim idenvaseout As Integer
 
     'setter y getter
 
@@ -384,7 +385,15 @@
         End Get
         Set(value)
             activo = value
+        End Set
+    End Property
 
+    Public Property gidenvaseout
+        Get
+            Return idenvaseout
+        End Get
+        Set(value)
+            idenvaseout = value
         End Set
     End Property
 
@@ -430,7 +439,8 @@
                     ByVal porccastigo As Integer,
                     ByVal kiloscastigo As Integer,
                     ByVal anulado As Boolean,
-                    ByVal activo As Boolean)
+                    ByVal activo As Boolean,
+                    ByVal idenvaseout As Integer)
 
         gidpesajev = idpesajev
         ganiovendimia = aniovendimia
@@ -470,6 +480,7 @@
         gkiloscastigo = kiloscastigo
         ganulado = anulado
         gactivo = activo
+        gidenvaseout = idenvaseout
 
     End Sub
 

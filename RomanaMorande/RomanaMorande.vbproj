@@ -441,6 +441,12 @@
     <Compile Include="Presentacion\frmSeleccionaVariedad.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentacion\frmSeleccionTipoEnvase.Designer.vb">
+      <DependentUpon>frmSeleccionTipoEnvase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmSeleccionTipoEnvase.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentacion\frmTipoVehiculo.Designer.vb">
       <DependentUpon>frmTipoVehiculo.vb</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -513,6 +519,9 @@
     <Compile Include="ReportePesajeVendimia.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePesajeVendimia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePesajeVendimia.vb">
       <DependentUpon>ReportePesajeVendimia.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reportes\frmreportecomprobante.Designer.vb">
@@ -650,6 +659,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmSeleccionaVariedad.resx">
       <DependentUpon>frmSeleccionaVariedad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmSeleccionTipoEnvase.resx">
+      <DependentUpon>frmSeleccionTipoEnvase.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmTipoVehiculo.resx">
       <DependentUpon>frmTipoVehiculo.vb</DependentUpon>

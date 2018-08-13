@@ -115,7 +115,7 @@ Public Class fpesajevendimia
             cmd.Parameters.AddWithValue("@idenvase", dts.gidenvase)
             cmd.Parameters.AddWithValue("@cantenvin", dts.gcantenvin)
             'cmd.Parameters.AddWithValue("@cantenvout", dts.gcantenvout)
-            'cmd.Parameters.AddWithValue("@diftaraenvases", dts.gdiftaraenvases)
+            cmd.Parameters.AddWithValue("@diftaraenvases", dts.gdiftaraenvases)
             cmd.Parameters.AddWithValue("@tipocosecha", dts.gtipocosecha)
             cmd.Parameters.AddWithValue("@idcontrato", dts.gidcontrato)
             cmd.Parameters.AddWithValue("@idcontratovariedad", dts.gidcontratovariedad)
@@ -173,9 +173,9 @@ Public Class fpesajevendimia
             cmd.Parameters.AddWithValue("@numguia", dts.gnumguia)
             cmd.Parameters.AddWithValue("@idbodega", dts.gidbodega)
             cmd.Parameters.AddWithValue("@idenvase", dts.gidenvase)
-            cmd.Parameters.AddWithValue("@cantenvin", dts.gcantenvin)
-            'cmd.Parameters.AddWithValue("@cantenvout", dts.gcantenvout)
-            'cmd.Parameters.AddWithValue("@diftaraenvases", dts.gdiftaraenvases)
+            'cmd.Parameters.AddWithValue("@cantenvin", dts.gcantenvin)
+            cmd.Parameters.AddWithValue("@cantenvout", dts.gcantenvout)
+            cmd.Parameters.AddWithValue("@diftaraenvases", dts.gdiftaraenvases)
             cmd.Parameters.AddWithValue("@tipocosecha", dts.gtipocosecha)
             cmd.Parameters.AddWithValue("@idcontrato", dts.gidcontrato)
             cmd.Parameters.AddWithValue("@idcontratovariedad", dts.gidcontratovariedad)
@@ -195,6 +195,7 @@ Public Class fpesajevendimia
             cmd.Parameters.AddWithValue("@kiloscastigo", dts.gkiloscastigo)
             'cmd.Parameters.AddWithValue("@anulado", dts.ganulado)
             'cmd.Parameters.AddWithValue("@activo", dts.gactivo)
+            cmd.Parameters.AddWithValue("@idenvaseout", dts.gidenvaseout)
 
 
 

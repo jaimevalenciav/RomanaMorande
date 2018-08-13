@@ -23,13 +23,13 @@ Partial Class frmVendimiaPesajeAutomatico
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVendimiaPesajeAutomatico))
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataListado = New System.Windows.Forms.DataGridView()
         Me.txtcantenvin = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -54,18 +54,30 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtnomtipoenv = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txttara = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.txtnomtrans = New System.Windows.Forms.TextBox()
         Me.txtpesajetara = New System.Windows.Forms.TextBox()
         Me.sppuerto = New System.IO.Ports.SerialPort(Me.components)
         Me.txtidtransportista = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtpromenv = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtdifkgenvbck = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtdifkgenv = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txttipoenvout = New System.Windows.Forms.TextBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.txtnomtipoenvout = New System.Windows.Forms.TextBox()
+        Me.chkemular = New System.Windows.Forms.CheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtidcontratos = New System.Windows.Forms.TextBox()
         Me.Label33 = New System.Windows.Forms.Label()
         Me.txtidbodega = New System.Windows.Forms.TextBox()
         Me.txtcantenvout = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.dpfechaguia = New System.Windows.Forms.DateTimePicker()
+        Me.fecha = New System.Windows.Forms.Label()
         Me.txtnomprov = New System.Windows.Forms.TextBox()
         Me.txtrutprov = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -110,7 +122,6 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.txtbodega = New System.Windows.Forms.TextBox()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGuardarpesaje = New System.Windows.Forms.Button()
@@ -124,17 +135,13 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txtnumpesaje = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblhora = New System.Windows.Forms.Label()
         Me.lblfecha = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.fecha = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.chkemular = New System.Windows.Forms.CheckBox()
         CType(Me.DataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -148,34 +155,34 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.DataListado.AllowUserToAddRows = False
         Me.DataListado.AllowUserToDeleteRows = False
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataListado.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataListado.DefaultCellStyle = DataGridViewCellStyle8
         Me.DataListado.Location = New System.Drawing.Point(6, 22)
         Me.DataListado.Name = "DataListado"
         Me.DataListado.ReadOnly = True
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DataListado.RowHeadersVisible = False
         Me.DataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataListado.Size = New System.Drawing.Size(671, 264)
@@ -184,7 +191,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'txtcantenvin
         '
         Me.txtcantenvin.Enabled = False
-        Me.txtcantenvin.Location = New System.Drawing.Point(318, 167)
+        Me.txtcantenvin.Location = New System.Drawing.Point(336, 144)
         Me.txtcantenvin.Name = "txtcantenvin"
         Me.txtcantenvin.Size = New System.Drawing.Size(53, 20)
         Me.txtcantenvin.TabIndex = 54
@@ -193,7 +200,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(281, 170)
+        Me.Label15.Location = New System.Drawing.Point(299, 147)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(37, 13)
         Me.Label15.TabIndex = 53
@@ -249,9 +256,9 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtnumguia
         '
-        Me.txtnumguia.Location = New System.Drawing.Point(379, 122)
+        Me.txtnumguia.Location = New System.Drawing.Point(229, 122)
         Me.txtnumguia.Name = "txtnumguia"
-        Me.txtnumguia.Size = New System.Drawing.Size(95, 20)
+        Me.txtnumguia.Size = New System.Drawing.Size(69, 20)
         Me.txtnumguia.TabIndex = 4
         Me.txtnumguia.Text = "0"
         Me.txtnumguia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -259,11 +266,11 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(273, 125)
+        Me.Label14.Location = New System.Drawing.Point(188, 125)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(98, 13)
+        Me.Label14.Size = New System.Drawing.Size(41, 13)
         Me.Label14.TabIndex = 48
-        Me.Label14.Text = "N° Guía Despacho"
+        Me.Label14.Text = "N° GD:"
         '
         'Label13
         '
@@ -323,34 +330,34 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.datalistado2.AllowUserToAddRows = False
         Me.datalistado2.AllowUserToDeleteRows = False
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistado2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistado2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.datalistado2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.datalistado2.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.datalistado2.DefaultCellStyle = DataGridViewCellStyle11
         Me.datalistado2.Location = New System.Drawing.Point(5, 29)
         Me.datalistado2.Name = "datalistado2"
         Me.datalistado2.ReadOnly = True
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistado2.RowHeadersDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistado2.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.datalistado2.RowHeadersVisible = False
         Me.datalistado2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.datalistado2.Size = New System.Drawing.Size(672, 280)
@@ -409,7 +416,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'txttipoenv
         '
         Me.txttipoenv.Enabled = False
-        Me.txttipoenv.Location = New System.Drawing.Point(89, 166)
+        Me.txttipoenv.Location = New System.Drawing.Point(96, 166)
         Me.txttipoenv.Name = "txttipoenv"
         Me.txttipoenv.Size = New System.Drawing.Size(29, 20)
         Me.txttipoenv.TabIndex = 39
@@ -418,7 +425,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'txtnomtipoenv
         '
         Me.txtnomtipoenv.Enabled = False
-        Me.txtnomtipoenv.Location = New System.Drawing.Point(120, 166)
+        Me.txtnomtipoenv.Location = New System.Drawing.Point(127, 166)
         Me.txtnomtipoenv.Name = "txtnomtipoenv"
         Me.txtnomtipoenv.Size = New System.Drawing.Size(126, 20)
         Me.txtnomtipoenv.TabIndex = 38
@@ -435,24 +442,15 @@ Partial Class frmVendimiaPesajeAutomatico
         'txttara
         '
         Me.txttara.Enabled = False
-        Me.txttara.Location = New System.Drawing.Point(379, 144)
+        Me.txttara.Location = New System.Drawing.Point(391, 122)
         Me.txttara.Name = "txttara"
-        Me.txttara.Size = New System.Drawing.Size(95, 20)
+        Me.txttara.Size = New System.Drawing.Size(79, 20)
         Me.txttara.TabIndex = 36
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(296, 147)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(75, 13)
-        Me.Label9.TabIndex = 35
-        Me.Label9.Text = "Tara Estimada"
         '
         'txtnomtrans
         '
         Me.txtnomtrans.Enabled = False
-        Me.txtnomtrans.Location = New System.Drawing.Point(120, 144)
+        Me.txtnomtrans.Location = New System.Drawing.Point(127, 144)
         Me.txtnomtrans.Name = "txtnomtrans"
         Me.txtnomtrans.Size = New System.Drawing.Size(159, 20)
         Me.txtnomtrans.TabIndex = 34
@@ -472,7 +470,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'txtidtransportista
         '
         Me.txtidtransportista.Enabled = False
-        Me.txtidtransportista.Location = New System.Drawing.Point(89, 144)
+        Me.txtidtransportista.Location = New System.Drawing.Point(96, 144)
         Me.txtidtransportista.Name = "txtidtransportista"
         Me.txtidtransportista.Size = New System.Drawing.Size(29, 20)
         Me.txtidtransportista.TabIndex = 33
@@ -480,6 +478,16 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Label9)
+        Me.GroupBox3.Controls.Add(Me.txtpromenv)
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Controls.Add(Me.txtdifkgenvbck)
+        Me.GroupBox3.Controls.Add(Me.Label4)
+        Me.GroupBox3.Controls.Add(Me.txtdifkgenv)
+        Me.GroupBox3.Controls.Add(Me.Button1)
+        Me.GroupBox3.Controls.Add(Me.txttipoenvout)
+        Me.GroupBox3.Controls.Add(Me.Label34)
+        Me.GroupBox3.Controls.Add(Me.txtnomtipoenvout)
         Me.GroupBox3.Controls.Add(Me.chkemular)
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Controls.Add(Me.txtidcontratos)
@@ -519,11 +527,9 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Controls.Add(Me.Label18)
         Me.GroupBox3.Controls.Add(Me.txttara)
-        Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Controls.Add(Me.txtnomtrans)
         Me.GroupBox3.Controls.Add(Me.Label17)
         Me.GroupBox3.Controls.Add(Me.txtidtransportista)
-        Me.GroupBox3.Controls.Add(Me.Label8)
         Me.GroupBox3.Controls.Add(Me.txtbodega)
         Me.GroupBox3.Controls.Add(Me.btnCancelar)
         Me.GroupBox3.Controls.Add(Me.btnGuardarpesaje)
@@ -537,7 +543,6 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Controls.Add(Me.Label16)
         Me.GroupBox3.Controls.Add(Me.txtnumpesaje)
-        Me.GroupBox3.Controls.Add(Me.Label4)
         Me.GroupBox3.Controls.Add(Me.Label3)
         Me.GroupBox3.Controls.Add(Me.lblhora)
         Me.GroupBox3.Controls.Add(Me.lblfecha)
@@ -547,6 +552,118 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox3.TabIndex = 40
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Pesaje"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(398, 152)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(66, 13)
+        Me.Label9.TabIndex = 97
+        Me.Label9.Text = "Dif. Kg. BCK"
+        Me.Label9.Visible = False
+        '
+        'txtpromenv
+        '
+        Me.txtpromenv.Enabled = False
+        Me.txtpromenv.Location = New System.Drawing.Point(480, 188)
+        Me.txtpromenv.Name = "txtpromenv"
+        Me.txtpromenv.Size = New System.Drawing.Size(53, 20)
+        Me.txtpromenv.TabIndex = 96
+        Me.txtpromenv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(393, 192)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(86, 13)
+        Me.Label8.TabIndex = 95
+        Me.Label8.Text = "Kg. Prom. x Env."
+        '
+        'txtdifkgenvbck
+        '
+        Me.txtdifkgenvbck.Enabled = False
+        Me.txtdifkgenvbck.Location = New System.Drawing.Point(396, 167)
+        Me.txtdifkgenvbck.Name = "txtdifkgenvbck"
+        Me.txtdifkgenvbck.Size = New System.Drawing.Size(66, 20)
+        Me.txtdifkgenvbck.TabIndex = 94
+        Me.txtdifkgenvbck.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtdifkgenvbck.Visible = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(289, 192)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(42, 13)
+        Me.Label4.TabIndex = 93
+        Me.Label4.Text = "Dif. Kg."
+        '
+        'txtdifkgenv
+        '
+        Me.txtdifkgenv.Enabled = False
+        Me.txtdifkgenv.Location = New System.Drawing.Point(336, 188)
+        Me.txtdifkgenv.Name = "txtdifkgenv"
+        Me.txtdifkgenv.Size = New System.Drawing.Size(53, 20)
+        Me.txtdifkgenv.TabIndex = 92
+        Me.txtdifkgenv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(253, 187)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(33, 22)
+        Me.Button1.TabIndex = 91
+        Me.Button1.Text = "..."
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'txttipoenvout
+        '
+        Me.txttipoenvout.Enabled = False
+        Me.txttipoenvout.Location = New System.Drawing.Point(96, 188)
+        Me.txttipoenvout.Name = "txttipoenvout"
+        Me.txttipoenvout.Size = New System.Drawing.Size(29, 20)
+        Me.txttipoenvout.TabIndex = 90
+        Me.txttipoenvout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(5, 192)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(93, 13)
+        Me.Label34.TabIndex = 88
+        Me.Label34.Text = "Tipo Envase OUT"
+        '
+        'txtnomtipoenvout
+        '
+        Me.txtnomtipoenvout.Enabled = False
+        Me.txtnomtipoenvout.Location = New System.Drawing.Point(127, 188)
+        Me.txtnomtipoenvout.Name = "txtnomtipoenvout"
+        Me.txtnomtipoenvout.Size = New System.Drawing.Size(126, 20)
+        Me.txtnomtipoenvout.TabIndex = 89
+        '
+        'chkemular
+        '
+        Me.chkemular.AutoSize = True
+        Me.chkemular.Location = New System.Drawing.Point(504, 40)
+        Me.chkemular.Name = "chkemular"
+        Me.chkemular.Size = New System.Drawing.Size(58, 17)
+        Me.chkemular.TabIndex = 87
+        Me.chkemular.Text = "Emular"
+        Me.chkemular.UseVisualStyleBackColor = True
+        Me.chkemular.Visible = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label1.Location = New System.Drawing.Point(293, 44)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(33, 13)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Hora:"
         '
         'txtidcontratos
         '
@@ -578,7 +695,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'txtcantenvout
         '
         Me.txtcantenvout.Enabled = False
-        Me.txtcantenvout.Location = New System.Drawing.Point(421, 167)
+        Me.txtcantenvout.Location = New System.Drawing.Point(336, 166)
         Me.txtcantenvout.Name = "txtcantenvout"
         Me.txtcantenvout.Size = New System.Drawing.Size(53, 20)
         Me.txtcantenvout.TabIndex = 65
@@ -587,7 +704,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(374, 170)
+        Me.Label32.Location = New System.Drawing.Point(289, 170)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(49, 13)
         Me.Label32.TabIndex = 64
@@ -596,10 +713,20 @@ Partial Class frmVendimiaPesajeAutomatico
         'dpfechaguia
         '
         Me.dpfechaguia.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dpfechaguia.Location = New System.Drawing.Point(89, 122)
+        Me.dpfechaguia.Location = New System.Drawing.Point(96, 122)
         Me.dpfechaguia.Name = "dpfechaguia"
         Me.dpfechaguia.Size = New System.Drawing.Size(82, 20)
         Me.dpfechaguia.TabIndex = 63
+        '
+        'fecha
+        '
+        Me.fecha.AutoSize = True
+        Me.fecha.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.fecha.Location = New System.Drawing.Point(34, 44)
+        Me.fecha.Name = "fecha"
+        Me.fecha.Size = New System.Drawing.Size(40, 13)
+        Me.fecha.TabIndex = 9
+        Me.fecha.Text = "Fecha:"
         '
         'txtnomprov
         '
@@ -626,7 +753,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(246, 165)
+        Me.Button2.Location = New System.Drawing.Point(253, 165)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(33, 22)
         Me.Button2.TabIndex = 59
@@ -639,7 +766,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox6.Controls.Add(Me.rbManual)
         Me.GroupBox6.Location = New System.Drawing.Point(480, 123)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(114, 66)
+        Me.GroupBox6.Size = New System.Drawing.Size(114, 60)
         Me.GroupBox6.TabIndex = 58
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Tipo Cosecha"
@@ -669,7 +796,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'btnBuscarContrato
         '
         Me.btnBuscarContrato.Enabled = False
-        Me.btnBuscarContrato.Location = New System.Drawing.Point(158, 99)
+        Me.btnBuscarContrato.Location = New System.Drawing.Point(165, 99)
         Me.btnBuscarContrato.Name = "btnBuscarContrato"
         Me.btnBuscarContrato.Size = New System.Drawing.Size(33, 22)
         Me.btnBuscarContrato.TabIndex = 57
@@ -719,16 +846,16 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox4.Controls.Add(Me.txtnomuva)
         Me.GroupBox4.Controls.Add(Me.txtcoduva)
         Me.GroupBox4.Controls.Add(Me.Label22)
-        Me.GroupBox4.Location = New System.Drawing.Point(8, 189)
+        Me.GroupBox4.Location = New System.Drawing.Point(8, 217)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(587, 151)
+        Me.GroupBox4.Size = New System.Drawing.Size(587, 123)
         Me.GroupBox4.TabIndex = 55
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos de la Uva"
         '
         'txtidsectorcuartel
         '
-        Me.txtidsectorcuartel.Location = New System.Drawing.Point(321, 76)
+        Me.txtidsectorcuartel.Location = New System.Drawing.Point(321, 55)
         Me.txtidsectorcuartel.Name = "txtidsectorcuartel"
         Me.txtidsectorcuartel.Size = New System.Drawing.Size(39, 20)
         Me.txtidsectorcuartel.TabIndex = 91
@@ -736,7 +863,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtiddetcontrato
         '
-        Me.txtiddetcontrato.Location = New System.Drawing.Point(98, 2)
+        Me.txtiddetcontrato.Location = New System.Drawing.Point(98, -7)
         Me.txtiddetcontrato.Name = "txtiddetcontrato"
         Me.txtiddetcontrato.Size = New System.Drawing.Size(39, 20)
         Me.txtiddetcontrato.TabIndex = 90
@@ -744,7 +871,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtidvariedad
         '
-        Me.txtidvariedad.Location = New System.Drawing.Point(476, 24)
+        Me.txtidvariedad.Location = New System.Drawing.Point(476, 12)
         Me.txtidvariedad.Name = "txtidvariedad"
         Me.txtidvariedad.Size = New System.Drawing.Size(39, 20)
         Me.txtidvariedad.TabIndex = 89
@@ -752,7 +879,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtidcalidad
         '
-        Me.txtidcalidad.Location = New System.Drawing.Point(321, 50)
+        Me.txtidcalidad.Location = New System.Drawing.Point(321, 34)
         Me.txtidcalidad.Name = "txtidcalidad"
         Me.txtidcalidad.Size = New System.Drawing.Size(39, 20)
         Me.txtidcalidad.TabIndex = 85
@@ -761,7 +888,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'btnBuscarSector
         '
         Me.btnBuscarSector.Enabled = False
-        Me.btnBuscarSector.Location = New System.Drawing.Point(284, 75)
+        Me.btnBuscarSector.Location = New System.Drawing.Point(284, 54)
         Me.btnBuscarSector.Name = "btnBuscarSector"
         Me.btnBuscarSector.Size = New System.Drawing.Size(33, 22)
         Me.btnBuscarSector.TabIndex = 64
@@ -771,7 +898,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(344, 105)
+        Me.Label31.Location = New System.Drawing.Point(344, 79)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(53, 13)
         Me.Label31.TabIndex = 83
@@ -779,7 +906,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtcastigo
         '
-        Me.txtcastigo.Location = New System.Drawing.Point(400, 101)
+        Me.txtcastigo.Location = New System.Drawing.Point(400, 76)
         Me.txtcastigo.Name = "txtcastigo"
         Me.txtcastigo.Size = New System.Drawing.Size(39, 20)
         Me.txtcastigo.TabIndex = 84
@@ -788,7 +915,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(471, 79)
+        Me.Label30.Location = New System.Drawing.Point(471, 58)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(28, 13)
         Me.Label30.TabIndex = 81
@@ -796,7 +923,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtapb
         '
-        Me.txtapb.Location = New System.Drawing.Point(502, 75)
+        Me.txtapb.Location = New System.Drawing.Point(502, 55)
         Me.txtapb.Name = "txtapb"
         Me.txtapb.Size = New System.Drawing.Size(50, 20)
         Me.txtapb.TabIndex = 82
@@ -805,7 +932,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(379, 79)
+        Me.Label29.Location = New System.Drawing.Point(379, 58)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(18, 13)
         Me.Label29.TabIndex = 79
@@ -813,16 +940,17 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txttemp
         '
-        Me.txttemp.Location = New System.Drawing.Point(400, 75)
+        Me.txttemp.Location = New System.Drawing.Point(400, 55)
         Me.txttemp.Name = "txttemp"
         Me.txttemp.Size = New System.Drawing.Size(39, 20)
         Me.txttemp.TabIndex = 80
+        Me.txttemp.Text = "20"
         Me.txttemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(447, 53)
+        Me.Label28.Location = New System.Drawing.Point(447, 37)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(52, 13)
         Me.Label28.TabIndex = 77
@@ -830,7 +958,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtdensidad
         '
-        Me.txtdensidad.Location = New System.Drawing.Point(502, 50)
+        Me.txtdensidad.Location = New System.Drawing.Point(502, 34)
         Me.txtdensidad.Name = "txtdensidad"
         Me.txtdensidad.Size = New System.Drawing.Size(66, 20)
         Me.txtdensidad.TabIndex = 78
@@ -839,7 +967,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(373, 53)
+        Me.Label27.Location = New System.Drawing.Point(373, 37)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(24, 13)
         Me.Label27.TabIndex = 75
@@ -847,7 +975,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtbrix
         '
-        Me.txtbrix.Location = New System.Drawing.Point(400, 50)
+        Me.txtbrix.Location = New System.Drawing.Point(400, 34)
         Me.txtbrix.Name = "txtbrix"
         Me.txtbrix.Size = New System.Drawing.Size(39, 20)
         Me.txtbrix.TabIndex = 76
@@ -855,7 +983,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtnomsubcuartel
         '
-        Me.txtnomsubcuartel.Location = New System.Drawing.Point(115, 127)
+        Me.txtnomsubcuartel.Location = New System.Drawing.Point(115, 97)
         Me.txtnomsubcuartel.Name = "txtnomsubcuartel"
         Me.txtnomsubcuartel.Size = New System.Drawing.Size(202, 20)
         Me.txtnomsubcuartel.TabIndex = 74
@@ -863,7 +991,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(9, 130)
+        Me.Label26.Location = New System.Drawing.Point(9, 100)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(62, 13)
         Me.Label26.TabIndex = 72
@@ -871,7 +999,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtidsubcuartel
         '
-        Me.txtidsubcuartel.Location = New System.Drawing.Point(75, 127)
+        Me.txtidsubcuartel.Location = New System.Drawing.Point(75, 97)
         Me.txtidsubcuartel.Name = "txtidsubcuartel"
         Me.txtidsubcuartel.Size = New System.Drawing.Size(39, 20)
         Me.txtidsubcuartel.TabIndex = 73
@@ -879,7 +1007,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtnomcuartel
         '
-        Me.txtnomcuartel.Location = New System.Drawing.Point(115, 102)
+        Me.txtnomcuartel.Location = New System.Drawing.Point(115, 76)
         Me.txtnomcuartel.Name = "txtnomcuartel"
         Me.txtnomcuartel.Size = New System.Drawing.Size(202, 20)
         Me.txtnomcuartel.TabIndex = 71
@@ -887,7 +1015,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(9, 105)
+        Me.Label25.Location = New System.Drawing.Point(9, 79)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(40, 13)
         Me.Label25.TabIndex = 69
@@ -895,7 +1023,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtidcuartel
         '
-        Me.txtidcuartel.Location = New System.Drawing.Point(75, 102)
+        Me.txtidcuartel.Location = New System.Drawing.Point(75, 76)
         Me.txtidcuartel.Name = "txtidcuartel"
         Me.txtidcuartel.Size = New System.Drawing.Size(39, 20)
         Me.txtidcuartel.TabIndex = 70
@@ -903,7 +1031,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtnomsector
         '
-        Me.txtnomsector.Location = New System.Drawing.Point(115, 76)
+        Me.txtnomsector.Location = New System.Drawing.Point(115, 55)
         Me.txtnomsector.Name = "txtnomsector"
         Me.txtnomsector.Size = New System.Drawing.Size(168, 20)
         Me.txtnomsector.TabIndex = 68
@@ -911,7 +1039,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(9, 79)
+        Me.Label24.Location = New System.Drawing.Point(9, 58)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(38, 13)
         Me.Label24.TabIndex = 66
@@ -919,7 +1047,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtidsector
         '
-        Me.txtidsector.Location = New System.Drawing.Point(75, 76)
+        Me.txtidsector.Location = New System.Drawing.Point(75, 55)
         Me.txtidsector.Name = "txtidsector"
         Me.txtidsector.Size = New System.Drawing.Size(39, 20)
         Me.txtidsector.TabIndex = 67
@@ -927,7 +1055,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtcalidad
         '
-        Me.txtcalidad.Location = New System.Drawing.Point(115, 50)
+        Me.txtcalidad.Location = New System.Drawing.Point(115, 34)
         Me.txtcalidad.Name = "txtcalidad"
         Me.txtcalidad.Size = New System.Drawing.Size(202, 20)
         Me.txtcalidad.TabIndex = 65
@@ -935,7 +1063,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(9, 53)
+        Me.Label23.Location = New System.Drawing.Point(9, 37)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(42, 13)
         Me.Label23.TabIndex = 63
@@ -944,7 +1072,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'btnBuscarVariedad
         '
         Me.btnBuscarVariedad.Enabled = False
-        Me.btnBuscarVariedad.Location = New System.Drawing.Point(516, 24)
+        Me.btnBuscarVariedad.Location = New System.Drawing.Point(516, 12)
         Me.btnBuscarVariedad.Name = "btnBuscarVariedad"
         Me.btnBuscarVariedad.Size = New System.Drawing.Size(52, 22)
         Me.btnBuscarVariedad.TabIndex = 63
@@ -953,7 +1081,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtcodcalidad
         '
-        Me.txtcodcalidad.Location = New System.Drawing.Point(75, 50)
+        Me.txtcodcalidad.Location = New System.Drawing.Point(75, 34)
         Me.txtcodcalidad.Name = "txtcodcalidad"
         Me.txtcodcalidad.Size = New System.Drawing.Size(39, 20)
         Me.txtcodcalidad.TabIndex = 64
@@ -961,14 +1089,14 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtnomuva
         '
-        Me.txtnomuva.Location = New System.Drawing.Point(153, 25)
+        Me.txtnomuva.Location = New System.Drawing.Point(153, 13)
         Me.txtnomuva.Name = "txtnomuva"
         Me.txtnomuva.Size = New System.Drawing.Size(362, 20)
         Me.txtnomuva.TabIndex = 64
         '
         'txtcoduva
         '
-        Me.txtcoduva.Location = New System.Drawing.Point(75, 25)
+        Me.txtcoduva.Location = New System.Drawing.Point(75, 13)
         Me.txtcoduva.Name = "txtcoduva"
         Me.txtcoduva.Size = New System.Drawing.Size(77, 20)
         Me.txtcoduva.TabIndex = 63
@@ -978,7 +1106,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.Label22.AutoSize = True
         Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(9, 28)
+        Me.Label22.Location = New System.Drawing.Point(9, 16)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(49, 13)
         Me.Label22.TabIndex = 63
@@ -987,16 +1115,16 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(12, 170)
+        Me.Label19.Location = New System.Drawing.Point(6, 170)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(67, 13)
+        Me.Label19.Size = New System.Drawing.Size(81, 13)
         Me.Label19.TabIndex = 37
-        Me.Label19.Text = "Tipo Envase"
+        Me.Label19.Text = "Tipo Envase IN"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(296, 147)
+        Me.Label18.Location = New System.Drawing.Point(315, 125)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(75, 13)
         Me.Label18.TabIndex = 35
@@ -1005,20 +1133,11 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(12, 147)
+        Me.Label17.Location = New System.Drawing.Point(6, 147)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(68, 13)
         Me.Label17.TabIndex = 32
         Me.Label17.Text = "Transportista"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(12, 147)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(68, 13)
-        Me.Label8.TabIndex = 32
-        Me.Label8.Text = "Transportista"
         '
         'txtbodega
         '
@@ -1093,7 +1212,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtnumcontrato
         '
-        Me.txtnumcontrato.Location = New System.Drawing.Point(89, 100)
+        Me.txtnumcontrato.Location = New System.Drawing.Point(96, 100)
         Me.txtnumcontrato.Name = "txtnumcontrato"
         Me.txtnumcontrato.Size = New System.Drawing.Size(69, 20)
         Me.txtnumcontrato.TabIndex = 23
@@ -1102,7 +1221,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 104)
+        Me.Label6.Location = New System.Drawing.Point(6, 104)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(62, 13)
         Me.Label6.TabIndex = 21
@@ -1131,7 +1250,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(12, 125)
+        Me.Label16.Location = New System.Drawing.Point(6, 125)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(78, 13)
         Me.Label16.TabIndex = 16
@@ -1149,20 +1268,11 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.txtnumpesaje.TabIndex = 17
         Me.txtnumpesaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 125)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(78, 13)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Fecha Guía D."
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 77)
+        Me.Label3.Location = New System.Drawing.Point(6, 77)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(54, 13)
         Me.Label3.TabIndex = 15
@@ -1192,26 +1302,6 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.lblfecha.TabIndex = 11
         Me.lblfecha.Text = "Fecha"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(293, 44)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(33, 13)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Hora:"
-        '
-        'fecha
-        '
-        Me.fecha.AutoSize = True
-        Me.fecha.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.fecha.Location = New System.Drawing.Point(34, 44)
-        Me.fecha.Name = "fecha"
-        Me.fecha.Size = New System.Drawing.Size(40, 13)
-        Me.fecha.TabIndex = 9
-        Me.fecha.Text = "Fecha:"
-        '
         'Timer1
         '
         Me.Timer1.Interval = 1000
@@ -1238,17 +1328,6 @@ Partial Class frmVendimiaPesajeAutomatico
         'Timer2
         '
         Me.Timer2.Interval = 1000
-        '
-        'chkemular
-        '
-        Me.chkemular.AutoSize = True
-        Me.chkemular.Location = New System.Drawing.Point(504, 40)
-        Me.chkemular.Name = "chkemular"
-        Me.chkemular.Size = New System.Drawing.Size(58, 17)
-        Me.chkemular.TabIndex = 87
-        Me.chkemular.Text = "Emular"
-        Me.chkemular.UseVisualStyleBackColor = True
-        Me.chkemular.Visible = False
         '
         'frmVendimiaPesajeAutomatico
         '
@@ -1303,13 +1382,11 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents txtnomtipoenv As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents txttara As TextBox
-    Friend WithEvents Label9 As Label
     Friend WithEvents txtnomtrans As TextBox
     Friend WithEvents txtpesajetara As TextBox
     Friend WithEvents sppuerto As IO.Ports.SerialPort
     Friend WithEvents txtidtransportista As TextBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Label8 As Label
     Friend WithEvents txtbodega As TextBox
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGuardarpesaje As Button
@@ -1329,7 +1406,6 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents fecha As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents rbMecanica As RadioButton
@@ -1384,4 +1460,14 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents txtidsectorcuartel As TextBox
     Friend WithEvents txtidcontratos As TextBox
     Friend WithEvents chkemular As CheckBox
+    Friend WithEvents txtdifkgenv As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents txttipoenvout As TextBox
+    Friend WithEvents Label34 As Label
+    Friend WithEvents txtnomtipoenvout As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtdifkgenvbck As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txtpromenv As TextBox
+    Friend WithEvents Label8 As Label
 End Class

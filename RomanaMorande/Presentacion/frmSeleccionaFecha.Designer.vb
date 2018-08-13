@@ -73,7 +73,7 @@ Partial Class frmSeleccionaFecha
         Me.MinimizeBox = False
         Me.Name = "frmSeleccionaFecha"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmSeleccionaFecha"
+        Me.Text = "Selección Fecha"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

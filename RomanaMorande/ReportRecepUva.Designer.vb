@@ -5921,6 +5921,10 @@ Partial Public Class ReportRecepUva
         
         Private columniddetcontratosectorcuartel As Global.System.Data.DataColumn
         
+        Private columnidenvaseout As Global.System.Data.DataColumn
+        
+        Private columnNomEnvOut As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -6261,6 +6265,22 @@ Partial Public Class ReportRecepUva
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property idenvaseoutColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnidenvaseout
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property NomEnvOutColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNomEnvOut
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -6334,9 +6354,11 @@ Partial Public Class ReportRecepUva
                     ByVal kiloscastigo As Integer,  _
                     ByVal anulado As Boolean,  _
                     ByVal activo As Boolean,  _
-                    ByVal iddetcontratosectorcuartel As Integer) As pesajesvendimiaRow
+                    ByVal iddetcontratosectorcuartel As Integer,  _
+                    ByVal idenvaseout As String,  _
+                    ByVal NomEnvOut As String) As pesajesvendimiaRow
             Dim rowpesajesvendimiaRow As pesajesvendimiaRow = CType(Me.NewRow,pesajesvendimiaRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, aniovendimia, idsapv, idvehiculo, fechacreacion, fechapesajein, fechapesajeout, pesajetara, pesajebruto, pesajeneto, observaciones, estadopesaje, visible, numguia, Nothing, Nothing, cantenvin, cantenvout, diftaraenvases, tipocosecha, Nothing, idcontratovariedad, sector, nomsector, cuartel, nomcuartel, subcuartel, nomsubcuartel, idcalidad, brix, densidad, temp, apb, porccastigo, kiloscastigo, anulado, activo, iddetcontratosectorcuartel}
+            Dim columnValuesArray() As Object = New Object() {Nothing, aniovendimia, idsapv, idvehiculo, fechacreacion, fechapesajein, fechapesajeout, pesajetara, pesajebruto, pesajeneto, observaciones, estadopesaje, visible, numguia, Nothing, Nothing, cantenvin, cantenvout, diftaraenvases, tipocosecha, Nothing, idcontratovariedad, sector, nomsector, cuartel, nomcuartel, subcuartel, nomsubcuartel, idcalidad, brix, densidad, temp, apb, porccastigo, kiloscastigo, anulado, activo, iddetcontratosectorcuartel, idenvaseout, NomEnvOut}
             If (Not (parentbodegaRowByFK_pesajesvendimia_bodega) Is Nothing) Then
                 columnValuesArray(14) = parentbodegaRowByFK_pesajesvendimia_bodega(0)
             End If
@@ -6412,6 +6434,8 @@ Partial Public Class ReportRecepUva
             Me.columnanulado = MyBase.Columns("anulado")
             Me.columnactivo = MyBase.Columns("activo")
             Me.columniddetcontratosectorcuartel = MyBase.Columns("iddetcontratosectorcuartel")
+            Me.columnidenvaseout = MyBase.Columns("idenvaseout")
+            Me.columnNomEnvOut = MyBase.Columns("NomEnvOut")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6493,6 +6517,10 @@ Partial Public Class ReportRecepUva
             MyBase.Columns.Add(Me.columnactivo)
             Me.columniddetcontratosectorcuartel = New Global.System.Data.DataColumn("iddetcontratosectorcuartel", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columniddetcontratosectorcuartel)
+            Me.columnidenvaseout = New Global.System.Data.DataColumn("idenvaseout", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnidenvaseout)
+            Me.columnNomEnvOut = New Global.System.Data.DataColumn("NomEnvOut", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNomEnvOut)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnidpesajev}, true))
             Me.columnidpesajev.AutoIncrement = true
             Me.columnidpesajev.AutoIncrementSeed = -1
@@ -23240,6 +23268,36 @@ Partial Public Class ReportRecepUva
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property idenvaseout() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablepesajesvendimia.idenvaseoutColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'idenvaseout' de la tabla 'pesajesvendimia' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablepesajesvendimia.idenvaseoutColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property NomEnvOut() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablepesajesvendimia.NomEnvOutColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NomEnvOut' de la tabla 'pesajesvendimia' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablepesajesvendimia.NomEnvOutColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property bodegaRow() As bodegaRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_pesajesvendimia_bodega")),bodegaRow)
@@ -23557,6 +23615,30 @@ Partial Public Class ReportRecepUva
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetiddetcontratosectorcuartelNull()
             Me(Me.tablepesajesvendimia.iddetcontratosectorcuartelColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsidenvaseoutNull() As Boolean
+            Return Me.IsNull(Me.tablepesajesvendimia.idenvaseoutColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetidenvaseoutNull()
+            Me(Me.tablepesajesvendimia.idenvaseoutColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsNomEnvOutNull() As Boolean
+            Return Me.IsNull(Me.tablepesajesvendimia.NomEnvOutColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetNomEnvOutNull()
+            Me(Me.tablepesajesvendimia.NomEnvOutColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

@@ -25,14 +25,24 @@ Partial Class frmReporteRecepUva
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReporteRecepUva))
+        Me.mostrar_reportepesajesvendimiaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReportePesajeUva1 = New RomanaMorande.ReportePesajeUva1()
         Me.txtidpesajev = New System.Windows.Forms.TextBox()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.ReportePesajeUva1 = New RomanaMorande.ReportePesajeUva1()
-        Me.mostrar_reportepesajesvendimiaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.mostrar_reportepesajesvendimiaTableAdapter = New RomanaMorande.ReportePesajeUva1TableAdapters.mostrar_reportepesajesvendimiaTableAdapter()
-        CType(Me.ReportePesajeUva1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mostrar_reportepesajesvendimiaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReportePesajeUva1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'mostrar_reportepesajesvendimiaBindingSource
+        '
+        Me.mostrar_reportepesajesvendimiaBindingSource.DataMember = "mostrar_reportepesajesvendimia"
+        Me.mostrar_reportepesajesvendimiaBindingSource.DataSource = Me.ReportePesajeUva1
+        '
+        'ReportePesajeUva1
+        '
+        Me.ReportePesajeUva1.DataSetName = "ReportePesajeUva1"
+        Me.ReportePesajeUva1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txtidpesajev
         '
@@ -55,16 +65,6 @@ Partial Class frmReporteRecepUva
         Me.ReportViewer1.Size = New System.Drawing.Size(701, 319)
         Me.ReportViewer1.TabIndex = 4
         '
-        'ReportePesajeUva1
-        '
-        Me.ReportePesajeUva1.DataSetName = "ReportePesajeUva1"
-        Me.ReportePesajeUva1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'mostrar_reportepesajesvendimiaBindingSource
-        '
-        Me.mostrar_reportepesajesvendimiaBindingSource.DataMember = "mostrar_reportepesajesvendimia"
-        Me.mostrar_reportepesajesvendimiaBindingSource.DataSource = Me.ReportePesajeUva1
-        '
         'mostrar_reportepesajesvendimiaTableAdapter
         '
         Me.mostrar_reportepesajesvendimiaTableAdapter.ClearBeforeFill = True
@@ -80,8 +80,8 @@ Partial Class frmReporteRecepUva
         Me.Name = "frmReporteRecepUva"
         Me.Text = "Reporte Recepción Uva"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.ReportePesajeUva1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.mostrar_reportepesajesvendimiaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReportePesajeUva1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

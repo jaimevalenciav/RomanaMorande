@@ -31,7 +31,7 @@
         txtpesajebruto.ReadOnly = True
         txtpesajetara.ReadOnly = True
         txtpesajeneto.ReadOnly = True
-
+        txttemp.ReadOnly = True
         rbManual.Checked = False
         rbMecanica.Checked = False
 
@@ -66,51 +66,49 @@
 
             If dt.Rows.Count <> 0 Then
                 DataListado.DataSource = dt
+                DataListado.Columns(0).Width = 55
+                DataListado.Columns(3).Visible = False
+                DataListado.Columns(5).Visible = False
+                DataListado.Columns(7).Visible = False
+                DataListado.Columns(9).Visible = False
+                DataListado.Columns(10).Visible = False
+                DataListado.Columns(14).Visible = False
+                DataListado.Columns(15).Visible = False
+                DataListado.Columns(16).Visible = False
+                DataListado.Columns(17).Visible = False
+                DataListado.Columns(20).Visible = False
+                DataListado.Columns(21).Visible = False
+                DataListado.Columns(22).Visible = False
+                DataListado.Columns(23).Visible = False
+                DataListado.Columns(24).Visible = False
+                DataListado.Columns(26).Visible = False
+                DataListado.Columns(27).Visible = False
+                DataListado.Columns(30).Visible = False
+                DataListado.Columns(31).Visible = False
+                DataListado.Columns(32).Visible = False
+                DataListado.Columns(34).Visible = False
+                DataListado.Columns(36).Visible = False
+                DataListado.Columns(38).Visible = False
+                DataListado.Columns(39).Visible = False
+                DataListado.Columns(40).Visible = False
+                DataListado.Columns(41).Visible = False
+                DataListado.Columns(42).Visible = False
+                DataListado.Columns(43).Visible = False
+                DataListado.Columns(53).Visible = False
+                DataListado.Columns(44).Visible = False
+                DataListado.Columns(45).Visible = False
+                DataListado.Columns(46).Visible = False
+                DataListado.Columns(47).Visible = False
+                DataListado.Columns(48).Visible = False
+                DataListado.Columns(49).Visible = False
+                DataListado.Columns(51).Visible = False
+                DataListado.Columns(53).Visible = False
             Else
                 DataListado.DataSource = Nothing
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
-        DataListado.Columns(0).Width = 55
-
-        DataListado.Columns(3).Visible = False
-        DataListado.Columns(5).Visible = False
-        DataListado.Columns(7).Visible = False
-        DataListado.Columns(9).Visible = False
-        DataListado.Columns(10).Visible = False
-        DataListado.Columns(14).Visible = False
-        DataListado.Columns(15).Visible = False
-        DataListado.Columns(16).Visible = False
-        DataListado.Columns(17).Visible = False
-        DataListado.Columns(20).Visible = False
-        DataListado.Columns(21).Visible = False
-        DataListado.Columns(22).Visible = False
-        DataListado.Columns(23).Visible = False
-        DataListado.Columns(24).Visible = False
-        DataListado.Columns(26).Visible = False
-        DataListado.Columns(27).Visible = False
-        DataListado.Columns(30).Visible = False
-        DataListado.Columns(31).Visible = False
-        DataListado.Columns(32).Visible = False
-        DataListado.Columns(34).Visible = False
-        DataListado.Columns(36).Visible = False
-        DataListado.Columns(38).Visible = False
-        DataListado.Columns(39).Visible = False
-        DataListado.Columns(40).Visible = False
-        DataListado.Columns(41).Visible = False
-        DataListado.Columns(42).Visible = False
-        DataListado.Columns(43).Visible = False
-        DataListado.Columns(53).Visible = False
-        DataListado.Columns(44).Visible = False
-        DataListado.Columns(45).Visible = False
-        DataListado.Columns(46).Visible = False
-        DataListado.Columns(47).Visible = False
-        DataListado.Columns(48).Visible = False
-        DataListado.Columns(49).Visible = False
-        DataListado.Columns(51).Visible = False
-        DataListado.Columns(53).Visible = False
 
 
 
@@ -126,48 +124,50 @@
 
             If dt.Rows.Count <> 0 Then
                 datalistado2.DataSource = dt
+                datalistado2.Columns(3).Visible = False
+                datalistado2.Columns(5).Visible = False
+                datalistado2.Columns(7).Visible = False
+                datalistado2.Columns(9).Visible = False
+                datalistado2.Columns(10).Visible = False
+                datalistado2.Columns(14).Visible = False
+                datalistado2.Columns(15).Visible = False
+                datalistado2.Columns(16).Visible = False
+                datalistado2.Columns(17).Visible = False
+                datalistado2.Columns(20).Visible = False
+                datalistado2.Columns(21).Visible = False
+                datalistado2.Columns(22).Visible = False
+                datalistado2.Columns(23).Visible = False
+                datalistado2.Columns(24).Visible = False
+                datalistado2.Columns(26).Visible = False
+                datalistado2.Columns(27).Visible = False
+                datalistado2.Columns(30).Visible = False
+                datalistado2.Columns(31).Visible = False
+                datalistado2.Columns(32).Visible = False
+                datalistado2.Columns(34).Visible = False
+                datalistado2.Columns(36).Visible = False
+                datalistado2.Columns(38).Visible = False
+                datalistado2.Columns(39).Visible = False
+                datalistado2.Columns(40).Visible = False
+                datalistado2.Columns(41).Visible = False
+                datalistado2.Columns(42).Visible = False
+                datalistado2.Columns(43).Visible = False
+                datalistado2.Columns(53).Visible = False
+                datalistado2.Columns(44).Visible = False
+                datalistado2.Columns(45).Visible = False
+                datalistado2.Columns(46).Visible = False
+                datalistado2.Columns(47).Visible = False
+                datalistado2.Columns(48).Visible = False
+                datalistado2.Columns(49).Visible = False
+                datalistado2.Columns(51).Visible = False
+                datalistado2.Columns(53).Visible = False
             Else
                 datalistado2.DataSource = Nothing
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        datalistado2.Columns(3).Visible = False
-        datalistado2.Columns(5).Visible = False
-        datalistado2.Columns(7).Visible = False
-        datalistado2.Columns(9).Visible = False
-        datalistado2.Columns(10).Visible = False
-        datalistado2.Columns(14).Visible = False
-        datalistado2.Columns(15).Visible = False
-        datalistado2.Columns(16).Visible = False
-        datalistado2.Columns(17).Visible = False
-        datalistado2.Columns(20).Visible = False
-        datalistado2.Columns(21).Visible = False
-        datalistado2.Columns(22).Visible = False
-        datalistado2.Columns(23).Visible = False
-        datalistado2.Columns(24).Visible = False
-        datalistado2.Columns(26).Visible = False
-        datalistado2.Columns(27).Visible = False
-        datalistado2.Columns(30).Visible = False
-        datalistado2.Columns(31).Visible = False
-        datalistado2.Columns(32).Visible = False
-        datalistado2.Columns(34).Visible = False
-        datalistado2.Columns(36).Visible = False
-        datalistado2.Columns(38).Visible = False
-        datalistado2.Columns(39).Visible = False
-        datalistado2.Columns(40).Visible = False
-        datalistado2.Columns(41).Visible = False
-        datalistado2.Columns(42).Visible = False
-        datalistado2.Columns(43).Visible = False
-        datalistado2.Columns(53).Visible = False
-        datalistado2.Columns(44).Visible = False
-        datalistado2.Columns(45).Visible = False
-        datalistado2.Columns(46).Visible = False
-        datalistado2.Columns(47).Visible = False
-        datalistado2.Columns(48).Visible = False
-        datalistado2.Columns(49).Visible = False
-        datalistado2.Columns(51).Visible = False
-        datalistado2.Columns(53).Visible = False
+
+
 
     End Sub
 
@@ -218,6 +218,12 @@
         btncapturapesobruto.Visible = False
         btncapturapesotara.Visible = False
         btnanula.Visible = False
+        txttipoenvout.Text = ""
+        txtcantenvout.Text = ""
+        txtnomtipoenvout.Text = ""
+        txtdifkgenv.Text = ""
+        txtdifkgenvbck.Text = ""
+        txtpromenv.Text = ""
         mostrar()
         mostrar2()
     End Sub
@@ -270,7 +276,10 @@
         txtpesajebruto.Text = DataListado.SelectedCells.Item(12).Value
         txtpesajetara.Text = DataListado.SelectedCells.Item(11).Value
         txtpesajeneto.Text = DataListado.SelectedCells.Item(13).Value
-
+        txtdifkgenv.Text = DataListado.SelectedCells.Item(24).Value
+        txtdifkgenvbck.Text = DataListado.SelectedCells.Item(24).Value
+        txttipoenvout.Text = "0"
+        txtnomtipoenvout.Text = "Sin Información"
 
 
         btnBuscarBodega.Enabled = True
@@ -289,6 +298,8 @@
             frmIngresaNumGuia.ShowDialog()
             frmSeleccionaVariedad.ShowDialog()
             frmSeleccionarSectorCuartel.ShowDialog()
+            frmSeleccionTipoEnvase.txtflag.Text = txtestadopesaje.Text
+            frmSeleccionTipoEnvase.ShowDialog()
             btncapturapesobruto.Visible = True
             btncapturapesotara.Visible = False
             btnanula.Visible = True
@@ -297,6 +308,8 @@
             frmBodega.txtflag.Text = 2
             btncapturapesotara.Visible = True
             btncapturapesobruto.Visible = False
+            frmSeleccionTipoEnvase.txtflag.Text = 1
+            frmSeleccionTipoEnvase.ShowDialog()
         End If
         btnanula.Visible = True
     End Sub
@@ -325,13 +338,16 @@
 
         Dim rnd2 As New Random()
         Dim N2 As Integer = rnd2.Next(1000, 15000)
-        txtpesajetara.Text = N2
+        txtpesajetara.Text = N2+txtdifkgenv.Text
     End Sub
     Private Sub btncapturapesobruto_Click(sender As Object, e As EventArgs) Handles btncapturapesobruto.Click
+        Dim pretara As Integer
         If chkemular.Checked = True Then
             'Si checkbox emular se encuentra activado, emula un pesaje
             emularbruto()
             txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
+            pretara = Val(txtpesajebruto.Text) - Val(txttara.Text)
+            txtpromenv.Text = Math.Round(((Val(pretara) - Val(txtdifkgenv.Text)) / Val(txtcantenvin.Text)), 0, MidpointRounding.ToEven)
         Else
             txtpesajebruto.Text = "0"
             While txtpesajebruto.Text = 0
@@ -354,6 +370,7 @@
                             If Val(buffer) <= 60000 Then
                                 txtpesajebruto.Text = Val(buffer)
                                 txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
+                                txtpromenv.Text = Math.Round(((Val(txtpesajeneto.Text) - Val(txtdifkgenv.Text)) / Val(txtcantenvin.Text)), 0, MidpointRounding.ToEven)
                                 sppuerto.Close()
                             End If
                         Else
@@ -373,7 +390,8 @@
         If chkemular.Checked = True Then
             'Si checkbox emular se encuentra activado, emula un pesaje
             emulartara()
-            txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
+            txtpesajeneto.Text = Val(txtpesajebruto.Text) - (Val(txtpesajetara.Text) + Val(txtdifkgenv.Text))
+            txtpromenv.Text = Math.Round((Val(txtpesajeneto.Text) / Val(txtcantenvin.Text)), 0, MidpointRounding.ToEven)
         Else
 
             txtpesajetara.Text = "0"
@@ -396,7 +414,8 @@
                             'MsgBox(buffer)
                             If Val(buffer) <= 60000 Then
                                 txtpesajetara.Text = Val(buffer)
-                                txtpesajeneto.Text = Val(txtpesajebruto.Text) - Val(txtpesajetara.Text)
+                                txtpesajeneto.Text = Val(txtpesajebruto.Text) - (Val(txtpesajetara.Text) + Val(txtdifkgenv.Text))
+                                txtpromenv.Text = Math.Round((Val(txtpesajeneto.Text) / Val(txtcantenvin.Text)), 0, MidpointRounding.ToEven)
                                 sppuerto.Close()
                             End If
                         Else
@@ -434,6 +453,12 @@
                         dts.gidcontratosectorcuartel = txtidsectorcuartel.Text
                         dts.gnumguia = txtnumguia.Text
                         dts.gidbodega = txtidbodega.Text
+                        dts.gidenvase = txttipoenv.Text
+                        dts.gcantenvin = txtcantenvin.Text
+                        dts.gdiftaraenvases = txtdifkgenv.Text
+                        dts.gidenvaseout = txttipoenvout.Text
+                        dts.gcantenvout = txtcantenvout.Text
+                        dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
                         If rbManual.Checked = True Then
                             dts.gtipocosecha = "M"
                         ElseIf rbMecanica.Checked = True Then
@@ -443,9 +468,13 @@
 
                         If Val(txtestadopesaje.Text) = 0 Then
                             dts.gestadopesaje = 1 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
+                            dts.gidenvaseout = txttipoenvout.Text
+                            dts.gcantenvout = txtcantenvout.Text
                             dts.gobservaciones = txtobservaciones.Text
                             If func.editarIN(dts) Then
                                 MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                frmReporteRecepUva.txtidpesajev.Text = Me.txtnumpesaje.Text
+                                frmReporteRecepUva.ShowDialog()
                                 mostrar()
                                 mostrar2()
                                 limpiar()
@@ -467,7 +496,11 @@
                                     txtnumguia.Select()
                                 Else
                                     dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
-                                    'dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
+
+                                    dts.gidenvaseout = txttipoenvout.Text
+                                    dts.gcantenvout = txtcantenvout.Text
+
+                                    dts.gdiftaraenvases = txtdifkgenv.Text
                                     If func.editarOUT(dts) Then
                                         MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                         'If txtestadopesaje.Text = 1 Then
@@ -486,7 +519,7 @@
                                 End If
                             Else
                                 dts.gestadopesaje = 2 '0:SinPesaje 1:PesajeTara 2:PesajeBruto
-                                dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
+                                'dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
                                 If func.editarOUT(dts) Then
                                     MessageBox.Show("Pesaje Registrado Correctamente", "Guardando Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                                     frmReporteRecepUva.txtidpesajev.Text = Me.txtnumpesaje.Text
@@ -554,4 +587,21 @@
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If txtestadopesaje.Text = 0 Then
+            frmSeleccionTipoEnvase.txtflag.Text = txtestadopesaje.Text
+            frmSeleccionTipoEnvase.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        If txtestadopesaje.Text = 1 Then
+            txtdifkgenv.Text = txtdifkgenvbck.Text
+            frmSeleccionTipoEnvase.txtflag.Text = txtestadopesaje.Text
+            frmSeleccionTipoEnvase.ShowDialog()
+        End If
+    End Sub
+
+
 End Class
