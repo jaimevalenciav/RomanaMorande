@@ -23,26 +23,53 @@ Partial Class frmReporteRecepUva
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReporteRecepUva))
-        Me.mostrar_reportepesajesvendimiaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ReportePesajeUva1 = New RomanaMorande.ReportePesajeUva1()
-        Me.txtidpesajev = New System.Windows.Forms.TextBox()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.mostrar_reportepesajesvendimiaTableAdapter = New RomanaMorande.ReportePesajeUva1TableAdapters.mostrar_reportepesajesvendimiaTableAdapter()
+        Me.mostrar_reportepesajesvendimiaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReportRecepUva = New RomanaMorande.ReportRecepUva()
+        Me.reporte_pesajeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.pesajeDataSet8 = New RomanaMorande.pesajeDataSet8()
+        Me.txtidpesajev = New System.Windows.Forms.TextBox()
+        Me.Reporte_pesajeTableAdapter1 = New RomanaMorande.pesajeDataSet8TableAdapters.reporte_pesajeTableAdapter()
+        Me.reporte_pesajeTableAdapter = New RomanaMorande.pesajeDataSet8TableAdapters.reporte_pesajeTableAdapter()
+        Me.pesajebckDataSet = New RomanaMorande.pesajebckDataSet()
+        Me.mostrar_reportepesajesvendimiaTableAdapter = New RomanaMorande.ReportRecepUvaTableAdapters.mostrar_reportepesajesvendimiaTableAdapter()
         CType(Me.mostrar_reportepesajesvendimiaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ReportePesajeUva1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReportRecepUva, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.reporte_pesajeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pesajeDataSet8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pesajebckDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ReportViewer1
+        '
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "RomanaMorande.ReporteRecepcionUva.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(754, 270)
+        Me.ReportViewer1.TabIndex = 4
         '
         'mostrar_reportepesajesvendimiaBindingSource
         '
         Me.mostrar_reportepesajesvendimiaBindingSource.DataMember = "mostrar_reportepesajesvendimia"
-        Me.mostrar_reportepesajesvendimiaBindingSource.DataSource = Me.ReportePesajeUva1
+        Me.mostrar_reportepesajesvendimiaBindingSource.DataSource = Me.ReportRecepUva
         '
-        'ReportePesajeUva1
+        'ReportRecepUva
         '
-        Me.ReportePesajeUva1.DataSetName = "ReportePesajeUva1"
-        Me.ReportePesajeUva1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.ReportRecepUva.DataSetName = "ReportRecepUva"
+        Me.ReportRecepUva.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'reporte_pesajeBindingSource
+        '
+        Me.reporte_pesajeBindingSource.DataMember = "reporte_pesaje"
+        Me.reporte_pesajeBindingSource.DataSource = Me.pesajeDataSet8
+        '
+        'pesajeDataSet8
+        '
+        Me.pesajeDataSet8.DataSetName = "pesajebckDataSet"
+        Me.pesajeDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txtidpesajev
         '
@@ -52,18 +79,18 @@ Partial Class frmReporteRecepUva
         Me.txtidpesajev.TabIndex = 3
         Me.txtidpesajev.Visible = False
         '
-        'ReportViewer1
+        'Reporte_pesajeTableAdapter1
         '
-        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource1.Name = "ReportePesajeVendimia"
-        ReportDataSource1.Value = Me.mostrar_reportepesajesvendimiaBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "RomanaMorande.VoucherPesajeUva.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(701, 319)
-        Me.ReportViewer1.TabIndex = 4
+        Me.Reporte_pesajeTableAdapter1.ClearBeforeFill = True
+        '
+        'reporte_pesajeTableAdapter
+        '
+        Me.reporte_pesajeTableAdapter.ClearBeforeFill = True
+        '
+        'pesajebckDataSet
+        '
+        Me.pesajebckDataSet.DataSetName = "pesajebckDataSet"
+        Me.pesajebckDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'mostrar_reportepesajesvendimiaTableAdapter
         '
@@ -73,23 +100,30 @@ Partial Class frmReporteRecepUva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(701, 319)
+        Me.ClientSize = New System.Drawing.Size(754, 270)
         Me.Controls.Add(Me.txtidpesajev)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmReporteRecepUva"
-        Me.Text = "Reporte Recepción Uva"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Text = "Imprimir Reporte Recepción Uva"
         CType(Me.mostrar_reportepesajesvendimiaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ReportePesajeUva1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReportRecepUva, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.reporte_pesajeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pesajeDataSet8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pesajebckDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents txtidpesajev As TextBox
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents mostrar_reportepesajesvendimiaBindingSource As BindingSource
-    Friend WithEvents ReportePesajeUva1 As ReportePesajeUva1
-    Friend WithEvents mostrar_reportepesajesvendimiaTableAdapter As ReportePesajeUva1TableAdapters.mostrar_reportepesajesvendimiaTableAdapter
+    Friend WithEvents ReportRecepUva As ReportRecepUva
+    Friend WithEvents reporte_pesajeBindingSource As BindingSource
+    Friend WithEvents pesajeDataSet8 As pesajeDataSet8
+    Friend WithEvents txtidpesajev As TextBox
+    Friend WithEvents Reporte_pesajeTableAdapter1 As pesajeDataSet8TableAdapters.reporte_pesajeTableAdapter
+    Friend WithEvents reporte_pesajeTableAdapter As pesajeDataSet8TableAdapters.reporte_pesajeTableAdapter
+    Friend WithEvents pesajebckDataSet As pesajebckDataSet
+    Friend WithEvents mostrar_reportepesajesvendimiaTableAdapter As ReportRecepUvaTableAdapters.mostrar_reportepesajesvendimiaTableAdapter
 End Class

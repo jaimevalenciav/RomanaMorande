@@ -32,6 +32,7 @@ Public Class frmSeleccionaVariedad
         datalistado.Columns(6).Visible = False
         datalistado.Columns(7).Visible = False
         datalistado.Columns(8).Visible = False
+        datalistado.Columns(9).Visible = False
     End Sub
 
     Private Sub datalistado_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentDoubleClick
@@ -42,6 +43,11 @@ Public Class frmSeleccionaVariedad
         frmVendimiaPesajeAutomatico.txtidvariedad.Text = datalistado.SelectedCells(6).Value
         frmVendimiaPesajeAutomatico.txtidcalidad.Text = datalistado.SelectedCells(7).Value
         frmVendimiaPesajeAutomatico.txtiddetcontrato.Text = datalistado.SelectedCells(8).Value
+        If datalistado.SelectedCells.Item(9).Value.ToString = "B" Then
+            frmVendimiaPesajeAutomatico.rbBlanco.Checked = True
+        ElseIf datalistado.SelectedCells.Item(9).Value.ToString = "T" Then
+            frmVendimiaPesajeAutomatico.rbTinto.Checked = True
+        End If
         Me.Close()
     End Sub
 

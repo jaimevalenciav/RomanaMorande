@@ -86,23 +86,23 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
@@ -226,10 +226,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>pesajeDataSet8.xsd</DependentUpon>
     </Compile>
+    <Compile Include="pesajeDataSet8.vb">
+      <DependentUpon>pesajeDataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="pesajeDataSet9.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>pesajeDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pesajeUvaDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pesajeUvaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PesajeVendimiaReport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PesajeVendimiaReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PesajeVendimiaUvaReporte.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PesajeVendimiaUvaReporte.xsd</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\AboutBox1.Designer.vb">
       <DependentUpon>AboutBox1.vb</DependentUpon>
@@ -506,6 +524,11 @@
     <Compile Include="Presentacion\frmVendimiaPesajeAutomatico.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReortePesajeVendimia4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReortePesajeVendimia4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ReportePesajeUva.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -523,6 +546,16 @@
     </Compile>
     <Compile Include="ReportePesajeVendimia.vb">
       <DependentUpon>ReportePesajeVendimia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePesajeVendimia1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePesajeVendimia1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePesajeVendimia2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePesajeVendimia2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reportes\frmreportecomprobante.Designer.vb">
       <DependentUpon>frmreportecomprobante.vb</DependentUpon>
@@ -546,6 +579,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportRecepUva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportUva.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportUva.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RepPesajeUva.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepPesajeUva.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -691,8 +734,8 @@
     <EmbeddedResource Include="Reportes\frmReporteRecepUva.resx">
       <DependentUpon>frmReporteRecepUva.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteRecepcionUva.rdlc" />
     <EmbeddedResource Include="Reportes\VoucherPesajeNuevo.rdlc" />
-    <EmbeddedResource Include="Reportes\VoucherPesajeUva.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -871,6 +914,50 @@
     <None Include="pesajeDataSet9.xss">
       <DependentUpon>pesajeDataSet9.xsd</DependentUpon>
     </None>
+    <None Include="pesajeUvaDataSet1.xsc">
+      <DependentUpon>pesajeUvaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pesajeUvaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pesajeUvaDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pesajeUvaDataSet1.xss">
+      <DependentUpon>pesajeUvaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PesajeVendimiaReport.xsc">
+      <DependentUpon>PesajeVendimiaReport.xsd</DependentUpon>
+    </None>
+    <None Include="PesajeVendimiaReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PesajeVendimiaReport.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PesajeVendimiaReport.xss">
+      <DependentUpon>PesajeVendimiaReport.xsd</DependentUpon>
+    </None>
+    <None Include="PesajeVendimiaUvaReporte.xsc">
+      <DependentUpon>PesajeVendimiaUvaReporte.xsd</DependentUpon>
+    </None>
+    <None Include="PesajeVendimiaUvaReporte.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PesajeVendimiaUvaReporte.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PesajeVendimiaUvaReporte.xss">
+      <DependentUpon>PesajeVendimiaUvaReporte.xsd</DependentUpon>
+    </None>
+    <None Include="ReortePesajeVendimia4.xsc">
+      <DependentUpon>ReortePesajeVendimia4.xsd</DependentUpon>
+    </None>
+    <None Include="ReortePesajeVendimia4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReortePesajeVendimia4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReortePesajeVendimia4.xss">
+      <DependentUpon>ReortePesajeVendimia4.xsd</DependentUpon>
+    </None>
     <None Include="ReportePesajeUva.xsc">
       <DependentUpon>ReportePesajeUva.xsd</DependentUpon>
     </None>
@@ -904,6 +991,28 @@
     <None Include="ReportePesajeVendimia.xss">
       <DependentUpon>ReportePesajeVendimia.xsd</DependentUpon>
     </None>
+    <None Include="ReportePesajeVendimia1.xsc">
+      <DependentUpon>ReportePesajeVendimia1.xsd</DependentUpon>
+    </None>
+    <None Include="ReportePesajeVendimia1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportePesajeVendimia1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReportePesajeVendimia1.xss">
+      <DependentUpon>ReportePesajeVendimia1.xsd</DependentUpon>
+    </None>
+    <None Include="ReportePesajeVendimia2.xsc">
+      <DependentUpon>ReportePesajeVendimia2.xsd</DependentUpon>
+    </None>
+    <None Include="ReportePesajeVendimia2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportePesajeVendimia2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReportePesajeVendimia2.xss">
+      <DependentUpon>ReportePesajeVendimia2.xsd</DependentUpon>
+    </None>
     <None Include="ReportRecepUva.xsc">
       <DependentUpon>ReportRecepUva.xsd</DependentUpon>
     </None>
@@ -914,6 +1023,28 @@
     </None>
     <None Include="ReportRecepUva.xss">
       <DependentUpon>ReportRecepUva.xsd</DependentUpon>
+    </None>
+    <None Include="ReportUva.xsc">
+      <DependentUpon>ReportUva.xsd</DependentUpon>
+    </None>
+    <None Include="ReportUva.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportUva.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReportUva.xss">
+      <DependentUpon>ReportUva.xsd</DependentUpon>
+    </None>
+    <None Include="RepPesajeUva.xsc">
+      <DependentUpon>RepPesajeUva.xsd</DependentUpon>
+    </None>
+    <None Include="RepPesajeUva.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RepPesajeUva.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RepPesajeUva.xss">
+      <DependentUpon>RepPesajeUva.xsd</DependentUpon>
     </None>
     <None Include="RomanaMorande_TemporaryKey.pfx" />
   </ItemGroup>
@@ -945,17 +1076,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="SAPbouiCOM">
-      <Guid>{6048236A-956D-498D-A6F1-9C81C13AB6E8}</Guid>
-      <VersionMajor>9</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

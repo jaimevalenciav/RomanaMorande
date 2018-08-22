@@ -7,8 +7,10 @@ Public Class frmreportecomprobante
         Dim usuario As New ReportParameter("usuario", frmPrincipal.lbluser.Text)
         ReportViewer1.LocalReport.SetParameters(usuario)
 
+
+
         'TODO: esta línea de código carga datos en la tabla 'pesajeDataSet2.reporte_pesaje' Puede moverla o quitarla según sea necesario.
-        Me.reporte_pesajeTableAdapter.Fill(Me.pesajeDataSet8.reporte_pesaje, idpesaje:=txtidpesaje.Text)
+        Me.mostrar_reportepesajesvendimiaTableAdapter.Fill(Me.ReportRecepUva.mostrar_reportepesajesvendimia, idpesajev:=txtidpesaje.Text)
 
         Me.ReportViewer1.RefreshReport()
     End Sub

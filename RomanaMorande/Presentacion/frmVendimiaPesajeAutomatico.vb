@@ -1,4 +1,7 @@
-﻿Public Class frmVendimiaPesajeAutomatico
+﻿Imports System.Data.SqlClient
+Imports System.Globalization
+
+Public Class frmVendimiaPesajeAutomatico
     Private dt As New DataTable
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -32,8 +35,14 @@
         txtpesajetara.ReadOnly = True
         txtpesajeneto.ReadOnly = True
         txttemp.ReadOnly = True
+        txtdensidad.ReadOnly = True
+        txtapb.ReadOnly = True
         rbManual.Checked = False
         rbMecanica.Checked = False
+        rbBlanco.Checked = False
+        rbTinto.Checked = False
+        rbBlanco.AutoCheck = False
+        rbTinto.AutoCheck = False
 
         limpiar()
 
@@ -103,6 +112,7 @@
                 DataListado.Columns(49).Visible = False
                 DataListado.Columns(51).Visible = False
                 DataListado.Columns(53).Visible = False
+                DataListado.Columns(54).Visible = False
             Else
                 DataListado.DataSource = Nothing
             End If
@@ -224,6 +234,13 @@
         txtdifkgenv.Text = ""
         txtdifkgenvbck.Text = ""
         txtpromenv.Text = ""
+        rbBlanco.Checked = False
+        rbTinto.Checked = False
+        txtapb.Text = "0"
+        txtbrix.Text = "0"
+        txtdensidad.Text = "0"
+        txttemp.Text = "0"
+        txtapb.Text = "0"
         mostrar()
         mostrar2()
     End Sub
@@ -282,6 +299,13 @@
         txtnomtipoenvout.Text = "Sin Información"
 
 
+
+        If DataListado.SelectedCells.Item(54).Value.ToString = "B" Then
+            rbBlanco.Checked = True
+        ElseIf DataListado.SelectedCells.Item(54).Value.ToString = "T" Then
+            rbTinto.Checked = True
+        End If
+
         btnBuscarBodega.Enabled = True
         btnBuscarContrato.Enabled = True
         btnBuscarVariedad.Enabled = True
@@ -338,7 +362,7 @@
 
         Dim rnd2 As New Random()
         Dim N2 As Integer = rnd2.Next(1000, 15000)
-        txtpesajetara.Text = N2+txtdifkgenv.Text
+        txtpesajetara.Text = N2 + txtdifkgenv.Text
     End Sub
     Private Sub btncapturapesobruto_Click(sender As Object, e As EventArgs) Handles btncapturapesobruto.Click
         Dim pretara As Integer
@@ -459,6 +483,10 @@
                         dts.gidenvaseout = txttipoenvout.Text
                         dts.gcantenvout = txtcantenvout.Text
                         dts.gobservaciones = txtobservaciones.Text & ". Pesado por: " & frmPrincipal.lbluser.Text
+                        dts.gbrix = Double.Parse(txtbrix.Text)
+                        dts.gdensidad = Val(txtdensidad.Text)
+                        dts.gtemp = Double.Parse(txttemp.Text)
+                        dts.gapb = Double.Parse(txtapb.Text)
                         If rbManual.Checked = True Then
                             dts.gtipocosecha = "M"
                         ElseIf rbMecanica.Checked = True Then
@@ -600,6 +628,50 @@
             txtdifkgenv.Text = txtdifkgenvbck.Text
             frmSeleccionTipoEnvase.txtflag.Text = txtestadopesaje.Text
             frmSeleccionTipoEnvase.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub txtbrix_LostFocus(sender As Object, e As EventArgs) Handles txtbrix.LostFocus
+        Dim dt As New DataTable
+        Dim con As New SqlConnection("Data Source = SQLSERVER02\BCI_ERP_C; Initial Catalog= pesaje; Persist Security Info = True; user Id = pesaje; Password= sinpassword")
+        Dim consultablanco As String = "SELECT densidad,gapb FROM tablabrix WHERE brix= replace('" & txtbrix.Text & "',',','.')"
+        Dim consultatinto As String = "SELECT densidad,gapt FROM tablabrix WHERE brix=replace('" & txtbrix.Text & "',',','.')"
+        Dim comandoblanco As New SqlCommand(consultablanco, con)
+        Dim comandotinto As New SqlCommand(consultatinto, con)
+        If rbBlanco.Checked = True Then
+            Try
+                Dim drd As SqlDataReader
+                con.Open()
+                drd = comandoblanco.ExecuteReader
+                If drd.Read() Then
+                    Me.txtdensidad.Text = drd.Item("densidad").ToString
+                    Me.txtapb.Text = drd.Item("gapb").ToString
+                    Me.txttemp.Text = 20
+                Else
+                    MessageBox.Show("El grado brix a ingresar debe ser mayor o igual a 10 y menor o igual a 30.")
+                End If
+                drd.Close()
+                con.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        ElseIf rbTinto.Checked = True Then
+            Try
+                Dim drd As SqlDataReader
+                con.Open()
+                drd = comandotinto.ExecuteReader
+                If drd.Read() Then
+                    Me.txtdensidad.Text = drd.Item("densidad").text
+                    Me.txtapb.Text = drd.Item("gapt").text
+                    Me.txttemp.Text = 20
+                Else
+                    MessageBox.Show("El grado brix a ingresar debe ser mayor o igual a 10 y menor o igual a 30.")
+                End If
+                drd.Close()
+                con.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
         End If
     End Sub
 

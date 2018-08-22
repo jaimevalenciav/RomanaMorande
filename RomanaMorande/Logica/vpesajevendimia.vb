@@ -30,11 +30,11 @@
     Dim subcuartel As Integer
     Dim nomsubcuartel As String
     Dim idcalidad As Integer
-    Dim brix As Integer
+    Dim brix As Decimal
     Dim densidad As Integer
-    Dim temp As Integer
-    Dim apb As Integer
-    Dim porccastigo As Integer
+    Dim temp As Decimal
+    Dim apb As Decimal
+    Dim porccastigo As Decimal
     Dim kiloscastigo As Integer
     Dim anulado As Boolean
     Dim activo As Boolean
@@ -432,11 +432,11 @@
                     ByVal subcuartel As Integer,
                     ByVal nomsubcuartel As String,
                     ByVal idcalidad As Integer,
-                    ByVal brix As Integer,
+                    ByVal brix As Decimal,
                     ByVal densidad As Integer,
-                    ByVal temp As Integer,
-                    ByVal apb As Integer,
-                    ByVal porccastigo As Integer,
+                    ByVal temp As Decimal,
+                    ByVal apb As Decimal,
+                    ByVal porccastigo As Decimal,
                     ByVal kiloscastigo As Integer,
                     ByVal anulado As Boolean,
                     ByVal activo As Boolean,

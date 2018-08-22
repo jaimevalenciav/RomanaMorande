@@ -23,13 +23,13 @@ Partial Class frmVendimiaPesajeAutomatico
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmVendimiaPesajeAutomatico))
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataListado = New System.Windows.Forms.DataGridView()
         Me.txtcantenvin = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -88,6 +88,9 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.btnBuscarContrato = New System.Windows.Forms.Button()
         Me.btnBuscarBodega = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.rbTinto = New System.Windows.Forms.RadioButton()
+        Me.rbBlanco = New System.Windows.Forms.RadioButton()
+        Me.Label35 = New System.Windows.Forms.Label()
         Me.txtidsectorcuartel = New System.Windows.Forms.TextBox()
         Me.txtiddetcontrato = New System.Windows.Forms.TextBox()
         Me.txtidvariedad = New System.Windows.Forms.TextBox()
@@ -155,34 +158,34 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.DataListado.AllowUserToAddRows = False
         Me.DataListado.AllowUserToDeleteRows = False
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataListado.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataListado.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataListado.Location = New System.Drawing.Point(6, 22)
         Me.DataListado.Name = "DataListado"
         Me.DataListado.ReadOnly = True
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataListado.RowHeadersVisible = False
         Me.DataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataListado.Size = New System.Drawing.Size(671, 264)
@@ -293,12 +296,14 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtpesajeneto
         '
-        Me.txtpesajeneto.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.txtpesajeneto.Font = New System.Drawing.Font("Microsoft Sans Serif", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtpesajeneto.BackColor = System.Drawing.Color.SteelBlue
+        Me.txtpesajeneto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtpesajeneto.Font = New System.Drawing.Font("Tahoma", 38.0!)
         Me.txtpesajeneto.ForeColor = System.Drawing.SystemColors.Window
         Me.txtpesajeneto.Location = New System.Drawing.Point(185, 553)
+        Me.txtpesajeneto.Margin = New System.Windows.Forms.Padding(0)
         Me.txtpesajeneto.Name = "txtpesajeneto"
-        Me.txtpesajeneto.Size = New System.Drawing.Size(189, 71)
+        Me.txtpesajeneto.Size = New System.Drawing.Size(189, 69)
         Me.txtpesajeneto.TabIndex = 45
         Me.txtpesajeneto.Text = "0"
         Me.txtpesajeneto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -308,7 +313,7 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.btnanula.BackColor = System.Drawing.Color.Red
         Me.btnanula.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnanula.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnanula.Location = New System.Drawing.Point(437, 626)
+        Me.btnanula.Location = New System.Drawing.Point(437, 630)
         Me.btnanula.Name = "btnanula"
         Me.btnanula.Size = New System.Drawing.Size(127, 48)
         Me.btnanula.TabIndex = 50
@@ -330,34 +335,34 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.datalistado2.AllowUserToAddRows = False
         Me.datalistado2.AllowUserToDeleteRows = False
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistado2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistado2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.datalistado2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.datalistado2.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.datalistado2.DefaultCellStyle = DataGridViewCellStyle5
         Me.datalistado2.Location = New System.Drawing.Point(5, 29)
         Me.datalistado2.Name = "datalistado2"
         Me.datalistado2.ReadOnly = True
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.datalistado2.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.datalistado2.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.datalistado2.RowHeadersVisible = False
         Me.datalistado2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.datalistado2.Size = New System.Drawing.Size(672, 280)
@@ -365,12 +370,14 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtpesajebruto
         '
-        Me.txtpesajebruto.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.txtpesajebruto.Font = New System.Drawing.Font("Microsoft Sans Serif", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtpesajebruto.BackColor = System.Drawing.Color.SteelBlue
+        Me.txtpesajebruto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtpesajebruto.Font = New System.Drawing.Font("Tahoma", 38.0!)
         Me.txtpesajebruto.ForeColor = System.Drawing.SystemColors.Window
         Me.txtpesajebruto.Location = New System.Drawing.Point(185, 409)
+        Me.txtpesajebruto.Margin = New System.Windows.Forms.Padding(0)
         Me.txtpesajebruto.Name = "txtpesajebruto"
-        Me.txtpesajebruto.Size = New System.Drawing.Size(189, 71)
+        Me.txtpesajebruto.Size = New System.Drawing.Size(189, 69)
         Me.txtpesajebruto.TabIndex = 7
         Me.txtpesajebruto.Text = "0"
         Me.txtpesajebruto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -457,12 +464,14 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtpesajetara
         '
-        Me.txtpesajetara.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.txtpesajetara.Font = New System.Drawing.Font("Microsoft Sans Serif", 42.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtpesajetara.BackColor = System.Drawing.Color.SteelBlue
+        Me.txtpesajetara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtpesajetara.Font = New System.Drawing.Font("Tahoma", 38.0!)
         Me.txtpesajetara.ForeColor = System.Drawing.SystemColors.Window
         Me.txtpesajetara.Location = New System.Drawing.Point(185, 481)
+        Me.txtpesajetara.Margin = New System.Windows.Forms.Padding(0)
         Me.txtpesajetara.Name = "txtpesajetara"
-        Me.txtpesajetara.Size = New System.Drawing.Size(189, 71)
+        Me.txtpesajetara.Size = New System.Drawing.Size(189, 69)
         Me.txtpesajetara.TabIndex = 6
         Me.txtpesajetara.Text = "0"
         Me.txtpesajetara.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -815,6 +824,9 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.rbTinto)
+        Me.GroupBox4.Controls.Add(Me.rbBlanco)
+        Me.GroupBox4.Controls.Add(Me.Label35)
         Me.GroupBox4.Controls.Add(Me.txtidsectorcuartel)
         Me.GroupBox4.Controls.Add(Me.txtiddetcontrato)
         Me.GroupBox4.Controls.Add(Me.txtidvariedad)
@@ -852,6 +864,37 @@ Partial Class frmVendimiaPesajeAutomatico
         Me.GroupBox4.TabIndex = 55
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Datos de la Uva"
+        '
+        'rbTinto
+        '
+        Me.rbTinto.AutoSize = True
+        Me.rbTinto.Location = New System.Drawing.Point(464, 36)
+        Me.rbTinto.Name = "rbTinto"
+        Me.rbTinto.Size = New System.Drawing.Size(49, 17)
+        Me.rbTinto.TabIndex = 94
+        Me.rbTinto.TabStop = True
+        Me.rbTinto.Text = "Tinto"
+        Me.rbTinto.UseVisualStyleBackColor = True
+        '
+        'rbBlanco
+        '
+        Me.rbBlanco.AutoSize = True
+        Me.rbBlanco.Location = New System.Drawing.Point(403, 36)
+        Me.rbBlanco.Name = "rbBlanco"
+        Me.rbBlanco.Size = New System.Drawing.Size(58, 17)
+        Me.rbBlanco.TabIndex = 93
+        Me.rbBlanco.TabStop = True
+        Me.rbBlanco.Text = "Blanco"
+        Me.rbBlanco.UseVisualStyleBackColor = True
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(366, 37)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(31, 13)
+        Me.Label35.TabIndex = 92
+        Me.Label35.Text = "Color"
         '
         'txtidsectorcuartel
         '
@@ -898,7 +941,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(344, 79)
+        Me.Label31.Location = New System.Drawing.Point(344, 100)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(53, 13)
         Me.Label31.TabIndex = 83
@@ -906,7 +949,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtcastigo
         '
-        Me.txtcastigo.Location = New System.Drawing.Point(400, 76)
+        Me.txtcastigo.Location = New System.Drawing.Point(400, 97)
         Me.txtcastigo.Name = "txtcastigo"
         Me.txtcastigo.Size = New System.Drawing.Size(39, 20)
         Me.txtcastigo.TabIndex = 84
@@ -915,7 +958,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(471, 58)
+        Me.Label30.Location = New System.Drawing.Point(471, 79)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(28, 13)
         Me.Label30.TabIndex = 81
@@ -923,7 +966,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtapb
         '
-        Me.txtapb.Location = New System.Drawing.Point(502, 55)
+        Me.txtapb.Location = New System.Drawing.Point(502, 76)
         Me.txtapb.Name = "txtapb"
         Me.txtapb.Size = New System.Drawing.Size(50, 20)
         Me.txtapb.TabIndex = 82
@@ -932,7 +975,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(379, 58)
+        Me.Label29.Location = New System.Drawing.Point(379, 79)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(18, 13)
         Me.Label29.TabIndex = 79
@@ -940,17 +983,16 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txttemp
         '
-        Me.txttemp.Location = New System.Drawing.Point(400, 55)
+        Me.txttemp.Location = New System.Drawing.Point(400, 76)
         Me.txttemp.Name = "txttemp"
         Me.txttemp.Size = New System.Drawing.Size(39, 20)
         Me.txttemp.TabIndex = 80
-        Me.txttemp.Text = "20"
         Me.txttemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(447, 37)
+        Me.Label28.Location = New System.Drawing.Point(447, 58)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(52, 13)
         Me.Label28.TabIndex = 77
@@ -958,7 +1000,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtdensidad
         '
-        Me.txtdensidad.Location = New System.Drawing.Point(502, 34)
+        Me.txtdensidad.Location = New System.Drawing.Point(502, 55)
         Me.txtdensidad.Name = "txtdensidad"
         Me.txtdensidad.Size = New System.Drawing.Size(66, 20)
         Me.txtdensidad.TabIndex = 78
@@ -967,7 +1009,7 @@ Partial Class frmVendimiaPesajeAutomatico
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(373, 37)
+        Me.Label27.Location = New System.Drawing.Point(373, 58)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(24, 13)
         Me.Label27.TabIndex = 75
@@ -975,7 +1017,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         'txtbrix
         '
-        Me.txtbrix.Location = New System.Drawing.Point(400, 34)
+        Me.txtbrix.Location = New System.Drawing.Point(400, 55)
         Me.txtbrix.Name = "txtbrix"
         Me.txtbrix.Size = New System.Drawing.Size(39, 20)
         Me.txtbrix.TabIndex = 76
@@ -1152,7 +1194,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnCancelar.Location = New System.Drawing.Point(151, 626)
+        Me.btnCancelar.Location = New System.Drawing.Point(151, 630)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(137, 48)
         Me.btnCancelar.TabIndex = 9
@@ -1163,7 +1205,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.btnGuardarpesaje.Image = CType(resources.GetObject("btnGuardarpesaje.Image"), System.Drawing.Image)
         Me.btnGuardarpesaje.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnGuardarpesaje.Location = New System.Drawing.Point(8, 627)
+        Me.btnGuardarpesaje.Location = New System.Drawing.Point(8, 630)
         Me.btnGuardarpesaje.Name = "btnGuardarpesaje"
         Me.btnGuardarpesaje.Size = New System.Drawing.Size(137, 48)
         Me.btnGuardarpesaje.TabIndex = 8
@@ -1185,7 +1227,7 @@ Partial Class frmVendimiaPesajeAutomatico
         '
         Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSalir.Location = New System.Drawing.Point(294, 626)
+        Me.btnSalir.Location = New System.Drawing.Point(294, 630)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(137, 48)
         Me.btnSalir.TabIndex = 10
@@ -1470,4 +1512,7 @@ Partial Class frmVendimiaPesajeAutomatico
     Friend WithEvents Label9 As Label
     Friend WithEvents txtpromenv As TextBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents rbTinto As RadioButton
+    Friend WithEvents rbBlanco As RadioButton
+    Friend WithEvents Label35 As Label
 End Class
